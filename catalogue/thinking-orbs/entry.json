@@ -1,0 +1,16 @@
+{
+  "name": "Thinking Orbs",
+  "tagline": "Dotted orbs that animate what an AI agent is doing: nine states, plain 2D canvas, no WebGL.",
+  "category": "Loaders & indicators",
+  "author": "Jakub Antalik",
+  "github": "Jakubantalik/Libraries.dev",
+  "path": "packages/thinking-orbs",
+  "demo": "https://libraries.dev/orbs",
+  "licence": "MIT",
+  "stack": ["React"],
+  "install": "npm install thinking-orbs",
+  "npm": "thinking-orbs",
+  "version": "0.3.2",
+  "verified": "2026-10-15",
+  "maps": ["colours"]
+}

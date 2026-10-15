@@ -1,0 +1,14 @@
+{
+  "name": "Example (warm paper)",
+  "colors": {
+    "background": "#FBF7F2",
+    "foreground": "#1F1B16",
+    "primary": "#E4572E"
+  },
+  "fonts": {
+    "sans": "Inter",
+    "display": "Instrument Serif",
+    "mono": "JetBrains Mono"
+  },
+  "radius": 10
+}

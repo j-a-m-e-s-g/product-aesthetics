@@ -1,0 +1,20 @@
+{
+  "name": "YIMBY Alliance",
+  "colors": {
+    "background": "#FFFFFF",
+    "foreground": "#353741",
+    "primary": "#73AB96",
+    "accent": "#3D6657",
+    "muted": "#F4F4F5"
+  },
+  "dark": {
+    "background": "#353741",
+    "foreground": "#FFFFFF",
+    "primary": "#73AB96",
+    "accent": "#73AB96"
+  },
+  "fonts": {
+    "sans": "Lato"
+  },
+  "radius": "6px"
+}

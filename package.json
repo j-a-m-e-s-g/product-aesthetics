@@ -1,0 +1,17 @@
+{
+  "name": "product-aesthetics",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Beautiful open-source UI you can ship without credit, with install steps for each and a one-command mapping onto your own brand.",
+  "type": "module",
+  "bin": {
+    "pa": "bin/pa.mjs"
+  },
+  "scripts": {
+    "check": "node bin/pa.mjs check",
+    "check:online": "node bin/pa.mjs check --online"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
