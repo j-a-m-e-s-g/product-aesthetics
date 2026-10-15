@@ -1,0 +1,16 @@
+{
+  "name": "NumberFlow",
+  "tagline": "Numbers that roll digit by digit to their new value, formatted by the browser's own Intl.",
+  "category": "Motion & animation",
+  "author": "Maxwell Barvian",
+  "github": "barvian/number-flow",
+  "demo": "https://number-flow.barvian.me",
+  "licence": "MIT",
+  "stack": ["React", "Vue", "Svelte", "JavaScript"],
+  "install": "npm install @number-flow/react",
+  "npm": "@number-flow/react",
+  "version": "0.6.2",
+  "verified": "2026-10-15",
+  "maps": [],
+  "from_picks": true
+}

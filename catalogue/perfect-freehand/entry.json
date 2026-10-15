@@ -1,0 +1,16 @@
+{
+  "name": "perfect-freehand",
+  "tagline": "Pressure-sensitive ink strokes from mouse, pen or touch points: tapering, thinning and smoothing that feel like a real pen.",
+  "category": "Drawing & hand-drawn",
+  "author": "Steve Ruiz",
+  "github": "steveruizok/perfect-freehand",
+  "demo": "https://perfectfreehand.com",
+  "licence": "MIT",
+  "stack": ["JavaScript"],
+  "install": "npm install perfect-freehand",
+  "npm": "perfect-freehand",
+  "version": "1.2.3",
+  "verified": "2026-10-15",
+  "maps": [],
+  "from_picks": true
+}

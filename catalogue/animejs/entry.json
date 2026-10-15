@@ -1,0 +1,17 @@
+{
+  "name": "anime.js",
+  "pick": "anime.js (version 4)",
+  "tagline": "SVG line drawing, split-text reveals and timelines you can scrub to the millisecond, in one small engine.",
+  "category": "Motion & animation",
+  "author": "Julian Garnier",
+  "github": "juliangarnier/anime",
+  "demo": "https://animejs.com",
+  "licence": "MIT",
+  "stack": ["JavaScript"],
+  "install": "npm install animejs",
+  "npm": "animejs",
+  "version": "4.5.0",
+  "verified": "2026-10-15",
+  "maps": [],
+  "from_picks": true
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Iconify",
+  "pick": "Iconify and Icones",
+  "tagline": "Every open-source icon set behind one name format: 227 sets, 159 of them need no credit, bundled at build time or fetched as SVG.",
+  "category": "Icons",
+  "author": "Vjacheslav Trushkin",
+  "github": "iconify/iconify",
+  "path": "components/react",
+  "demo": "https://icones.js.org",
+  "licence": "MIT",
+  "stack": ["React", "Vue", "Svelte", "JavaScript", "CSS"],
+  "install": "npm install @iconify/react @iconify-json/lucide",
+  "npm": "@iconify/react",
+  "version": "6.0.2",
+  "verified": "2026-10-15",
+  "maps": [],
+  "from_picks": true
+}

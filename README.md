@@ -12,11 +12,24 @@ Every library here has three things checked: it looks exceptional, it's free and
 
 <!-- catalogue:start (pa check --fix writes this) -->
 
-### Loaders & indicators
-
 <table>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/thinking-orbs"><img src="catalogue/thinking-orbs/preview.gif" width="100%" alt="Thinking Orbs"></a><br><b><a href="catalogue/thinking-orbs">Thinking Orbs</a></b><br>Dotted orbs that animate what an AI agent is doing: nine states, plain 2D canvas, no WebGL.<br><sub>React · MIT (keep notice) · maps colours</sub></td>
+<td width="33%" valign="top"><a href="catalogue/ambientcg"><img src="catalogue/ambientcg/preview.png" width="100%" alt="ambientCG"></a><br><sub>3D & MATERIALS</sub><br><b><a href="catalogue/ambientcg">ambientCG</a></b><br>2,900 public-domain materials and HDRIs, from London stock brick and slate to paper grain, fetched by API with no key.<br><sub>Blender · CC0-1.0 (no strings) · no brand mapping</sub></td>
+<td width="33%" valign="top"><a href="catalogue/observable-plot"><img src="catalogue/observable-plot/preview.png" width="100%" alt="Observable Plot"></a><br><sub>CHARTS & DATA</sub><br><b><a href="catalogue/observable-plot">Observable Plot</a></b><br>Charts in a few lines of JavaScript, with the restraint of a good newspaper graphic: quiet axes, direct labels, no chart junk.<br><sub>JavaScript · ISC (keep notice) · maps colours, fonts</sub></td>
+<td width="33%" valign="top"><a href="catalogue/perfect-freehand"><img src="catalogue/perfect-freehand/preview.gif" width="100%" alt="perfect-freehand"></a><br><sub>DRAWING & HAND-DRAWN</sub><br><b><a href="catalogue/perfect-freehand">perfect-freehand</a></b><br>Pressure-sensitive ink strokes from mouse, pen or touch points: tapering, thinning and smoothing that feel like a real pen.<br><sub>JavaScript · MIT (keep notice) · no brand mapping</sub></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="catalogue/iconify"><img src="catalogue/iconify/preview.gif" width="100%" alt="Iconify"></a><br><sub>ICONS</sub><br><b><a href="catalogue/iconify">Iconify</a></b><br>Every open-source icon set behind one name format: 227 sets, 159 of them need no credit, bundled at build time or fetched as SVG.<br><sub>React, Vue, Svelte, JavaScript, CSS · MIT (keep notice) · no brand mapping</sub></td>
+<td width="33%" valign="top"><a href="catalogue/thinking-orbs"><img src="catalogue/thinking-orbs/preview.gif" width="100%" alt="Thinking Orbs"></a><br><sub>LOADERS & INDICATORS</sub><br><b><a href="catalogue/thinking-orbs">Thinking Orbs</a></b><br>Dotted orbs that animate what an AI agent is doing: nine states, plain 2D canvas, no WebGL.<br><sub>React · MIT (keep notice) · maps colours</sub></td>
+<td width="33%" valign="top"><a href="catalogue/animejs"><img src="catalogue/animejs/preview.gif" width="100%" alt="anime.js"></a><br><sub>MOTION & ANIMATION</sub><br><b><a href="catalogue/animejs">anime.js</a></b><br>SVG line drawing, split-text reveals and timelines you can scrub to the millisecond, in one small engine.<br><sub>JavaScript · MIT (keep notice) · no brand mapping</sub></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="catalogue/motion"><img src="catalogue/motion/preview.gif" width="100%" alt="Motion"></a><br><sub>MOTION & ANIMATION</sub><br><b><a href="catalogue/motion">Motion</a></b><br>Springs, gestures and layout morphs for React and plain JavaScript: change the layout and it animates between the two.<br><sub>React, JavaScript · MIT (keep notice) · no brand mapping</sub></td>
+<td width="33%" valign="top"><a href="catalogue/motion-primitives"><img src="catalogue/motion-primitives/preview.gif" width="100%" alt="Motion Primitives"></a><br><sub>MOTION & ANIMATION</sub><br><b><a href="catalogue/motion-primitives">Motion Primitives</a></b><br>Restrained motion to copy into a Tailwind site: shimmering and blur-in text, scrambles, progressive blur, border trails, morphing dialogs.<br><sub>React, Tailwind · MIT (keep notice) · no brand mapping</sub></td>
+<td width="33%" valign="top"><a href="catalogue/number-flow"><img src="catalogue/number-flow/preview.gif" width="100%" alt="NumberFlow"></a><br><sub>MOTION & ANIMATION</sub><br><b><a href="catalogue/number-flow">NumberFlow</a></b><br>Numbers that roll digit by digit to their new value, formatted by the browser's own Intl.<br><sub>React, Vue, Svelte, JavaScript · MIT (keep notice) · no brand mapping</sub></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="catalogue/paper-shaders"><img src="catalogue/paper-shaders/preview.gif" width="100%" alt="Paper Shaders"></a><br><sub>SHADERS & BACKGROUNDS</sub><br><b><a href="catalogue/paper-shaders">Paper Shaders</a></b><br>Thirty ready-made WebGL backgrounds and photo effects: mesh gradients, grain, dithering, halftone, paper. One component each, no GLSL.<br><sub>React, JavaScript · Apache-2.0 (keep notice) · maps colours</sub></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -92,17 +105,19 @@ YIMBY Alliance from brands/yimby-alliance.json
 
    | Terms | Licences | What you owe |
    |---|---|---|
-   | **no strings** | CC0-1.0, Unlicense, MIT-0, 0BSD | nothing |
+   | **no strings** | CC0-1.0, Unlicense, MIT-0, 0BSD, public domain mark | nothing |
    | **keep notice** | MIT, ISC, BSD-2/3-Clause, Apache-2.0, OFL-1.1 | nothing on screen; the licence text stays with the code. npm keeps it in `node_modules` for you, and copy-pasted files keep their header comment |
 
-   **Kept out:** GPL, LGPL and AGPL (copyleft); any CC-BY (visible credit) or non-commercial licence; MIT plus Commons Clause; BSL, PolyForm and other source-available licences; "free with attribution"; and anything that's free only as a teaser for a paid tier.
+   Apps we run rather than ship (`"kind": "tool"`) are the exception: any open-source licence is fine, because it covers the app, not what we make with it.
+
+   **Kept out of anything we ship:** GPL, LGPL and AGPL (copyleft); any CC-BY (visible credit) or non-commercial licence; MIT plus Commons Clause; BSL, PolyForm and other source-available licences; "free with attribution"; and anything that's free only as a teaser for a paid tier.
 3. **It's alive.** Archived repos are rejected. A repo with no push for 18 months gets flagged.
 
 A project can change its licence for future versions, but the version you installed keeps the licence it shipped under. That's why each entry records the version and the date its licence was read. `pa check --online` re-reads every licence on GitHub and npm and fails if one has changed.
 
 ## Add a library
 
-The quickest way is to ask Claude: *"add `<repo url>` to product-aesthetics"*. [`CLAUDE.md`](CLAUDE.md) holds the checklist it follows. To do it by hand:
+The quickest way is to ask Claude: *"add `<repo url>` to product-aesthetics"*. [`CLAUDE.md`](CLAUDE.md) holds the checklist it follows. James also keeps a ticklist of candidates in a Google Doc; "update the gh" makes Claude add whatever is ticked there (`pa picks` reads the doc's export). To do it by hand:
 
 1. Read the licence yourself, including the LICENSE file and the README's small print. Don't go by the badge.
 2. Create `catalogue/<id>/` with:
@@ -127,7 +142,9 @@ The quickest way is to ask Claude: *"add `<repo url>` to product-aesthetics"*. [
   "npm": "thinking-orbs",                   // optional: lets pa install it and track versions
   "version": "0.3.2",                       // the version the licence was read at
   "verified": "2026-10-15",                 // the day it was read
-  "maps": ["colours"]                       // what the adapter maps: colours, fonts, radius
+  "maps": ["colours"],                      // what the adapter maps: colours, fonts, radius
+  "kind": "code",                           // optional: code (default), asset (fonts, icons, images) or tool (an app)
+  "url": "https://…"                        // optional: home page, instead of github, for assets and tools
 }
 ```
 
@@ -150,6 +167,7 @@ export default async function adapt(brand, { ts, colour }) {
 
 ```text
 bin/pa.mjs            the CLI (no dependencies)
+lib/picks.mjs         reads the ticks from the Google Doc's Markdown export
 lib/brand.mjs         reads brand files and CSS, derives the missing roles
 lib/colour.mjs        colour parsing, OKLab mixing, WCAG contrast
 lib/catalogue.mjs     loads and validates entries; writes the gallery above

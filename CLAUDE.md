@@ -5,7 +5,7 @@ A private catalogue of beautiful open-source UI that can ship in a product with 
 ## The bar: all three, or it stays out
 
 1. **Exceptional craft.** Ask whether a designer would stop scrolling for it. If it's merely competent, leave it out.
-2. **Licence.** Only the tiers in `lib/catalogue.mjs` count (`no-strings`: CC0, Unlicense, MIT-0, 0BSD; `keep-notice`: MIT, ISC, BSD, Apache-2.0, OFL).
+2. **Licence.** Only the tiers in `lib/catalogue.mjs` count (`no-strings`: CC0, Unlicense, MIT-0, 0BSD, public domain mark; `keep-notice`: MIT, ISC, BSD, Apache-2.0, OFL). The exception is apps we run (`"kind": "tool"`): any open-source licence, since it covers the app and not what we make.
 3. **Alive.** Not archived. Flag anything with no push in 18 months.
 
 ## Adding an entry
@@ -22,6 +22,17 @@ A private catalogue of beautiful open-source UI that can ship in a product with 
    - `adapter.mjs`: only if the library takes colours, fonts or radius. Set `maps` to match.
 3. **Prove it in a scratch project** (never in this repo). Run `npm init -y`, then `pa add <id> --brand <repo>/brands/yimby-alliance.json`, then bundle a test page with esbuild, render it in headless Chrome (puppeteer-core lives in `~/projects/YA/public-mapping/node_modules`) and **look at the screenshot**. For animated previews, stub `performance.now` and `requestAnimationFrame` with a frame-stepped clock so every frame is exact, then encode with ffmpeg (`palettegen` + `paletteuse`, `diff_mode=rectangle`). If the generated code ships types, type-check them with `tsc --strict`.
 4. **Finish with `node bin/pa.mjs check --online --fix`.** It must exit 0. It rewrites the README gallery; never edit the gallery by hand.
+
+## Picks: when James says "update the gh"
+
+James ticks what he wants in the Google Doc *Product aesthetics: free design resources you can use without credit* (Drive id `14wSzjGfBSltsrHQNWGjgku4xgKjyxkdit71r7X70WbQ`), tab **Tick what you want**. That tab is the only record of his picks, so read it every time and never ask him to re-tick.
+
+1. Export the doc as Markdown with the Google Drive connector: `download_file_content`, `exportMimeType: "text/markdown"`. The result is saved as JSON with a base64 `content` field; decode it to a scratch `.md` file. Checkboxes inside tables don't survive this export, which is why the picks are a checklist and not a table column.
+2. Run `node bin/pa.mjs picks <file>`. It lists ticked items not yet in the catalogue (**To add**), ticked items already here, and earlier picks he has since unticked.
+3. Add each **To add** item using the checklist above. Re-read its licence; the doc's check is from 15 October 2026. Set `"from_picks": true`, and set `"pick": "<doc name>"` if the entry's `name` differs from the doc's. Apps get `"kind": "tool"` (any open-source licence, since what we make is ours). Fonts, icon sets, image and 3D archives get `"kind": "asset"`. Both kinds can use `url` instead of `github`.
+4. Never remove an unticked entry without asking him first.
+5. Run `pa check --online --fix`, then commit and push. "Update the gh" is the go-ahead to push.
+6. Tell him what went in, what couldn't and why, and anything waiting on his decision.
 
 ## Adapter rules
 

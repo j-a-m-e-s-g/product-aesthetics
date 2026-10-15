@@ -1,0 +1,15 @@
+{
+  "name": "ambientCG",
+  "tagline": "2,900 public-domain materials and HDRIs, from London stock brick and slate to paper grain, fetched by API with no key.",
+  "category": "3D & materials",
+  "author": "Lennart Demes",
+  "url": "https://ambientcg.com",
+  "licence": "CC0-1.0",
+  "stack": ["Blender"],
+  "install": "Download from ambientcg.com or fetch by API (no key)",
+  "version": "API v3",
+  "verified": "2026-10-15",
+  "maps": [],
+  "kind": "asset",
+  "from_picks": true
+}

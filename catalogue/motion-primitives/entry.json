@@ -1,0 +1,15 @@
+{
+  "name": "Motion Primitives",
+  "tagline": "Restrained motion to copy into a Tailwind site: shimmering and blur-in text, scrambles, progressive blur, border trails, morphing dialogs.",
+  "category": "Motion & animation",
+  "author": "Julien Thibeaut (ibelick)",
+  "github": "ibelick/motion-primitives",
+  "demo": "https://motion-primitives.com/docs",
+  "licence": "MIT",
+  "stack": ["React", "Tailwind"],
+  "install": "npx motion-primitives@latest add <component>",
+  "version": "main@120f64f",
+  "verified": "2026-10-15",
+  "maps": [],
+  "from_picks": true
+}

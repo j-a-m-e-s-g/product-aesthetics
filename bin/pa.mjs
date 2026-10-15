@@ -8,6 +8,7 @@
 //   pa brand <file>                         show what a brand file (or your CSS) resolves to
 //   pa check [--online] [--fix]             validate the catalogue; --online re-reads
 //                                           licences upstream; --fix rewrites the README table
+//   pa picks <export.md> [--json]           what James ticked in the Google Doc vs the catalogue
 
 import { spawnSync } from 'node:child_process';
 import { existsSync } from 'node:fs';
@@ -18,7 +19,8 @@ import { pathToFileURL } from 'node:url';
 import { parseArgs } from 'node:util';
 import { loadBrand, resolveBrand, ROLES } from '../lib/brand.mjs';
 import * as colour from '../lib/colour.mjs';
-import { ROOT, TIERS, loadCatalogue, loadEntry, validateEntry, withCatalogue } from '../lib/catalogue.mjs';
+import { ROOT, TIERS, loadCatalogue, loadEntry, stackOf, validateEntry, withCatalogue } from '../lib/catalogue.mjs';
+import { diffPicks, parsePicks } from '../lib/picks.mjs';
 
 const tty = process.stdout.isTTY;
 process.stdout.on('error', (e) => e.code === 'EPIPE' && process.exit(0)); // piped into head
@@ -43,14 +45,15 @@ const { positionals, values: flags } = parseArgs({
     force: { type: 'boolean' },
     online: { type: 'boolean' },
     fix: { type: 'boolean' },
+    json: { type: 'boolean' },
     help: { type: 'boolean', short: 'h' },
   },
 });
 const [command, ...args] = positionals;
-const commands = { list, add, brand, check };
+const commands = { list, add, brand, check, picks };
 
 if (!command || flags.help || !commands[command]) {
-  const usage = (await readFile(new URL(import.meta.url), 'utf8')).split('\n').slice(1, 11);
+  const usage = (await readFile(new URL(import.meta.url), 'utf8')).split('\n').slice(1, 12);
   console.log(usage.map((l) => l.replace(/^\/\/ ?/, '')).join('\n'));
   process.exit(command && !flags.help ? 1 : 0);
 }
@@ -70,7 +73,7 @@ async function list() {
     if (e.category !== category) console.log(`\n${bold((category = e.category))}`);
     const brand = e.maps?.length ? green(`maps ${e.maps.join(', ')}`) : dim('no brand mapping');
     console.log(`  ${bold(e.id.padEnd(22))} ${e.tagline}`);
-    console.log(`  ${''.padEnd(22)} ${dim(`${e.licence} · ${[e.stack].flat().join(', ')} ·`)} ${brand}`);
+    console.log(`  ${''.padEnd(22)} ${dim(`${e.licence} · ${stackOf(e)} ·`)} ${brand}`);
   }
   console.log(dim(`\n${entries.length} ${entries.length === 1 ? 'entry' : 'entries'}. Details: catalogue/<id>/README.md · Use one: pa add <id> --brand <file>`));
 }
@@ -84,7 +87,7 @@ async function add(id) {
     throw new Error(`no entry "${id}". Try: ${ids.filter((x) => x.includes(id.slice(0, 3))).join(', ') || ids.join(', ')}`);
   });
   const cwd = process.cwd();
-  console.log(`${bold(entry.name)} ${dim(`· ${entry.licence} (${TIERS[entry.tier].means})`)}`);
+  console.log(`${bold(entry.name)} ${dim(`· ${entry.licence} (${TIERS[entry.tier]?.means ?? 'an app: what you make with it is yours'})`)}`);
 
   // 1. Install
   if (entry.npm && !flags['no-install']) {
@@ -209,7 +212,7 @@ async function check() {
 async function upstream(e) {
   const out = [];
   const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
-  try {
+  if (e.github) try {
     const res = await fetch(`https://api.github.com/repos/${e.github}`, {
       headers: { accept: 'application/vnd.github+json', ...(token && { authorization: `Bearer ${token}` }) },
     });
@@ -239,4 +242,32 @@ async function upstream(e) {
     }
   }
   return out;
+}
+
+// ── picks ──────────────────────────────────────────────────────────────────
+
+async function picks(file) {
+  if (!file) throw new Error('pa picks <export.md>  (the Google Doc exported as Markdown; see CLAUDE.md)');
+  const { picks: all, unmatched } = parsePicks(await readFile(path.resolve(file), 'utf8'));
+  if (!all.length) throw new Error(`no checklist lines found in ${file}; is it the Markdown export of the doc?`);
+  const diff = diffPicks(all, await loadCatalogue());
+  if (flags.json) {
+    console.log(JSON.stringify({ ticked: all.filter((p) => p.ticked).length, total: all.length, ...diff, unmatched }, null, 2));
+    return unmatched.length ? 1 : 0;
+  }
+  const row = (p) => `  ${p.rank ? dim(String(p.rank).padStart(3)) + ' ' : '    '}${p.name}${p.url ? dim(`  ${p.url}`) : ''}`;
+  console.log(`${bold(`${all.filter((p) => p.ticked).length} ticked`)} of ${all.length} in the doc\n`);
+  console.log(green(`To add (${diff.add.length})`));
+  diff.add.forEach((p) => console.log(row(p)));
+  console.log(`\nAlready in the repo (${diff.have.length})`);
+  diff.have.forEach((p) => console.log(row(p)));
+  if (diff.unticked.length) {
+    console.log(yellow(`\nIn the repo from an earlier pick, now unticked (${diff.unticked.length}); ask James before removing`));
+    diff.unticked.forEach((p) => console.log(row(p)));
+  }
+  if (unmatched.length) {
+    console.log(red(`\nCouldn't match ${unmatched.length} checklist line(s) to a resource:`));
+    unmatched.forEach((t) => console.log(`  ${t}`));
+  }
+  return unmatched.length ? 1 : 0;
 }

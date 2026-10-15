@@ -1,0 +1,16 @@
+{
+  "name": "Observable Plot",
+  "tagline": "Charts in a few lines of JavaScript, with the restraint of a good newspaper graphic: quiet axes, direct labels, no chart junk.",
+  "category": "Charts & data",
+  "author": "Observable",
+  "github": "observablehq/plot",
+  "demo": "https://observablehq.com/plot/",
+  "licence": "ISC",
+  "stack": ["JavaScript"],
+  "install": "npm install @observablehq/plot",
+  "npm": "@observablehq/plot",
+  "version": "0.6.17",
+  "verified": "2026-10-15",
+  "maps": ["colours", "fonts"],
+  "from_picks": true
+}
