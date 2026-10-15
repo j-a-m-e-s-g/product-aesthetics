@@ -8,7 +8,7 @@
 //   pa brand <file>                         show what a brand file (or your CSS) resolves to
 //   pa check [--online] [--fix]             validate the catalogue; --online re-reads
 //                                           licences upstream; --fix rewrites the README table
-//   pa picks <export.md> [--json]           what James ticked in the Google Doc vs the catalogue
+//   pa picks <export.md> [--json]           what's ticked in a picks checklist vs the catalogue
 
 import { spawnSync } from 'node:child_process';
 import { existsSync } from 'node:fs';
@@ -262,7 +262,7 @@ async function picks(file) {
   console.log(`\nAlready in the repo (${diff.have.length})`);
   diff.have.forEach((p) => console.log(row(p)));
   if (diff.unticked.length) {
-    console.log(yellow(`\nIn the repo from an earlier pick, now unticked (${diff.unticked.length}); ask James before removing`));
+    console.log(yellow(`\nIn the repo from an earlier pick, now unticked (${diff.unticked.length}); ask before removing`));
     diff.unticked.forEach((p) => console.log(row(p)));
   }
   if (unmatched.length) {

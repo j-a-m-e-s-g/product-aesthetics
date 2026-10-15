@@ -2,7 +2,7 @@
 
 Dotted orbs that show what an AI agent is doing. There are nine animated states, each hand-tuned at two sizes, all drawn on a plain 2D canvas: no WebGL and no filters, so every browser shows the same pixels.
 
-<img src="sheet.gif" width="880" alt="The nine orb states in stock grey, then mapped onto the YIMBY Alliance brand on light and dark pages">
+<img src="sheet.gif" width="880" alt="The nine orb states in stock grey, then mapped onto two example brands on light and dark pages">
 
 | | |
 |---|---|
@@ -48,13 +48,13 @@ import { ThinkingOrb } from 'thinking-orbs';
 
 ## Use it in your brand
 
-The stock `color` prop gives a one-colour tint. The brand version uses two colours, the way a designer would: the dots nearest you take your text colour, the body takes your primary, and the far side fades out. On dark pages it uses your dark-scheme primary. It's the same look as the YIMBY Alliance orb (charcoal and sage), worked out from any brand.
+The stock `color` prop gives a one-colour tint. The brand version uses two colours, the way a designer would: the dots nearest you take your text colour, the body takes your primary, and the far side fades out. On dark pages it uses your dark-scheme primary.
 
 ```bash
 cd your-project
-node ~/projects/product-aesthetics/bin/pa.mjs add thinking-orbs --brand brand.json
+pa add thinking-orbs --brand brand.json
 # or read the colours straight from your shadcn / Tailwind CSS:
-node ~/projects/product-aesthetics/bin/pa.mjs add thinking-orbs --brand src/app/globals.css
+pa add thinking-orbs --brand src/app/globals.css
 ```
 
 This installs `thinking-orbs` and writes `components/brand-orb.js` plus `brand-orb.d.ts`, with your colours baked in:

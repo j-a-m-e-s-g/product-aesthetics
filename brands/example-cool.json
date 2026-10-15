@@ -1,0 +1,20 @@
+{
+  "name": "Example (cool slate)",
+  "colors": {
+    "background": "#F6F8FB",
+    "foreground": "#0F172A",
+    "primary": "#2563EB",
+    "accent": "#0891B2"
+  },
+  "dark": {
+    "background": "#0B1220",
+    "foreground": "#E2E8F0",
+    "primary": "#60A5FA",
+    "accent": "#22D3EE"
+  },
+  "fonts": {
+    "sans": "Inter",
+    "mono": "JetBrains Mono"
+  },
+  "radius": "8px"
+}

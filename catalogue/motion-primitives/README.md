@@ -14,7 +14,7 @@ Small, restrained motion components for React and Tailwind: headlines that blur 
 
 ## Install
 
-In a shadcn/ui project (most YA sites), install through the shadcn CLI. It puts the component in `components/ui/`, puts any hook in `hooks/`, rewrites the `@/` imports to your aliases and installs `motion`:
+In a shadcn/ui project, install through the shadcn CLI. It puts the component in `components/ui/`, puts any hook in `hooks/`, rewrites the `@/` imports to your aliases and installs `motion`:
 
 ```bash
 npx shadcn@latest add https://motion-primitives.com/c/text-shimmer.json
@@ -56,27 +56,27 @@ curl -sL https://raw.githubusercontent.com/ibelick/motion-primitives/main/LICENC
 import { TextEffect } from '@/components/ui/text-effect';
 import { TextShimmer } from '@/components/ui/text-shimmer';
 
-<TextEffect per="word" preset="fade-in-blur" as="h1">Homes people can afford.</TextEffect>
-<TextShimmer duration={1.5}>Counting every vote on your street…</TextShimmer>
+<TextEffect per="word" preset="fade-in-blur" as="h1">Ideas, in motion.</TextEffect>
+<TextShimmer duration={1.5}>Generating your report…</TextShimmer>
 ```
 
-The preview above is these two components unedited, set in Fraunces and Lato, with `speedReveal={0.7}` and `speedSegment={0.75}` on the headline and `trigger` switched off after two seconds to play the exit.
+The preview above is these two components unedited, set in Instrument Serif and Inter, with `speedReveal={0.7}` and `speedSegment={0.75}` on the headline and `trigger` switched off after about two seconds to play the exit. The headline is two `TextEffect`s, one per line, with their `delay` and `trigger` offset by one word's stagger so they read as one. `TextEffect` splits on spaces, so a `\n` inside one won't break the line.
 
-**The best free components for YA sites:**
+**The best free components:**
 
 | Component | What it does | Good for |
 |---|---|---|
 | `text-effect` | per word, character or line reveal; presets `blur`, `fade-in-blur`, `scale`, `fade`, `slide`; `trigger` plays it out again | hero headlines, section titles |
 | `text-shimmer` | a highlight sweeps across grey text | "loading…" and status lines |
-| `text-scramble` | random characters resolve into the text | a stat or postcode reveal |
+| `text-scramble` | random characters resolve into the text | a code, figure or name reveal |
 | `sliding-number` | each digit rolls to its new value | sign-up counters, live totals |
-| `animated-number` | a spring-animated count | big figures in an explainer |
+| `animated-number` | a spring-animated count | big figures on a landing page |
 | `in-view` | runs a variant when the element scrolls into view | scroll-in reveals for "how it works" steps |
 | `progressive-blur` | a stacked backdrop blur that fades along an edge | captions over photos, scroll edges |
 | `border-trail` | a light runs round a card's border | the one card you want clicked |
-| `morphing-dialog` | a card expands into a dialog, then shrinks back | case studies, scheme details |
+| `morphing-dialog` | a card expands into a dialog, then shrinks back | case studies, product details |
 | `infinite-slider` | a smooth endless strip | a press-logos row |
-| `text-loop` | cycles through phrases in one spot | "Homes for nurses / teachers / you" |
+| `text-loop` | cycles through phrases in one spot | "Built for designers / developers / teams" |
 
 `cursor` and `carousel` here are Motion Primitives' own free components, built on free `motion`. They're not the paid Motion+ `Cursor` and `Carousel`, which this entry doesn't cover.
 
@@ -91,9 +91,9 @@ A few hard-code Tailwind's zinc greys. The files are yours, so swap those for to
 | `text-shimmer`, `text-shimmer-wave` | `[--base-color:#a1a1aa] [--base-gradient-color:#000]`, and a `dark:` line with `#71717a` / `#ffffff` | `[--base-color:var(--muted-foreground)] [--base-gradient-color:var(--foreground)]`; delete the `dark:` line, because your variables already switch in `.dark`. Use `var(--primary)` for the sweep if you want it in brand colour |
 | `border-trail` | `bg-zinc-500` | pass `className="bg-primary"` (`cn()` swaps it), no edit needed |
 | `dialog`, `morphing-popover`, `toolbar-dynamic`, `carousel`, `dock`, `spotlight` | `bg-white`, `bg-zinc-*`, `text-zinc-*`, `border-zinc-*`, `gray-*`/`neutral-*` | `bg-background`, `bg-muted`, `text-foreground`, `text-muted-foreground`, `border-border` |
-| `glow-effect` | four rainbow hex colours | pass your own: `colors={['#73AB96', '#353741']}`. Use hex values, because the colours are animated inside a gradient string |
+| `glow-effect` | four rainbow hex colours | pass your own: `colors={['#2563EB', '#0891B2']}`. Use hex values, because the colours are animated inside a gradient string |
 
-For `text-shimmer`, passing the colours through `className` works in light mode only: the component's `dark:` values still win on dark pages. That's why the table says to edit the file. Tested on 2026-10-15 with the YIMBY Alliance tokens: the sage sweep and sage border trail rendered correctly on both the white and the charcoal schemes.
+For `text-shimmer`, passing the colours through `className` works in light mode only: the component's `dark:` values still win on dark pages. That's why the table says to edit the file. Tested on 2026-10-15 with the `example-cool` brand from this repo as shadcn tokens (sweep set to `var(--primary)`): the blue sweep and the blue border trail rendered correctly on both its light and its dark scheme.
 
 ## Notes
 

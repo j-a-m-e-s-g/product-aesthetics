@@ -4,9 +4,9 @@
 
 Every library here has three things checked: it looks exceptional, it's free and open source under a licence that needs no visible credit, and it's still maintained. Each one has its own folder with install steps, and one command puts it into your colours and fonts.
 
-<img src="catalogue/thinking-orbs/sheet.gif" width="880" alt="Thinking Orbs as they ship, then mapped onto the YIMBY Alliance brand and an example brand">
+<img src="catalogue/thinking-orbs/sheet.gif" width="880" alt="Thinking Orbs as they ship, then mapped onto two example brands, on light and dark pages">
 
-<sub>Thinking Orbs as they ship (top row), then mapped onto two brands by <code>pa add thinking-orbs --brand …</code>.</sub>
+<sub>Thinking Orbs as they ship (top row), then mapped onto two example brands by <code>pa add thinking-orbs --brand …</code>.</sub>
 
 ## Catalogue
 
@@ -14,7 +14,7 @@ Every library here has three things checked: it looks exceptional, it's free and
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/ambientcg"><img src="catalogue/ambientcg/preview.png" width="100%" alt="ambientCG"></a><br><sub>3D & MATERIALS</sub><br><b><a href="catalogue/ambientcg">ambientCG</a></b><br>2,900 public-domain materials and HDRIs, from London stock brick and slate to paper grain, fetched by API with no key.<br><sub>Blender · CC0-1.0 (no strings) · no brand mapping</sub></td>
+<td width="33%" valign="top"><a href="catalogue/ambientcg"><img src="catalogue/ambientcg/preview.png" width="100%" alt="ambientCG"></a><br><sub>3D & MATERIALS</sub><br><b><a href="catalogue/ambientcg">ambientCG</a></b><br>2,900 public-domain PBR materials and HDRIs, from brick, slate and concrete to marble and paper grain, fetched by API with no key.<br><sub>Blender · CC0-1.0 (no strings) · no brand mapping</sub></td>
 <td width="33%" valign="top"><a href="catalogue/observable-plot"><img src="catalogue/observable-plot/preview.png" width="100%" alt="Observable Plot"></a><br><sub>CHARTS & DATA</sub><br><b><a href="catalogue/observable-plot">Observable Plot</a></b><br>Charts in a few lines of JavaScript, with the restraint of a good newspaper graphic: quiet axes, direct labels, no chart junk.<br><sub>JavaScript · ISC (keep notice) · maps colours, fonts</sub></td>
 <td width="33%" valign="top"><a href="catalogue/perfect-freehand"><img src="catalogue/perfect-freehand/preview.gif" width="100%" alt="perfect-freehand"></a><br><sub>DRAWING & HAND-DRAWN</sub><br><b><a href="catalogue/perfect-freehand">perfect-freehand</a></b><br>Pressure-sensitive ink strokes from mouse, pen or touch points: tapering, thinning and smoothing that feel like a real pen.<br><sub>JavaScript · MIT (keep notice) · no brand mapping</sub></td>
 </tr>
@@ -42,8 +42,8 @@ Every library here has three things checked: it looks exceptional, it's free and
 You need Node 22 or later.
 
 ```bash
-git clone https://github.com/j-a-m-e-s-g/product-aesthetics.git ~/projects/product-aesthetics
-cd ~/projects/product-aesthetics && npm link       # optional: puts `pa` on your PATH
+git clone https://github.com/j-a-m-e-s-g/product-aesthetics.git
+cd product-aesthetics && npm link                  # optional: puts `pa` on your PATH
 
 cd ~/your-app
 pa list                                            # what's in the catalogue
@@ -51,25 +51,25 @@ pa add thinking-orbs                               # install it as it comes
 pa add thinking-orbs --brand src/app/globals.css   # …or generated in your brand
 ```
 
-Without `npm link`, run `node ~/projects/product-aesthetics/bin/pa.mjs` in place of `pa`.
+Without `npm link`, run `node <path to>/product-aesthetics/bin/pa.mjs` in place of `pa`.
 
 `pa add` installs with your project's package manager (pnpm, bun, yarn or npm, picked from the lockfile). With `--brand` it also writes a ready-made component into `src/components/` (or `--out <dir>`), and prints how to use it. It won't overwrite a file unless you add `--force`. Every library's own folder has the full install and usage steps if you'd rather do it by hand.
 
 ## Map it onto your style guide
 
-The adapters work from eight colour roles, three font stacks and a radius. Point `--brand` at either of these:
+Nothing in this repo belongs to any one brand. Your style guide stays in your own project, and `--brand` reads it from there. The adapters work from eight colour roles, three font stacks and a radius. Point `--brand` at either of these:
 
 **Your app's CSS.** If the project uses shadcn/ui or Tailwind v4, its `globals.css` already holds a style guide. `pa` reads `--background`, `--foreground`, `--primary`, `--color-*`, `--font-sans`, `--radius` and the rest from `:root`, `@theme` and `.dark`. It handles hex, `rgb()`, `hsl()`, `oklch()` and shadcn's bare HSL values, and it follows `var()` references.
 
-**A brand file.** Use a small JSON file like [`brands/yimby-alliance.json`](brands/yimby-alliance.json):
+**A brand file.** Keep a small JSON file in your project, shaped like the examples in [`brands/`](brands/). If your style guide is a PDF, a Figma file or a web page, ask Claude to write this file from it:
 
 ```json
 {
-  "name": "YIMBY Alliance",
-  "colors": { "background": "#FFFFFF", "foreground": "#353741", "primary": "#73AB96" },
-  "dark":   { "background": "#353741", "foreground": "#FFFFFF" },
-  "fonts":  { "sans": "Lato" },
-  "radius": "6px"
+  "name": "Example (cool slate)",
+  "colors": { "background": "#F6F8FB", "foreground": "#0F172A", "primary": "#2563EB", "accent": "#0891B2" },
+  "dark":   { "background": "#0B1220", "foreground": "#E2E8F0", "primary": "#60A5FA" },
+  "fonts":  { "sans": "Inter", "mono": "JetBrains Mono" },
+  "radius": "8px"
 }
 ```
 
@@ -82,20 +82,20 @@ Only `background`, `foreground` and `primary` are required. `pa` works out the r
 | `muted`, `border` | the background tinted 6% and 13% toward the foreground (mixed in OKLab, so tints stay clean) |
 | `mutedForeground` | foreground eased 38% toward the background, but never under 4.5:1 contrast |
 | the whole `dark` scheme | background and foreground swapped; primary lightened only if it falls under 3:1 on the dark background |
-| `fonts` | `"Lato"` becomes `"Lato", system-ui, sans-serif`; display follows sans; mono falls back to the system mono |
+| `fonts` | `"Inter"` becomes `"Inter", system-ui, sans-serif`; display follows sans; mono falls back to the system mono |
 
 Design-token files in the W3C format (`{"$value": …}`) load as they are, and keys can be `primary-foreground` or `primaryForeground`.
 
 `pa brand <file>` prints what a brand resolves to, with colour swatches, and warns when contrast is weak:
 
 ```text
-$ pa brand brands/yimby-alliance.json
-YIMBY Alliance from brands/yimby-alliance.json
-  background         #ffffff    #353741
-  foreground         #353741    #ffffff
-  primary            #73ab96    #73ab96
+$ pa brand brands/example-cool.json
+Example (cool slate) from brands/example-cool.json
+  background         #f6f8fb    #0b1220
+  foreground         #0f172a    #e2e8f0
+  primary            #2563eb    #60a5fa
+  accent             #0891b2    #22d3ee
   …
-  ! light: primary #73ab96 is 2.6:1 on #ffffff; graphics want 3:1 to read clearly
 ```
 
 ## What gets in
@@ -117,7 +117,11 @@ A project can change its licence for future versions, but the version you instal
 
 ## Add a library
 
-The quickest way is to ask Claude: *"add `<repo url>` to product-aesthetics"*. [`CLAUDE.md`](CLAUDE.md) holds the checklist it follows. James also keeps a ticklist of candidates in a Google Doc; "update the gh" makes Claude add whatever is ticked there (`pa picks` reads the doc's export). To do it by hand:
+The quickest way is to ask Claude: *"add `<repo url>` to product-aesthetics"*. [`CLAUDE.md`](CLAUDE.md) holds the checklist it follows.
+
+You can also keep a checklist of candidates, in a Google Doc or any Markdown file, and tick the ones you want. `pa picks <file>` reads the ticks (from the Markdown export, for a Google Doc) and lists what isn't in the catalogue yet, so Claude can add exactly those.
+
+To do it by hand:
 
 1. Read the licence yourself, including the LICENSE file and the README's small print. Don't go by the badge.
 2. Create `catalogue/<id>/` with:
@@ -171,6 +175,6 @@ lib/picks.mjs         reads the ticks from the Google Doc's Markdown export
 lib/brand.mjs         reads brand files and CSS, derives the missing roles
 lib/colour.mjs        colour parsing, OKLab mixing, WCAG contrast
 lib/catalogue.mjs     loads and validates entries; writes the gallery above
-brands/               brand files: yimby-alliance.json, example.json
+brands/               two neutral example brands: example.json (warm paper), example-cool.json (cool slate, with a dark scheme)
 catalogue/<id>/       one folder per library: entry.json, README.md, preview, adapter
 ```

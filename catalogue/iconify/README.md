@@ -1,6 +1,6 @@
 # Iconify
 
-Every open-source icon set behind one naming scheme, `prefix:name`, so `lucide:house`, `ph:train-duotone` and `material-symbols:park-outline-rounded` all work the same way. There are 227 sets and about 400,000 icons. [Icones](https://icones.js.org), Anthony Fu's search site built on Iconify, is the quickest way to find one: search, click, copy the name or the SVG. Bundle the icons you use into a site at build time, or have Claude fetch one as a ready-coloured SVG for a figure.
+Every open-source icon set behind one naming scheme, `prefix:name`, so `lucide:house`, `ph:train-duotone` and `material-symbols:park-outline-rounded` all work the same way. There are 227 sets and about 400,000 icons. [Icones](https://icones.js.org), Anthony Fu's search site built on Iconify, is the quickest way to find one: search, click, copy the name or the SVG. Bundle the icons you use into a site at build time, or fetch one as a ready-coloured SVG for a figure or slide.
 
 <img src="preview.gif" width="600" alt="House, train, tree, building and map pin icons rolling through ten no-credit Iconify sets: lucide, tabler, Phosphor duotone, Material Symbols, MDI, Remix, Carbon, Iconoir, MingCute and Huge Icons">
 
@@ -52,10 +52,10 @@ It renders a plain inline `<svg>`, server-side too. For a handful of icons you c
 
 **Tailwind v4.** Add `@plugin "@iconify/tailwind4";` under `@import "tailwindcss";`, install the `@iconify-json/<set>` packages you use, and write icons as classes: `<span class="icon-[lucide--train-front] size-6 text-primary"></span>`. Only the icons you use end up in the CSS, each as a mask, so they take the text colour.
 
-**One-off SVGs for figures, slides and videos.** The API returns a finished SVG for any icon. Claude can fetch one with `curl` when it's making a figure:
+**One-off SVGs for figures, slides and videos.** The API returns a finished SVG for any icon, so a script or an AI assistant can fetch one with `curl`:
 
 ```bash
-curl -s "https://api.iconify.design/lucide/train-front.svg?color=%2373ab96&height=48" -o train.svg
+curl -s "https://api.iconify.design/lucide/train-front.svg?color=%23e4572e&height=48" -o train.svg
 ```
 
 `color` takes any CSS colour (URL-encode `#` as `%23`), `height` or `width` sets the size (`auto` keeps the set's own grid), and `rotate=90deg` or `flip=horizontal` turn it. That's fine for files we make. Live sites should bundle, as above.
@@ -70,7 +70,7 @@ curl -s "https://api.iconify.design/lucide/train-front.svg?color=%2373ab96&heigh
 | Material Symbols | `material-symbols` | Google's 15,700, in outline, rounded and sharp; the `material-symbols-light` set is a lighter weight |
 | Material Design Icons | `mdi` | 7,400 community icons; covers odd things nobody else has |
 | Remix, Carbon, MingCute, Iconoir, Huge Icons | `ri` `carbon` `mingcute` `iconoir` `hugeicons` | other clean UI families; pick one and stay with it |
-| Maki, Temaki, Osmic, Map Icons | `maki` `temaki` `osmic` `map` | map-legend symbols (Maki is Mapbox's own); CC0 or OFL; good for maps3 |
+| Maki, Temaki, Osmic, Map Icons | `maki` `temaki` `osmic` `map` | map-legend symbols (Maki is Mapbox's own); CC0 or OFL |
 | Health Icons, Meteocons | `healthicons` `meteocons` | public services, and weather for charts |
 | Material Line Icons, SVG Spinners | `line-md` `svg-spinners` | animated: icons that draw themselves in, and loaders |
 | Circle Flags, Flagpack | `circle-flags` `flagpack` | country flags for charts |
@@ -86,7 +86,7 @@ Most icons are drawn in `currentColor`, so they take the colour of the text arou
 
 Duotone sets (`ph:*-duotone`, `icon-park-twotone`) draw their second tone as `currentColor` at reduced opacity, so they stay in one brand colour. Size follows the font (`1em`) unless you set `width`/`height`. For an SVG file, the API's `?color=` bakes the colour in; leave it off and the file keeps `currentColor`. Multicolour sets (`fluent-color`, `flat-color-icons`, emoji and flags) keep their own colours and won't follow your theme.
 
-For a consistent look, use one set throughout a product and match its stroke weight to your type: `ph:*-light` or `material-symbols-light` sit well beside Lato Light, and `lucide` or `tabler` beside regular weights.
+For a consistent look, use one set throughout a product and match its stroke weight to your type: `ph:*-light`, `ph:*-thin` or `material-symbols-light` sit well beside light and thin text weights, and `lucide` or `tabler` beside regular weights.
 
 ## Notes
 

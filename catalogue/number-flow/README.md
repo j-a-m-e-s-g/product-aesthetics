@@ -30,7 +30,7 @@ import NumberFlow from '@number-flow/react';
 <NumberFlow value={0.128} format={{ style: 'percent', maximumFractionDigits: 1, signDisplay: 'always' }} />   // +12.8%
 <NumberFlow value={1250} locales="en-GB" format={{ style: 'currency', currency: 'GBP', maximumFractionDigits: 0 }} />  // £1,250
 <NumberFlow value={2400000} locales="en-GB" format={{ notation: 'compact' }} />  // 2.4m
-<NumberFlow value={42} prefix="~" suffix=" homes" />                            // ~42 homes
+<NumberFlow value={42} prefix="~" suffix=" items" />                            // ~42 items
 ```
 
 Change `value` and it animates. Nothing else to wire up.

@@ -2,7 +2,7 @@
 
 Charts in a few lines of JavaScript, made by the team behind D3. You describe a chart as marks (lines, dots, bars, text, contours) laid over scales, and Plot handles the axes, ticks, legends and tooltips. Its defaults are quiet and editorial: thin axes, no chart junk, room for direct labels. It renders plain SVG, so a chart looks the same in every browser and prints cleanly.
 
-<img src="sheet.png" width="880" alt="Hours of daylight through the year for five places, and by latitude and month, drawn in stock Plot and then through brandPlot in the YIMBY Alliance brand (light and dark) and an example brand">
+<img src="sheet.png" width="880" alt="Hours of daylight through the year for five places, and by latitude and month, drawn in stock Plot and then through brandPlot in two example brands: cool slate (light and dark) and warm paper">
 
 | | |
 |---|---|
@@ -43,7 +43,7 @@ useEffect(() => {
 }, [data]);
 ```
 
-**Static figures.** For a briefing or a studio figure, run Plot in Node with jsdom (`npm install jsdom`): `Plot.plot({ document: new JSDOM('').window.document, ...options }).outerHTML` is a finished SVG file. `brandPlot` works the same way.
+**Static figures.** For a report, a social graphic or a video frame, run Plot in Node with jsdom (`npm install jsdom`): `Plot.plot({ document: new JSDOM('').window.document, ...options }).outerHTML` is a finished SVG file. `brandPlot` works the same way.
 
 **The good parts.** `tip: true` on any mark gives hover tooltips. `Plot.text` with `Plot.selectLast` puts labels at line ends instead of a legend. `Plot.contour`, `Plot.raster`, `Plot.hexbin` and `Plot.density` do heatmaps and density. `fx` and `fy` facet a chart into small multiples. Transforms (`Plot.binX`, `Plot.groupY`, `Plot.stackY`, `Plot.windowY`) do the counting and smoothing for you.
 
@@ -55,9 +55,9 @@ The brand version wraps `Plot.plot`, so it takes exactly the same options. It se
 
 ```bash
 cd your-project
-node ~/projects/product-aesthetics/bin/pa.mjs add observable-plot --brand brand.json
+pa add observable-plot --brand brand.json
 # or read the colours straight from your shadcn / Tailwind CSS:
-node ~/projects/product-aesthetics/bin/pa.mjs add observable-plot --brand src/app/globals.css
+pa add observable-plot --brand src/app/globals.css
 ```
 
 This installs `@observablehq/plot` and writes `components/brand-plot.js` plus `brand-plot.d.ts`, with your colours and font baked in:
@@ -80,7 +80,7 @@ Plot.barY(data, { x: 'k', y: 'v', fill: brandColors.primary });        // one se
 | Grid | your border colour | your dark border colour |
 | Tooltips | filled with your background | filled with your dark background |
 
-**The categorical palette.** It starts with your primary, accent and text colour exactly as given. Then it adds OKLab mixes of those colours (and your background), picking whichever is most different from what's already in the palette, until nothing distinct is left or it reaches eight. Every mixed colour reaches 3:1 against the background. A one-hue brand gives a short palette: YIMBY Alliance gets six (sage, dark green, charcoal, grey, mid green, deep teal) and the example brand gets eight.
+**The categorical palette.** It starts with your primary, accent and text colour exactly as given. Then it adds OKLab mixes of those colours (and your background), picking whichever is most different from what's already in the palette, until nothing distinct is left or it reaches eight. Every mixed colour reaches 3:1 against the background. Both example brands get eight; a brand built on one hue and a grey gets fewer, because fewer mixes are distinct.
 
 **When it leaves things alone.** If you set `color.range`, `color.scheme` or `color.interpolate`, it doesn't touch your colours. Diverging and identity scales keep Plot's own. A grid colour you set yourself (`grid: 'red'`) stays as you set it.
 
@@ -90,7 +90,7 @@ Run the command again with `--force` after a brand change.
 
 - **It can draw twice.** Plot only knows whether a colour scale holds categories or numbers once it has seen the data. So when a chart has a colour scale and you haven't picked its colours, `brandPlot` draws once, reads the scale type, then draws again with the right palette. Normal charts don't notice. To skip the second pass on a huge chart, pass `color: { range: brandColors.categorical }` or `color: { interpolate: brandRamp(brandColors.sequential) }` yourself.
 - **Internals it relies on.** The grid swap looks for Plot's grid groups by their `aria-label` (`x-grid`, `y-grid`, `fx-grid`, `fy-grid`), and only changes those still carrying Plot's default `stroke="currentColor"` and `stroke-opacity="0.1"`. Tooltip fill uses Plot's `--plot-background` CSS variable. If an upgrade changes either, `pa check --online` will flag the new version so the adapter can be re-checked.
-- **One-hue brands.** Past the fourth colour, neighbours in a one-hue palette sit close together (the example brand's two browns, YIMBY Alliance's two dark greens). Label lines directly with `Plot.text` and `Plot.selectLast`, as in the sheet, rather than relying on a legend. The palette isn't built for colour-blind safety.
-- **YIMBY Alliance primary.** The sage `#73AB96` is 2.6:1 on white, under the 3:1 that graphics want. The adapter uses it as given. For thin lines, the dark green accent reads better.
+- **One-hue brands.** Past the fourth colour, neighbours in a one-hue palette sit close together (the warm paper brand's two browns, for example). Label lines directly with `Plot.text` and `Plot.selectLast`, as in the sheet, rather than relying on a legend. The palette isn't built for colour-blind safety.
+- **A pale primary.** The adapter uses your primary as given, even under the 3:1 that graphics want against the background (`pa brand` warns when it is). If yours is pale, thin lines read better in your accent or text colour.
 - **TypeScript.** Plot's own type definitions import D3's. If your project type-checks libraries (`skipLibCheck: false`), add `@types/d3` as a dev dependency. Next.js and Vite templates skip library checks, so they don't need it.
 - The charts in the preview and sheet plot hours of daylight worked out with the standard sunrise equation, not a real dataset.

@@ -4,7 +4,7 @@ Thirty ready-made WebGL shaders from the team behind the Paper design tool: mesh
 
 > **Licence: use 0.0.77 or later only.** Paper Shaders became Apache-2.0 at v0.0.77. Versions 0.0.47 to 0.0.76 were under the PolyForm Shield licence, which this catalogue doesn't allow. Never install an older version from a tutorial, a CodePen or an old lockfile.
 
-<img src="sheet.png" width="880" alt="Six shaders (mesh gradient, grain gradient, dithering, halftone dots, image dithering, paper texture) in their stock colours, then through the brand presets for YIMBY Alliance on light and dark pages and for an example brand">
+<img src="sheet.png" width="880" alt="Six shaders (mesh gradient, grain gradient, dithering, halftone dots, image dithering, paper texture) in their stock colours, then through the brand presets for two example brands: cool slate (light and dark) and warm paper">
 
 | | |
 |---|---|
@@ -41,7 +41,7 @@ Every prop has a default from the shader's own Default preset, so `<MeshGradient
 | Light and objects | `GodRays`, `SmokeRing`, `PulsingBorder`, `LiquidMetal`, `GemSmoke`, `Heatmap` |
 | Photo effects | `HalftoneDots`, `HalftoneCmyk`, `ImageDithering`, `PaperTexture`, `FlutedGlass`, `Water`, `LensDistortion` |
 
-**Motion.** `speed` is a multiplier (0 stops it). `frame` (milliseconds) gives the same picture every time, which is how the preview above was made. The shaders don't check for reduced motion, so pass `speed={0}` when `prefers-reduced-motion` is set.
+**Motion.** `speed` is a multiplier (0 stops it). `frame` (milliseconds) gives the same picture every time, so you can render exact frames for a video or a still for a social graphic; the preview and sheet were made that way. The shaders don't check for reduced motion, so pass `speed={0}` when `prefers-reduced-motion` is set.
 
 **Performance.** `maxPixelCount` and `minPixelRatio` trade sharpness for speed on big canvases. Each shader is its own WebGL context, and browsers allow about 16 a page, so keep a page to a few of them.
 
@@ -50,7 +50,7 @@ Every prop has a default from the shader's own Default preset, so `<MeshGradient
 ```js
 import { ShaderMount, meshGradientFragmentShader, getShaderColorFromString, ShaderFitOptions, defaultObjectSizing as s } from '@paper-design/shaders';
 
-const colors = ['#ffffff', '#c0d9cf', '#73ab96', '#3d6657'];
+const colors = ['#f6f8fb', '#97b9f9', '#2563eb', '#0891b2'];
 new ShaderMount(el, meshGradientFragmentShader, {
   u_colors: colors.map(getShaderColorFromString), u_colorsCount: colors.length,
   u_distortion: 0.8, u_swirl: 0.1, u_grainMixer: 0, u_grainOverlay: 0,
@@ -65,9 +65,9 @@ The brand version writes colour presets for the six shaders a brand uses most, f
 
 ```bash
 cd your-project
-node ~/projects/product-aesthetics/bin/pa.mjs add paper-shaders --brand brand.json
+pa add paper-shaders --brand brand.json
 # or read the colours straight from your shadcn / Tailwind CSS:
-node ~/projects/product-aesthetics/bin/pa.mjs add paper-shaders --brand src/app/globals.css
+pa add paper-shaders --brand src/app/globals.css
 ```
 
 This installs `@paper-design/shaders-react` and writes `components/brand-shaders.js` plus `brand-shaders.d.ts`:
@@ -90,12 +90,12 @@ import { brandShaders } from '@/components/brand-shaders';
 | `imageDithering` | a photo in three tones: text colour for shadows, primary for mid-tones, background for highlights | dark background, primary, light text colour |
 | `paperTexture` | a sheet in your background colour, folds in a soft shade of your text colour | the same from your dark scheme |
 
-Where the accent is the primary itself (as in YIMBY Alliance's dark scheme, or a brand with one colour), the presets use primary mixed toward the text colour instead, so the gradient still has two greens or two oranges. The file is plain data with no imports, so you can use it in a server component and pass the props to a client one. Run the command again with `--force` after a brand change.
+Where the accent is the primary itself, or too close to tell apart (as in the warm paper brand, which has one colour), the presets use primary mixed toward the text colour instead, so the gradient still has two oranges. A distinct accent, like cool slate's cyan beside its blue, is used as given. The file is plain data with no imports, so you can use it in a server component and pass the props to a client one. Run the command again with `--force` after a brand change.
 
 ## Notes
 
 - **Licence history.** The licence changed at v0.0.77: 0.0.47–0.0.76 are PolyForm Shield (source-available, not open source). On 0.0.x versions a caret range like `^0.0.81` allows only that one version, so `npm install` without a range is also safe; what matters is never going below 0.0.77. `pa check --online` re-reads the licence on npm and GitHub.
 - **Attribution.** The upstream README says end products need "no visible attribution". The NOTICE file reads "Powered by Paper Shaders: https://shaders.paper.design"; it has to travel with the code, not appear on screen. The README asks anyone who redistributes the code inside another shader library, plugin or tool to keep LICENSE and NOTICE, and calls visible credit appreciated, not required.
 - **Paper texture** is subtle on a white brand: a white sheet with grey folds looks much like the stock one. It earns its keep on a coloured or dark page, or over a photo (`image`).
-- **YIMBY Alliance.** The sage primary on white is soft (2.6:1). That's fine for these backgrounds, but don't set text straight on a dithering or grain preset without a solid panel behind it.
+- **Text on top.** These presets are backgrounds. Don't set text straight on a dithering or grain preset without a solid panel behind it, especially if your primary is pale against your background.
 - The preview shows the stock Default presets of `MeshGradient`, `Dithering` and `HalftoneDots`. The photo is the Moon from NASA's Galileo mission (PIA00405, NASA/JPL, public domain). The animated panels were rendered frame by frame with `frame`, and the loop is closed with a short crossfade.
