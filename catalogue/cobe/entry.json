@@ -1,0 +1,15 @@
+{
+  "name": "cobe",
+  "tagline": "A 5 KB dotted WebGL globe that spins, with markers, arcs between cities and labels that ride on them.",
+  "category": "Maps & globes",
+  "author": "Shu Ding",
+  "github": "shuding/cobe",
+  "demo": "https://cobe.vercel.app",
+  "licence": "MIT",
+  "stack": ["JavaScript", "React"],
+  "install": "npm install cobe",
+  "npm": "cobe",
+  "version": "2.0.1",
+  "verified": "2026-10-15",
+  "maps": ["colours", "fonts", "radius"]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "D3",
+  "tagline": "The toolkit under most of the best data graphics on the web: scales, shapes, map projections, force layouts and transitions, for charts and maps no chart library would draw.",
+  "category": "Charts & data",
+  "author": "Mike Bostock and Observable",
+  "github": "d3/d3",
+  "demo": "https://observablehq.com/@d3/gallery",
+  "licence": "ISC",
+  "stack": ["JavaScript"],
+  "install": "npm install d3",
+  "npm": "d3",
+  "version": "7.9.0",
+  "verified": "2026-10-15",
+  "maps": []
+}

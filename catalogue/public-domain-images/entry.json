@@ -1,0 +1,13 @@
+{
+  "name": "Public-domain image archives",
+  "tagline": "Hundreds of thousands of museum masterpieces and NASA photographs, free to use with no credit, each searchable through a free API with no key: real imagery instead of stock or clip-art.",
+  "category": "Photos & imagery",
+  "author": "Art Institute of Chicago, The Met, Cleveland Museum of Art, NASA",
+  "url": "https://www.artic.edu/open-access/open-access-images",
+  "licence": "CC0-1.0",
+  "install": "Search each archive's API (no key) and download the images it returns",
+  "version": "APIs, 2026-10-15",
+  "verified": "2026-10-15",
+  "maps": [],
+  "kind": "asset"
+}

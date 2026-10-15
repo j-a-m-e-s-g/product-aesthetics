@@ -1,0 +1,14 @@
+{
+  "name": "Poly Haven",
+  "tagline": "About 2,400 public-domain HDRIs, textures and 3D models, photographed and scanned by its own team, with 124 million downloads between them: the lighting and surfaces that make a 3D render look real.",
+  "category": "3D & materials",
+  "author": "Poly Haven",
+  "url": "https://polyhaven.com",
+  "licence": "CC0-1.0",
+  "stack": ["Blender", "three.js"],
+  "install": "Download from polyhaven.com, the Blender add-on, or the free API (no key)",
+  "version": "API, 2026-10-15",
+  "verified": "2026-10-15",
+  "maps": [],
+  "kind": "asset"
+}

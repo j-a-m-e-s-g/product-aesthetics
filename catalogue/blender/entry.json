@@ -1,0 +1,13 @@
+{
+  "name": "Blender",
+  "tagline": "The complete free 3D studio: modelling, photoreal Cycles rendering, 2D Grease Pencil animation, compositing and video editing, scriptable in Python so renders can be made by code.",
+  "category": "3D & materials",
+  "author": "Blender Foundation and community",
+  "url": "https://www.blender.org",
+  "licence": "GPL-3.0-or-later",
+  "install": "Download from blender.org (or brew install --cask blender)",
+  "version": "5.2.2 LTS",
+  "verified": "2026-10-15",
+  "maps": [],
+  "kind": "tool"
+}

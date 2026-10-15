@@ -1,0 +1,13 @@
+{
+  "name": "Freesound CC0 sound kit",
+  "tagline": "The most-downloaded public-domain sound for each job in a video: whoosh, pop, click, typing, impact, riser, page turn, stamp, clock tick and more, 21 picks with 820,000 downloads between them.",
+  "category": "Sound effects",
+  "author": "Freesound contributors",
+  "url": "https://freesound.org",
+  "licence": "CC0-1.0",
+  "install": "Download each sound from its Freesound page (free account), or fetch the public preview linked in kit.json",
+  "version": "kit of 2026-10-15",
+  "verified": "2026-10-15",
+  "maps": [],
+  "kind": "asset"
+}

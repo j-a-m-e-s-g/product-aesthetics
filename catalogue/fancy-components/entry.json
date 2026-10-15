@@ -1,0 +1,14 @@
+{
+  "name": "Fancy Components",
+  "tagline": "Editorial type in motion for React: letters cut up into place, words rotate in a pill, highlighters sweep, text runs along a path, and headlines fall and pile up under real physics.",
+  "category": "Motion & animation",
+  "author": "Daniel Petho",
+  "github": "danielpetho/fancy",
+  "demo": "https://www.fancycomponents.dev",
+  "licence": "MIT",
+  "stack": ["React", "Tailwind"],
+  "install": "npx shadcn@latest add \"https://fancycomponents.dev/r/<component>.json\"",
+  "version": "main@f9f62c6",
+  "verified": "2026-10-15",
+  "maps": []
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Vizzu",
+  "tagline": "Charts that morph into each other: bars regroup, bend into a pie, then pour into stacked areas, so a viewer can follow the data from one view to the next.",
+  "category": "Charts & data",
+  "author": "Vizzu",
+  "github": "vizzuhq/vizzu-lib",
+  "demo": "https://lib.vizzuhq.com",
+  "licence": "Apache-2.0",
+  "stack": ["JavaScript"],
+  "install": "npm install vizzu",
+  "npm": "vizzu",
+  "version": "0.18.0",
+  "verified": "2026-10-15",
+  "maps": ["colours", "fonts"]
+}

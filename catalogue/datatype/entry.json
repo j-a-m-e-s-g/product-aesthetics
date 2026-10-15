@@ -1,0 +1,18 @@
+{
+  "name": "Datatype",
+  "tagline": "A font that draws charts: type {l:20,45,60,95} and a sparkline appears in the line of text, with bars and pies too, so a number and its trend sit in one sentence.",
+  "category": "Charts & data",
+  "author": "Frank Tisellano",
+  "url": "https://github.com/franktisellano/datatype",
+  "demo": "https://franktisellano.github.io/datatype/",
+  "licence": "OFL-1.1",
+  "stack": [
+    "CSS"
+  ],
+  "install": "npm install @fontsource-variable/datatype",
+  "npm": "@fontsource-variable/datatype",
+  "version": "5.3.0",
+  "verified": "2026-10-15",
+  "maps": [],
+  "kind": "asset"
+}
