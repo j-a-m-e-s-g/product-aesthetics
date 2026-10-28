@@ -12,14 +12,14 @@
 
 import { spawnSync } from 'node:child_process';
 import { existsSync } from 'node:fs';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { homedir } from 'node:os';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { parseArgs } from 'node:util';
-import { loadBrand, resolveBrand, ROLES } from '../lib/brand.mjs';
+import { loadBrand, ROLES } from '../lib/brand.mjs';
 import * as colour from '../lib/colour.mjs';
-import { ROOT, TIERS, loadCatalogue, loadEntry, stackOf, validateEntry, withCatalogue } from '../lib/catalogue.mjs';
+import { CATALOGUE, ROOT, TIERS, loadCatalogue, loadEntry, stackOf, validateEntry, withCatalogue } from '../lib/catalogue.mjs';
 import { diffPicks, parsePicks } from '../lib/picks.mjs';
 
 const tty = process.stdout.isTTY;
@@ -36,25 +36,36 @@ const swatch = (hex) => {
   return `\x1b[48;2;${r};${g};${b}m    \x1b[0m `;
 };
 
-const { positionals, values: flags } = parseArgs({
-  allowPositionals: true,
-  options: {
-    brand: { type: 'string' },
-    out: { type: 'string' },
-    'no-install': { type: 'boolean' },
-    force: { type: 'boolean' },
-    online: { type: 'boolean' },
-    fix: { type: 'boolean' },
-    json: { type: 'boolean' },
-    help: { type: 'boolean', short: 'h' },
-  },
-});
+const usage = async () => {
+  const lines = (await readFile(new URL(import.meta.url), 'utf8')).split('\n').slice(1, 12);
+  return lines.map((l) => l.replace(/^\/\/ ?/, '')).join('\n');
+};
+
+let parsed;
+try {
+  parsed = parseArgs({
+    allowPositionals: true,
+    options: {
+      brand: { type: 'string' },
+      out: { type: 'string' },
+      'no-install': { type: 'boolean' },
+      force: { type: 'boolean' },
+      online: { type: 'boolean' },
+      fix: { type: 'boolean' },
+      json: { type: 'boolean' },
+      help: { type: 'boolean', short: 'h' },
+    },
+  });
+} catch (e) {
+  console.error(`${red(`pa: ${e.message}`)}\n${await usage()}`);
+  process.exit(1);
+}
+const { positionals, values: flags } = parsed;
 const [command, ...args] = positionals;
 const commands = { list, add, brand, check, picks };
 
-if (!command || flags.help || !commands[command]) {
-  const usage = (await readFile(new URL(import.meta.url), 'utf8')).split('\n').slice(1, 12);
-  console.log(usage.map((l) => l.replace(/^\/\/ ?/, '')).join('\n'));
+if (!command || flags.help || !Object.hasOwn(commands, command)) {
+  console.log(await usage());
   process.exit(command && !flags.help ? 1 : 0);
 }
 try {
@@ -82,12 +93,16 @@ async function list() {
 
 async function add(id) {
   if (!id) throw new Error('which one? pa add <id>; see pa list');
-  const entry = await loadEntry(id).catch(async () => {
-    const ids = (await loadCatalogue()).map((e) => e.id);
+  if (!existsSync(path.join(CATALOGUE, id, 'entry.json'))) {
+    const ids = (await readdir(CATALOGUE, { withFileTypes: true })).filter((d) => d.isDirectory()).map((d) => d.name);
     throw new Error(`no entry "${id}". Try: ${ids.filter((x) => x.includes(id.slice(0, 3))).join(', ') || ids.join(', ')}`);
-  });
+  }
+  const entry = await loadEntry(id);
   const cwd = process.cwd();
   console.log(`${bold(entry.name)} ${dim(`· ${entry.licence} (${TIERS[entry.tier]?.means ?? 'an app: what you make with it is yours'})`)}`);
+
+  // Read the brand before installing anything, so a bad --brand fails fast.
+  const b = flags.brand && entry.adapter ? await loadBrand(path.resolve(cwd, flags.brand)) : null;
 
   // 1. Install
   if (entry.npm && !flags['no-install']) {
@@ -113,7 +128,6 @@ async function add(id) {
     console.log(yellow(`\n${entry.name} has no brand adapter; see its README for how it takes colours.`));
     return;
   }
-  const b = await loadBrand(path.resolve(cwd, flags.brand));
   printBrand(b);
   const adapt = (await import(pathToFileURL(entry.adapter))).default;
   const result = await adapt(b, { ts: existsSync(path.join(cwd, 'tsconfig.json')), colour });
@@ -127,7 +141,9 @@ async function add(id) {
     await writeFile(path.join(outDir, name), text);
     console.log(green(`wrote ${shortPath(path.join(outDir, name))}`));
   }
-  const dir = `./${path.relative(cwd, outDir) || '.'}`;
+  // An import path: forward slashes, starting with . or ..
+  const rel = path.relative(cwd, outDir).split(path.sep).join('/') || '.';
+  const dir = /^\.\.?(\/|$)/.test(rel) || path.isAbsolute(rel) ? rel : `./${rel}`;
   if (result.usage) console.log(`\n${result.usage.trim().replaceAll('{{dir}}', dir)}`);
 }
 
@@ -167,19 +183,27 @@ function printBrand(b) {
 
 async function check() {
   const entries = await loadCatalogue();
-  const sample = resolveBrand(JSON.parse(await readFile(path.join(ROOT, 'brands/example.json'), 'utf8')), 'brands/example.json');
+  // One example brand with a dark scheme, one without.
+  const samples = await Promise.all(['example.json', 'example-cool.json'].map((f) => loadBrand(path.join(ROOT, 'brands', f))));
   let errors = 0;
   let warnings = 0;
 
   for (const e of entries) {
     const problems = validateEntry(e);
-    // Every adapter has to run cleanly against the sample brand.
+    // Every adapter has to run cleanly against both example brands.
     if (e.adapter) {
       try {
-        const out = await (await import(pathToFileURL(e.adapter))).default(sample, { ts: true, colour });
-        if (!out?.files || !Object.keys(out.files).length) problems.push({ level: 'error', msg: 'adapter returned no files' });
+        const adapt = (await import(pathToFileURL(e.adapter))).default;
+        for (const sample of samples) {
+          try {
+            const out = await adapt(sample, { ts: true, colour });
+            if (!out?.files || !Object.keys(out.files).length) problems.push({ level: 'error', msg: `adapter returned no files for ${sample.name}` });
+          } catch (err) {
+            problems.push({ level: 'error', msg: `adapter threw for ${sample.name}: ${err.message}` });
+          }
+        }
       } catch (err) {
-        problems.push({ level: 'error', msg: `adapter threw: ${err.message}` });
+        problems.push({ level: 'error', msg: `adapter.mjs won't load: ${err.message}` });
       }
     }
     if (flags.online) problems.push(...(await upstream(e)));
@@ -212,21 +236,23 @@ async function check() {
 async function upstream(e) {
   const out = [];
   const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
-  if (e.github) try {
-    const res = await fetch(`https://api.github.com/repos/${e.github}`, {
-      headers: { accept: 'application/vnd.github+json', ...(token && { authorization: `Bearer ${token}` }) },
-    });
-    if (!res.ok) throw new Error(`GitHub ${res.status}`);
-    const repo = await res.json();
-    const spdx = repo.license?.spdx_id;
-    if (repo.archived) out.push({ level: 'error', msg: `${e.github} is archived` });
-    if (!e.path && spdx !== e.licence) {
-      out.push({ level: 'error', msg: `GitHub says ${spdx ?? 'no licence'}, entry says ${e.licence}; read the LICENSE by hand` });
+  if (e.github) {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${e.github}`, {
+        headers: { accept: 'application/vnd.github+json', ...(token && { authorization: `Bearer ${token}` }) },
+      });
+      if (!res.ok) throw new Error(`GitHub ${res.status}`);
+      const repo = await res.json();
+      const spdx = repo.license?.spdx_id;
+      if (repo.archived) out.push({ level: 'error', msg: `${e.github} is archived` });
+      if (!e.path && spdx !== e.licence) {
+        out.push({ level: 'error', msg: `GitHub says ${spdx ?? 'no licence'}, entry says ${e.licence}; read the LICENSE by hand` });
+      }
+      const idle = (Date.now() - Date.parse(repo.pushed_at)) / 864e5 / 30;
+      if (idle > 18 && !e.settled) out.push({ level: 'warn', msg: `no push for ${Math.round(idle)} months; if it's finished, say why in "settled"` });
+    } catch (err) {
+      out.push({ level: 'warn', msg: `couldn't reach GitHub: ${err.message}` });
     }
-    const idle = (Date.now() - Date.parse(repo.pushed_at)) / 864e5 / 30;
-    if (idle > 18 && !e.settled) out.push({ level: 'warn', msg: `no push for ${Math.round(idle)} months; if it's finished, say why in "settled"` });
-  } catch (err) {
-    out.push({ level: 'warn', msg: `couldn't reach GitHub: ${err.message}` });
   }
   if (e.npm) {
     try {

@@ -23,7 +23,7 @@ A catalogue of beautiful open-source UI that anyone can ship in a product with n
    - `preview.gif`: a 600 × 300 px tile (300 × 150 CSS px at 2x) under 500 KB, showing the library as it ships. Render it from the real package; never draw an imitation. An optional `sheet.gif` (≤ 1.5 MB) can show more inside the entry's README.
    - `adapter.mjs`: only if the library takes colours, fonts or radius. Set `maps` to match.
 3. **Prove it in a scratch project** (never in this repo). Run `npm init -y`, then `pa add <id> --brand <repo>/brands/example-cool.json` (and `example.json`), then bundle a test page with esbuild, render it in headless Chrome (install `puppeteer` in the scratch project, or point `puppeteer-core` at an installed Chrome) and **look at the screenshot**. For animated previews, stub `performance.now` and `requestAnimationFrame` with a frame-stepped clock so every frame is exact, then encode with ffmpeg (`palettegen` + `paletteuse`, `diff_mode=rectangle`). If the generated code ships types, type-check them with `tsc --strict`.
-4. **Finish with `node bin/pa.mjs check --online --fix`.** It must exit 0. It rewrites the README gallery; never edit the gallery by hand.
+4. **Finish with `npm test` and `node bin/pa.mjs check --online --fix`.** Both must exit 0. The check rewrites the README gallery; never edit the gallery by hand.
 
 ## The README
 

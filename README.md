@@ -316,7 +316,7 @@ To do it by hand:
    - `README.md`: install, usage and how it takes your brand ([thinking-orbs](catalogue/thinking-orbs/README.md) is the model)
    - `preview.gif`: a 600 × 300 tile rendered from the real library, under 500 KB
    - `adapter.mjs`, if it takes colours, fonts or radius
-3. Run `node bin/pa.mjs check --online --fix`. This validates the entry, runs its adapter against a sample brand, re-reads the licence upstream and rewrites the catalogue above.
+3. Run `npm test`, then `node bin/pa.mjs check --online --fix`. The check validates the entry, runs its adapter against both example brands, re-reads the licence upstream and rewrites the catalogue above.
 
 ```jsonc
 {
@@ -347,7 +347,7 @@ export default async function adapt(brand, { ts, colour }) {
   // brand.light / brand.dark: background, foreground, primary, primaryForeground,
   //   accent, muted, mutedForeground, border (all hex)
   // brand.fonts: sans, display, mono · brand.radius · brand.hasDark
-  // colour: mix, rgba, hex, contrast, ensureContrast · ts: the project uses TypeScript
+  // colour: mix, deltaE, contrast, ensureContrast, hex, rgba, rgb255 · ts: the project uses TypeScript
   return {
     files: { 'brand-orb.js': '…', 'brand-orb.d.ts': '…' },
     usage: "import { BrandOrb } from '{{dir}}/brand-orb';",
@@ -366,6 +366,7 @@ lib/catalogue.mjs     loads and validates entries; its sections and the catalogu
 lib/brand.mjs         reads brand files and CSS, derives the missing roles
 lib/colour.mjs        colour parsing, OKLab mixing, WCAG contrast
 lib/picks.mjs         reads the ticks from the Google Doc's Markdown export
+test/pa.test.mjs      regression tests for the above and every adapter (npm test)
 brands/               two neutral example brands: example.json (warm paper), example-cool.json (cool slate, with a dark scheme)
 catalogue/<id>/       one folder per entry: entry.json, README.md, preview, adapter
 assets/cover.png      the collage at the top of this page

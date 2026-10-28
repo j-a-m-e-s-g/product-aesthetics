@@ -16,7 +16,7 @@ export default async function adapt(brand) {
   };
   const js = (await template('brand-orb.js')).replace(
     /\/\* brand:start \*\/[\s\S]*?\/\* brand:end \*\//,
-    `/* brand:start */\nexport const BRAND = ${JSON.stringify(colours)};\n/* brand:end */`,
+    () => `/* brand:start */\nexport const BRAND = ${JSON.stringify(colours)};\n/* brand:end */`,
   );
   return {
     files: { 'brand-orb.js': js, 'brand-orb.d.ts': await template('brand-orb.d.ts') },

@@ -8,6 +8,7 @@
     "pa": "bin/pa.mjs"
   },
   "scripts": {
+    "test": "node --test",
     "check": "node bin/pa.mjs check",
     "check:online": "node bin/pa.mjs check --online"
   },

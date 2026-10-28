@@ -26,7 +26,7 @@ export default async function adapt(brand, { colour }) {
   const colours = { name: brand.name, font: brand.fonts.sans, ...scheme(brand.light, false), dark: scheme(brand.dark, true) };
   const js = (await template('brand-plot.js')).replace(
     /\/\* brand:start \*\/[\s\S]*?\/\* brand:end \*\//,
-    `/* brand:start */\nexport const brandColors = ${pretty(colours)};\n/* brand:end */`,
+    () => `/* brand:start */\nexport const brandColors = ${pretty(colours)};\n/* brand:end */`,
   );
   return {
     files: { 'brand-plot.js': js, 'brand-plot.d.ts': await template('brand-plot.d.ts') },
@@ -50,9 +50,9 @@ Plot.barY(data, { x: 'k', y: 'v', fill: brandColors.primary })   // one colour, 
  * (and of the background) picked farthest-first, so the first few are the
  * most distinct. Mixed colours are nudged to stay visible on the background.
  */
-function categorical(s, { mix, contrast, ensureContrast, rgb255 }) {
+function categorical(s, { mix, contrast, ensureContrast, deltaE }) {
   const out = [];
-  const gap = (c) => Math.min(...out.map((o) => deltaE(o, c, rgb255)));
+  const gap = (c) => Math.min(...out.map((o) => deltaE(o, c)));
   for (const c of [s.primary, s.accent, s.foreground]) if (!out.length || gap(c) >= DISTINCT) out.push(c);
 
   const keys = [s.primary, s.accent, s.foreground, s.background];
@@ -91,21 +91,3 @@ function sequential(s, { mix }, dark) {
 
 // JSON with each palette on one line.
 const pretty = (o) => JSON.stringify(o, null, 2).replace(/\[\s+([^\]]*?)\s+\]/g, (_, list) => `[${list.split(/,\s+/).join(', ')}]`);
-
-// OKLab distance, for "is this colour distinct enough".
-function deltaE(a, b, rgb255) {
-  const [p, q] = [oklab(rgb255(a)), oklab(rgb255(b))];
-  return Math.hypot(p[0] - q[0], p[1] - q[1], p[2] - q[2]);
-}
-
-function oklab(rgb) {
-  const [r, g, b] = rgb.map((v) => ((v /= 255) <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4));
-  const l = Math.cbrt(0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b);
-  const m = Math.cbrt(0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b);
-  const s = Math.cbrt(0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b);
-  return [
-    0.2104542553 * l + 0.793617785 * m - 0.0040720468 * s,
-    1.9779984951 * l - 2.428592205 * m + 0.4505937099 * s,
-    0.0259040371 * l + 0.7827717662 * m - 0.808675766 * s,
-  ];
-}

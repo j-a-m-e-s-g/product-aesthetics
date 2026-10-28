@@ -6,11 +6,16 @@
 export const brandStyle = {};
 /* brand:end */
 
+const unbranded = new WeakSet();
+
 /**
  * Put a chart in your brand: applies the style (no animation) and stops Vizzu drawing its logo.
- * Call it once, after `chart.initializing`. Returns the animation promise.
+ * Call it after `chart.initializing`, and again with the other theme to switch. Returns the animation promise.
  */
 export function brandChart(chart, theme = 'light') {
-  chart.on('logo-draw', (event) => event.preventDefault());
+  if (!unbranded.has(chart)) {
+    chart.on('logo-draw', (event) => event.preventDefault());
+    unbranded.add(chart);
+  }
   return chart.animate({ style: brandStyle[theme] }, 0);
 }
