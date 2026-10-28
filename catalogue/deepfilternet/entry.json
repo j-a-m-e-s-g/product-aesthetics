@@ -6,8 +6,10 @@
   "url": "https://github.com/Rikorose/DeepFilterNet",
   "licence": "MIT OR Apache-2.0",
   "install": "Download the deep-filter binary for your platform from the GitHub releases (or pip install deepfilternet)",
-  "version": "0.5.6 (DeepFilterNet3)",
+  "pypi": "deepfilternet",
+  "version": "0.5.6",
   "verified": "2026-10-16",
   "maps": [],
-  "kind": "tool"
+  "kind": "tool",
+  "settled": "Finished, not abandoned: last push October 2024, but about 42,000 PyPI downloads a month (month to 28 Oct 2026) and 4,900 GitHub stars. The 0.5.6 binary has no dependencies to break, and it only processes your own recordings. Reviewed 2026-10-28."
 }

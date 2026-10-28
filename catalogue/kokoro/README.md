@@ -7,7 +7,7 @@ A voiceover from a script, made on your own machine for free. Kokoro is a text-t
 | | |
 |---|---|
 | **By** | hexgrad (model); thewh1teagle (the `kokoro-onnx` runtime) |
-| **Model** | [hexgrad/Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) on Hugging Face |
+| **Model** | [hexgrad/Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) v1.0 on Hugging Face |
 | **Licence** | Apache-2.0 for the model weights. The lighter runtime, [kokoro-onnx](https://github.com/thewh1teagle/kokoro-onnx), is MIT. It's an app you run, so the speech you make is yours, with no credit. Read on 2026-10-16 |
 | **Needs** | Python 3.10+. About 350 MB of model files. No GPU |
 

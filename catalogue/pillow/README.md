@@ -8,8 +8,8 @@ The image library almost every Python script that touches a picture uses. It ope
 |---|---|
 | **By** | Jeffrey A. Clark (Alex) and contributors; the fork of PIL |
 | **Site** | [python-pillow.github.io](https://python-pillow.github.io) · [source](https://github.com/python-pillow/Pillow) |
-| **Licence** | MIT-CMU, a permissive licence that asks only that its notice is kept. An app you run, so the images you make are yours. Read on 2026-10-16 at 12.3.0 |
-| **Needs** | Python 3.10+ |
+| **Licence** | MIT-CMU, a permissive licence that asks only that its notice is kept. An app you run, so the images you make are yours. Read on 2026-10-28 at 13.0.0 |
+| **Needs** | Python 3.11+ |
 
 ## Install
 

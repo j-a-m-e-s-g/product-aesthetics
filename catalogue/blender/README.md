@@ -10,7 +10,7 @@ The free 3D studio the whole industry knows: modelling, sculpting, physically ac
 |---|---|
 | **By** | Blender Foundation and its community |
 | **Site** | [blender.org](https://www.blender.org) |
-| **Licence** | GNU GPL (an app you run, so any open-source licence is fine here). Blender's [licence page](https://www.blender.org/about/license/) says: "What you create with Blender is your sole property", including the images, films and `.blend` files. Read on 2026-10-15 at 5.2.2 LTS |
+| **Licence** | GNU GPL (an app you run, so any open-source licence is fine here). Blender's [licence page](https://www.blender.org/about/license/) says: "What you create with Blender is your sole property", including the images, films and `.blend` files. Read on 2026-10-28 at 5.2.3 LTS |
 | **Needs** | macOS, Windows or Linux. A recent GPU makes Cycles much faster (Metal on Apple silicon) |
 
 ## Install

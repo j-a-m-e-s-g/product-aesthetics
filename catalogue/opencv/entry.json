@@ -6,7 +6,8 @@
   "github": "opencv/opencv",
   "licence": "Apache-2.0",
   "install": "pip install opencv-python-headless",
-  "version": "5.0.0",
+  "pypi": "opencv-python-headless",
+  "version": "5.0.0.93",
   "verified": "2026-10-16",
   "maps": [],
   "kind": "tool"

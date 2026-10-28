@@ -6,6 +6,7 @@
   "github": "geopandas/geopandas",
   "licence": "BSD-3-Clause",
   "install": "pip install geopandas matplotlib",
+  "pypi": "geopandas",
   "version": "1.2.0",
   "verified": "2026-10-16",
   "maps": [],

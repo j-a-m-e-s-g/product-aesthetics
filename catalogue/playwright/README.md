@@ -8,7 +8,7 @@ Remote control for a real browser. Built for testing websites, it's also the sim
 |---|---|
 | **By** | Microsoft |
 | **Source** | [microsoft/playwright](https://github.com/microsoft/playwright) (98,000 GitHub stars) |
-| **Licence** | Apache-2.0. An app you run, so what you capture is yours. Read on 2026-10-16 at 1.63.0 |
+| **Licence** | Apache-2.0. An app you run, so what you capture is yours. Read on 2026-10-28 at 1.64.1 |
 | **Needs** | Python 3.9+ or Node 18+. It downloads its own Chromium, or uses an installed Chrome |
 
 ## Install

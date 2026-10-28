@@ -6,8 +6,8 @@
   "url": "https://ffmpeg.org",
   "licence": "LGPL-2.1-or-later",
   "install": "brew install ffmpeg (or a static build from ffmpeg.org/download.html)",
-  "version": "8.1.1",
-  "verified": "2026-10-16",
+  "version": "8.1.3",
+  "verified": "2026-10-28",
   "maps": [],
   "kind": "tool"
 }

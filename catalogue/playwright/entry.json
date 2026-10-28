@@ -6,8 +6,9 @@
   "github": "microsoft/playwright",
   "licence": "Apache-2.0",
   "install": "pip install playwright && playwright install chromium (or npm i -D playwright)",
-  "version": "1.63.0",
-  "verified": "2026-10-16",
+  "pypi": "playwright",
+  "version": "1.64.1",
+  "verified": "2026-10-28",
   "maps": [],
   "kind": "tool"
 }

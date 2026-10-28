@@ -6,8 +6,8 @@
   "url": "https://www.blender.org",
   "licence": "GPL-3.0-or-later",
   "install": "Download from blender.org (or brew install --cask blender)",
-  "version": "5.2.2 LTS",
-  "verified": "2026-10-15",
+  "version": "5.2.3 LTS",
+  "verified": "2026-10-28",
   "maps": [],
   "kind": "tool"
 }

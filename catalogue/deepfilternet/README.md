@@ -8,7 +8,7 @@ Noise removal for voice, done by a small neural network on your own machine. Giv
 |---|---|
 | **By** | Hendrik Schröter |
 | **Source** | [Rikorose/DeepFilterNet](https://github.com/Rikorose/DeepFilterNet) |
-| **Licence** | MIT or Apache-2.0, your choice. It's an app you run, so the cleaned audio is yours. Read on 2026-10-16 at 0.5.6 |
+| **Licence** | MIT or Apache-2.0, your choice. It's an app you run, so the cleaned audio is yours. Read on 2026-10-16 at 0.5.6 (the DeepFilterNet3 model) |
 | **Needs** | Nothing, for the prebuilt binary (macOS, Linux, Windows). Audio at 48 kHz |
 
 ## Install

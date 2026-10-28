@@ -6,6 +6,7 @@
   "github": "SYSTRAN/faster-whisper",
   "licence": "MIT",
   "install": "pip install faster-whisper",
+  "pypi": "faster-whisper",
   "version": "1.2.1",
   "verified": "2026-10-16",
   "maps": [],

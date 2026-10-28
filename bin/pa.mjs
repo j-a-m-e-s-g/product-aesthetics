@@ -237,21 +237,24 @@ async function check() {
   return errors ? 1 : 0;
 }
 
-// Re-read the licence where it lives. A licence change upstream is an error,
-// a newer version is just a nudge to re-verify.
+// Re-read the licence where it lives, and ask osv.dev about security
+// advisories. A licence change or a known advisory is an error, a newer
+// version is just a nudge to re-verify.
 async function upstream(e) {
   const out = [];
   const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
-  if (e.github) {
+  // Tools and assets may give their repo as a url: check it's alive, but read its licence by hand.
+  const repoName = e.github ?? e.url?.match(/^https:\/\/github\.com\/([\w.-]+\/[\w.-]+?)\/?$/)?.[1];
+  if (repoName) {
     try {
-      const res = await fetch(`https://api.github.com/repos/${e.github}`, {
+      const res = await fetch(`https://api.github.com/repos/${repoName}`, {
         headers: { accept: 'application/vnd.github+json', ...(token && { authorization: `Bearer ${token}` }) },
       });
       if (!res.ok) throw new Error(`GitHub ${res.status}`);
       const repo = await res.json();
       const spdx = repo.license?.spdx_id;
-      if (repo.archived) out.push({ level: 'error', msg: `${e.github} is archived` });
-      if (!e.path && spdx !== e.licence) {
+      if (repo.archived) out.push({ level: 'error', msg: `${repoName} is archived` });
+      if (e.github && !e.path && spdx !== e.licence) {
         out.push({ level: 'error', msg: `GitHub says ${spdx ?? 'no licence'}, entry says ${e.licence}; read the LICENSE by hand` });
       }
       const idle = (Date.now() - Date.parse(repo.pushed_at)) / 864e5 / 30;
@@ -260,20 +263,60 @@ async function upstream(e) {
       out.push({ level: 'warn', msg: `couldn't reach GitHub: ${err.message}` });
     }
   }
-  if (e.npm) {
+  const registries = [
+    e.npm && { where: 'npm', osv: 'npm', name: e.npm, url: `https://registry.npmjs.org/${e.npm.replace('/', '%2f')}/latest`, latest: (j) => j },
+    e.pypi && { where: 'PyPI', osv: 'PyPI', name: e.pypi, url: `https://pypi.org/pypi/${e.pypi}/json`, latest: (j) => j.info },
+  ].filter(Boolean);
+  for (const r of registries) {
+    let pkg;
     try {
-      const res = await fetch(`https://registry.npmjs.org/${e.npm.replace('/', '%2f')}/latest`);
-      if (!res.ok) throw new Error(`npm ${res.status}`);
-      const pkg = await res.json();
-      if (pkg.license !== e.licence) out.push({ level: 'error', msg: `npm says ${pkg.license}, entry says ${e.licence}` });
-      if (e.version && pkg.version !== e.version) {
-        out.push({ level: 'warn', msg: `npm is at ${pkg.version}, entry verified ${e.version}; check the adapter still fits, then update version + verified` });
+      const res = await fetch(r.url);
+      if (!res.ok) throw new Error(`${r.where} ${res.status}`);
+      pkg = r.latest(await res.json());
+    } catch (err) {
+      out.push({ level: 'warn', msg: `couldn't reach ${r.where}: ${err.message}` });
+      continue;
+    }
+    // PyPI licence metadata is too loose to compare, and pip installs are tools (any open-source licence).
+    if (r.where === 'npm' && pkg.license !== e.licence) out.push({ level: 'error', msg: `npm says ${pkg.license}, entry says ${e.licence}` });
+    try {
+      const listed = e.version ? await advisories(r.osv, r.name, e.version) : [];
+      const latest = pkg.version === e.version ? listed : await advisories(r.osv, r.name, pkg.version);
+      if (latest.length) {
+        out.push({ level: 'error', msg: `${r.name} ${pkg.version}, the latest, has ${latest.length} known security advisories (${brief(latest)}); decide whether it stays` });
+        continue;
+      }
+      if (listed.length) {
+        out.push({ level: 'error', msg: `${r.name} ${e.version} has ${listed.length} known security advisories (${brief(listed)}); ${pkg.version} has none: re-check it, then update version + verified` });
+        continue;
       }
     } catch (err) {
-      out.push({ level: 'warn', msg: `couldn't reach npm: ${err.message}` });
+      out.push({ level: 'warn', msg: `couldn't reach osv.dev: ${err.message}` });
+    }
+    if (e.version && pkg.version !== e.version) {
+      out.push({ level: 'warn', msg: `${r.where} is at ${pkg.version}, entry verified ${e.version}; check the adapter still fits, then update version + verified` });
     }
   }
   return out;
+}
+
+// Known advisories (including malicious-package reports) for one exact version,
+// one id per vulnerability: OSV lists the PyPI and GitHub records of a bug separately.
+async function advisories(ecosystem, name, version) {
+  const res = await fetch('https://api.osv.dev/v1/query', { method: 'POST', body: JSON.stringify({ package: { ecosystem, name }, version }) });
+  if (!res.ok) throw new Error(`osv.dev ${res.status}`);
+  const seen = new Set();
+  const ids = [];
+  for (const v of (await res.json()).vulns ?? []) {
+    const names = [v.id, ...(v.aliases ?? [])];
+    if (!names.some((n) => seen.has(n))) ids.push(v.id);
+    names.forEach((n) => seen.add(n));
+  }
+  return ids;
+}
+
+function brief(ids) {
+  return ids.slice(0, 3).join(', ') + (ids.length > 3 ? ', …' : '');
 }
 
 // ── picks ──────────────────────────────────────────────────────────────────

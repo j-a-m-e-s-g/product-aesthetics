@@ -8,7 +8,7 @@ The video and audio engine nearly everything else uses, VLC, OBS and HandBrake a
 |---|---|
 | **By** | The FFmpeg developers |
 | **Site** | [ffmpeg.org](https://ffmpeg.org) |
-| **Licence** | LGPL 2.1 or later, or GPL when built with GPL parts such as the x264 encoder, which most builds include. It's an app you run, so the videos you make are yours. Read on 2026-10-16 at 8.1.1 |
+| **Licence** | LGPL 2.1 or later, or GPL when built with GPL parts such as the x264 encoder, which most builds include. It's an app you run, so the videos you make are yours. Read on 2026-10-28 at 8.1.3 |
 | **Needs** | Nothing beyond the binary |
 
 ## Install

@@ -16,14 +16,14 @@ A catalogue of beautiful open-source UI that anyone can ship in a product with n
    - For npm packages, check `npm view PKG name version license`.
    - If any of these fail, don't add it. Tell the user the exact clause that rules it out.
 2. **Create `catalogue/<id>/`.** The id is the npm name or a short kebab-case name. Copy the shape of `catalogue/thinking-orbs/`:
-   - `entry.json`: every field in the README's example. `version` and `verified` record what you read and when.
+   - `entry.json`: every field in the README's example. `version` and `verified` record what you read and when. For anything installed from npm or pip, set `npm` or `pypi` and write `version` exactly as the registry does, so the online check can track releases and security advisories.
      - `tagline` is written for someone who has never coded: one or two plain sentences on what it does for them. No jargon (WebGL, SVG, API, CPU, React, HDRI, choropleth); the entry README holds the technical detail. It's the description on the README card.
      - `category` is one of the sections in `CATEGORIES` in `lib/catalogue.mjs`. Add a section there only when nothing fits, with a plain one-line intro.
    - `README.md`: same sections as thinking-orbs: a one-paragraph pitch, the visual, the facts table, Install, Use it as it comes, Use it in your brand, Notes. Write the real install command for each package manager that differs.
    - `preview.gif`: a 600 × 300 px tile (300 × 150 CSS px at 2x) under 500 KB, showing the library as it ships. Render it from the real package; never draw an imitation. An optional `sheet.gif` (≤ 1.5 MB) can show more inside the entry's README.
    - `adapter.mjs`: only if the library takes colours, fonts or radius. Set `maps` to match.
 3. **Prove it in a scratch project** (never in this repo). Run `npm init -y`, then `pa add <id> --brand <repo>/brands/example-cool.json` (and `example.json`), then bundle a test page with esbuild, render it in headless Chrome (install `puppeteer` in the scratch project, or point `puppeteer-core` at an installed Chrome) and **look at the screenshot**. For animated previews, stub `performance.now` and `requestAnimationFrame` with a frame-stepped clock so every frame is exact, then encode with ffmpeg (`palettegen` + `paletteuse`, `diff_mode=rectangle`). If the generated code ships types, type-check them with `tsc --strict`.
-4. **Finish with `npm test` and `node bin/pa.mjs check --online --fix`.** Both must exit 0. The check rewrites the README gallery; never edit the gallery by hand.
+4. **Finish with `npm test` and `node bin/pa.mjs check --online --fix`.** Both must exit 0. The check rewrites the README gallery; never edit the gallery by hand. A known security advisory (from osv.dev) on the listed or the latest version fails the check. Tools with neither `npm` nor `pypi` (FFmpeg, Blender) aren't covered: when you touch one, list its newest release that carries the security fixes (FFmpeg names them at ffmpeg.org/security.html).
 
 ## The README
 

@@ -6,8 +6,9 @@
   "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
   "licence": "Apache-2.0",
   "install": "uv tool install mflux (Apple silicon), then mflux-generate-flux2 downloads the model",
-  "version": "FLUX.2 [klein] 4B; mflux 0.21",
-  "verified": "2026-10-16",
+  "pypi": "mflux",
+  "version": "0.24.0",
+  "verified": "2026-10-28",
   "maps": [],
   "kind": "tool"
 }

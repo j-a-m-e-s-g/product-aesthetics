@@ -331,8 +331,9 @@ To do it by hand:
   "licence": "MIT",                         // SPDX id, from the list above
   "stack": ["React"],
   "install": "npm install thinking-orbs",   // shown to people; any command or download step
-  "npm": "thinking-orbs",                   // optional: lets pa install it and track versions
-  "version": "0.3.2",                       // the version the licence was read at
+  "npm": "thinking-orbs",                   // optional: lets pa install it and track versions and security advisories
+  "pypi": "…",                              // optional: the same, for a tool installed with pip
+  "version": "0.3.2",                       // the version the licence was read at (exact, with npm or pypi)
   "verified": "2026-10-15",                 // the day it was read
   "maps": ["colours"],                      // what the adapter maps: colours, fonts, radius
   "kind": "code",                           // optional: code (default), asset (fonts, icons, images) or tool (an app)

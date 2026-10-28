@@ -6,8 +6,9 @@
   "url": "https://python-pillow.github.io",
   "licence": "MIT-CMU",
   "install": "pip install pillow",
-  "version": "12.3.0",
-  "verified": "2026-10-16",
+  "pypi": "pillow",
+  "version": "13.0.0",
+  "verified": "2026-10-28",
   "maps": [],
   "kind": "tool"
 }

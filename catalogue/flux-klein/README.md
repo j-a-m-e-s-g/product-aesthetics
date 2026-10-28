@@ -8,7 +8,7 @@ An image model from Black Forest Labs, founded by researchers behind Stable Diff
 |---|---|
 | **By** | Black Forest Labs (model); Filip Strand (mflux, the Mac runner) |
 | **Model** | [black-forest-labs/FLUX.2-klein-4B](https://huggingface.co/black-forest-labs/FLUX.2-klein-4B) |
-| **Licence** | Apache-2.0 for the 4B model, which covers commercial use with no credit. mflux is MIT. **Only the 4B is open:** FLUX.2 [klein] 9B, FLUX.2 [dev] and FLUX.1 [dev] are non-commercial. Read on 2026-10-16 |
+| **Licence** | Apache-2.0 for the 4B model, which covers commercial use with no credit. mflux is MIT. **Only the 4B is open:** FLUX.2 [klein] 9B, FLUX.2 [dev] and FLUX.1 [dev] are non-commercial. Read on 2026-10-28 |
 | **Needs** | An Apple-silicon Mac with 16 GB or more for mflux, or an NVIDIA GPU through Hugging Face `diffusers` |
 
 ## Install
