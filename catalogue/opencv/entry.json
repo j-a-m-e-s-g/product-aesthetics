@@ -1,0 +1,13 @@
+{
+  "name": "OpenCV",
+  "tagline": "The standard computer-vision library: filters, edges, masks and transforms that turn a photo into a pencil drawing, cut out a subject or straighten a perspective.",
+  "category": "Image processing",
+  "author": "OpenCV team",
+  "github": "opencv/opencv",
+  "licence": "Apache-2.0",
+  "install": "pip install opencv-python-headless",
+  "version": "5.0.0",
+  "verified": "2026-10-16",
+  "maps": [],
+  "kind": "tool"
+}

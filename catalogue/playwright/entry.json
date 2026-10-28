@@ -1,0 +1,13 @@
+{
+  "name": "Playwright",
+  "tagline": "Drives a real browser from code, which turns any web page into frames for video, stills and PDFs: draw a scene in HTML, seek to each moment, screenshot it.",
+  "category": "Video & capture",
+  "author": "Microsoft",
+  "github": "microsoft/playwright",
+  "licence": "Apache-2.0",
+  "install": "pip install playwright && playwright install chromium (or npm i -D playwright)",
+  "version": "1.63.0",
+  "verified": "2026-10-16",
+  "maps": [],
+  "kind": "tool"
+}

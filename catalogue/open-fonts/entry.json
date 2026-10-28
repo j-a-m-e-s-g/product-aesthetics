@@ -1,11 +1,13 @@
 {
   "name": "Open fonts kit",
-  "tagline": "Ten free typefaces that cover nearly every job, picked from the most-used families on Google Fonts: a UI sans, a shouting condensed headline, an editorial serif, a soft variable serif, a superfamily, a mono and more, self-hosted through Fontsource.",
+  "tagline": "Nineteen free typefaces picked from the most-used families on Google Fonts, ten core faces and nine more: UI sans, condensed and heavy headlines, editorial serifs, a superfamily, monos and a handwriting face, self-hosted through Fontsource.",
   "category": "Type",
-  "author": "Rasmus Andersson, Vercel, IBM, Instrument, Undercase Type, Mathieu Triay, Florian Karsten, Ryoichi Tsunekawa, Production Type, JetBrains",
+  "author": "Rasmus Andersson, Vercel, IBM, Instrument, Undercase Type, Mathieu Triay, Florian Karsten, Ryoichi Tsunekawa, Production Type, JetBrains, Łukasz Dziedzic, Omnibus-Type, Christian Robertson, Wei Huang, Erik Kennedy, Impallari Type, Colophon Foundry, Hanken Design Co.",
   "url": "https://fontsource.org",
   "licence": "OFL-1.1",
-  "stack": ["CSS"],
+  "stack": [
+    "CSS"
+  ],
   "install": "npm install @fontsource-variable/<family> (one package per face; see the table)",
   "version": "Fontsource 5.3.0",
   "verified": "2026-10-15",

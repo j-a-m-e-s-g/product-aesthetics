@@ -224,7 +224,7 @@ async function upstream(e) {
       out.push({ level: 'error', msg: `GitHub says ${spdx ?? 'no licence'}, entry says ${e.licence}; read the LICENSE by hand` });
     }
     const idle = (Date.now() - Date.parse(repo.pushed_at)) / 864e5 / 30;
-    if (idle > 18) out.push({ level: 'warn', msg: `no push for ${Math.round(idle)} months` });
+    if (idle > 18 && !e.settled) out.push({ level: 'warn', msg: `no push for ${Math.round(idle)} months; if it's finished, say why in "settled"` });
   } catch (err) {
     out.push({ level: 'warn', msg: `couldn't reach GitHub: ${err.message}` });
   }

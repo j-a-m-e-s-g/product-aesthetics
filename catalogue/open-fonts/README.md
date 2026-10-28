@@ -1,6 +1,6 @@
 # Open fonts kit
 
-Type does more for a design than anything else on the page, and the best free faces are as good as paid ones. These ten cover nearly every job, from interface text to a shouting video title, and each is among the most-used families on Google Fonts (its popularity rank, out of 1,950 families, is in the table). All are under the SIL Open Font Licence, so they can go anywhere, from websites and apps to video, print and slides, with no credit. [Fontsource](https://fontsource.org) packages every one for npm, so a site self-hosts them rather than calling Google.
+Type does more for a design than anything else on the page, and the best free faces are as good as paid ones. Ten core faces and nine more cover nearly every job, from interface text to a shouting video title, and each is among the most-used families on Google Fonts (its popularity rank, out of 1,950 families, is in the table). All are under the SIL Open Font Licence, so they can go anywhere, from websites and apps to video, print and slides, with no credit. [Fontsource](https://fontsource.org) packages every one for npm, so a site self-hosts them rather than calling Google.
 
 <img src="preview.png" width="600" alt="A specimen of the ten faces, each with a short sample and its Google Fonts rank: Inter, Bebas Neue, Geist, Bricolage Grotesque, IBM Plex (sans, serif and mono), Space Grotesk, Instrument Serif, Fraunces, Newsreader and JetBrains Mono">
 
@@ -24,6 +24,22 @@ Type does more for a design than anything else on the page, and the best free fa
 | **Instrument Serif** | Editorial headlines, elegant title cards | Rodrigo Fuenzalida, Jordan Egstad | #53 | `@fontsource/instrument-serif` | regular and italic only |
 | **Fraunces** | Warm, friendly serif headlines | Undercase Type (Phaedra Charles, Flavia Zimbardi) | #63 | `@fontsource-variable/fraunces` | weight, optical size, softness 0–100, "wonk" 0–1 |
 | **Newsreader** | Long-form reading, articles, briefings | Production Type | #89 | `@fontsource-variable/newsreader` | weight 200–800, optical size 6–72 |
+
+### Nine more
+
+<img src="more.png" width="600" alt="A specimen of nine more faces with their Google Fonts ranks: Lato, Archivo Black, Roboto Mono, Archivo (condensed), Work Sans, DM Serif Display, Figtree, Caveat and Hanken Grotesk">
+
+| Face | Job | By | Google Fonts rank | npm package |
+|---|---|---|---|---|
+| **Lato** | Plain, friendly text and headings | Łukasz Dziedzic | #6 | `@fontsource/lato` |
+| **Roboto Mono** | Figures and tables that line up | Christian Robertson | #12 | `@fontsource-variable/roboto-mono` |
+| **Work Sans** | UI, slides, signage | Wei Huang | #27 | `@fontsource-variable/work-sans` |
+| **Archivo** | A width axis from condensed (62) to wide (125) | Omnibus-Type | #31 | `@fontsource-variable/archivo` |
+| **Figtree** | Friendly geometric web text | Erik Kennedy | #31 | `@fontsource-variable/figtree` |
+| **Archivo Black** | Heavy display for offers and posters | Omnibus-Type | #32 | `@fontsource/archivo-black` |
+| **Caveat** | Handwriting for notes and annotations | Impallari Type | #66 | `@fontsource-variable/caveat` |
+| **DM Serif Display** | Confident editorial headlines | Colophon Foundry | #73 | `@fontsource/dm-serif-display` |
+| **Hanken Grotesk** | Neat grotesk for text and UI | Hanken Design Co. | #105 | `@fontsource-variable/hanken-grotesk` |
 
 Two pairings that work straight away: **Instrument Serif headlines over Inter text** (editorial, calm) and **Bebas Neue titles over Space Grotesk** (loud, social). IBM Plex alone covers a whole report.
 

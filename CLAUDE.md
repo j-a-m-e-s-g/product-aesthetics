@@ -6,7 +6,7 @@ A catalogue of beautiful open-source UI that anyone can ship in a product with n
 
 1. **Exceptional craft.** Ask whether a designer would stop scrolling for it. If it's merely competent, leave it out.
 2. **Licence.** Only the tiers in `lib/catalogue.mjs` count (`no-strings`: CC0, Unlicense, MIT-0, 0BSD, public domain mark; `keep-notice`: MIT, ISC, BSD, Apache-2.0, OFL). The exception is apps we run (`"kind": "tool"`): any open-source licence, since it covers the app and not what we make.
-3. **Alive.** Not archived. Flag anything with no push in 18 months.
+3. **Alive.** Not archived. Flag anything with no push in 18 months. If it's finished rather than abandoned (heavy downloads, big projects depend on it), say why in the entry's `settled` field and the check stops flagging it; otherwise it goes.
 
 ## Adding an entry
 

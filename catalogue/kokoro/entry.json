@@ -1,0 +1,14 @@
+{
+  "name": "Kokoro",
+  "tagline": "A small text-to-speech model that sounds human and runs on a laptop CPU, offline and free: 54 voices in nine languages, eight of them British English, with over 10 million downloads.",
+  "category": "Voice & audio",
+  "author": "hexgrad",
+  "github": "hexgrad/kokoro",
+  "demo": "https://huggingface.co/hexgrad/Kokoro-82M",
+  "licence": "Apache-2.0",
+  "install": "pip install kokoro-onnx, plus the model files from its releases (or pip install kokoro)",
+  "version": "Kokoro-82M v1.0; kokoro-onnx 0.6.1",
+  "verified": "2026-10-16",
+  "maps": [],
+  "kind": "tool"
+}

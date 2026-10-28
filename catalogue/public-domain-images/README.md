@@ -49,6 +49,15 @@ curl -s "https://images-api.nasa.gov/search?q=earth%20at%20night&media_type=imag
 # each item's links[0].href is a preview; https://images-api.nasa.gov/asset/{nasa_id} lists every size, ~orig.jpg first
 ```
 
+**Searching wider: Openverse.** [Openverse](https://openverse.org), run by WordPress, indexes hundreds of millions of openly licensed images from Flickr, Wikimedia Commons, museums and more. Its API needs no key for light use. Filter to `license=cc0,pdm` and every result is free of credit:
+
+```bash
+curl -s "https://api.openverse.org/v1/images/?q=terraced%20houses&license=cc0,pdm&page_size=20"
+# → 240 results for that search on 2026-10-16, mostly historic photographs
+```
+
+Leave the filter off and most results need a credit (CC BY) or pass their licence on (CC BY-SA). That's fine for a credited editorial photo, but it's outside what this catalogue covers. Check each result's `license` field, and its source page, before using it.
+
 ## Use it as it comes
 
 The images are the artworks themselves, so the craft is in the crop. Some things that work: a detail cropped tight as a full-bleed background (the brushwork of a Van Gogh, the line of a Hokusai wave); a print or engraving behind a big headline; a night-time Earth photograph under a statistic about cities. The scans are large: Cleveland's `full` and the Met's `primaryImage` run to thousands of pixels (the Van Gogh above is an 8 MB original), so they hold up full-screen and in print.

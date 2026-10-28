@@ -1,0 +1,13 @@
+{
+  "name": "GeoPandas",
+  "tagline": "Maps from real boundaries in a few lines of Python: read any map data, join numbers to places, reproject, and draw choropleths with matplotlib or export them for the web.",
+  "category": "Maps & globes",
+  "author": "GeoPandas developers",
+  "github": "geopandas/geopandas",
+  "licence": "BSD-3-Clause",
+  "install": "pip install geopandas matplotlib",
+  "version": "1.2.0",
+  "verified": "2026-10-16",
+  "maps": [],
+  "kind": "tool"
+}

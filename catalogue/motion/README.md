@@ -9,7 +9,7 @@ The animation library that used to be called Framer Motion. Things move on sprin
 | **By** | Matt Perry and the Motion team (Motion B.V.) |
 | **Demo** | [motion.dev](https://motion.dev) |
 | **Source** | [motiondivision/motion](https://github.com/motiondivision/motion) |
-| **Licence** | MIT (keep notice): no visible credit; the licence stays inside `node_modules`. Read on 2026-10-15 at v14.2.0. The paid Motion+ extras are a separate product and are not covered (see Notes) |
+| **Licence** | MIT (keep notice): no visible credit; the licence stays inside `node_modules`. Read on 2026-10-28 at v14.7.1. The paid Motion+ extras are a separate product and are not covered (see Notes) |
 | **Needs** | React 18+ for `motion/react`; nothing for plain JavaScript |
 
 ## Install
@@ -88,7 +88,7 @@ A low `bounce` (0 to 0.2) reads calm and editorial; 0.3 or more reads playful. `
 
 ## Notes
 
-- **Don't use the paid Motion+ items:** AnimateNumber, Carousel, Cursor, Ticker, Typewriter, ScrambleText, splitText, Curtains, Gallery, AnimateActivity and Motion UI. They aren't in the free `motion` package (14.2.0 doesn't export `AnimateNumber` or `splitText`), so they can't arrive by accident. But many of the 450+ examples on motion.dev are Motion+ only, so check an example is free before copying it. Free stand-ins in this catalogue: [NumberFlow](../number-flow) for rolling numbers, and [anime.js](../animejs) for split text and scrambled text.
+- **Don't use the paid Motion+ items:** AnimateNumber, Carousel, Cursor, Ticker, Typewriter, ScrambleText, splitText, Curtains, Gallery, AnimateActivity and Motion UI. They aren't in the free `motion` package (14.7.1 doesn't export `AnimateNumber` or `splitText`), so they can't arrive by accident. But many of the 450+ examples on motion.dev are Motion+ only, so check an example is free before copying it. Free stand-ins in this catalogue: [NumberFlow](../number-flow) for rolling numbers, and [anime.js](../animejs) for split text and scrambled text.
 - `framer-motion` is the same library under its old name. New code should import from `motion/react`.
 - Vue has its own package, `motion-v`, which this entry doesn't cover.
 - If you build through Claude Code, `npx motion-ai` adds Motion's free docs skill and MCP server (MIT). It labels the Motion+ pages as paid.

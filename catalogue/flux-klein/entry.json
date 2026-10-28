@@ -1,0 +1,13 @@
+{
+  "name": "FLUX.2 [klein] 4B",
+  "tagline": "A photoreal AI image model small enough to run on a laptop in about ten seconds, under a licence that allows commercial use with no credit: images from a prompt, or edits of a real photo.",
+  "category": "AI images",
+  "author": "Black Forest Labs",
+  "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
+  "licence": "Apache-2.0",
+  "install": "uv tool install mflux (Apple silicon), then mflux-generate-flux2 downloads the model",
+  "version": "FLUX.2 [klein] 4B; mflux 0.21",
+  "verified": "2026-10-16",
+  "maps": [],
+  "kind": "tool"
+}

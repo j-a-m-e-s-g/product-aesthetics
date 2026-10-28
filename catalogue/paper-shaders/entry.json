@@ -9,8 +9,8 @@
   "stack": ["React", "JavaScript"],
   "install": "npm install @paper-design/shaders-react@\">=0.0.77\"",
   "npm": "@paper-design/shaders-react",
-  "version": "0.0.81",
-  "verified": "2026-10-15",
+  "version": "0.0.82",
+  "verified": "2026-10-28",
   "maps": ["colours"],
   "from_picks": true
 }

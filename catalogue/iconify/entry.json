@@ -11,8 +11,8 @@
   "stack": ["React", "Vue", "Svelte", "JavaScript", "CSS"],
   "install": "npm install @iconify/react @iconify-json/lucide",
   "npm": "@iconify/react",
-  "version": "6.0.2",
-  "verified": "2026-10-15",
+  "version": "6.0.3",
+  "verified": "2026-10-28",
   "maps": [],
   "from_picks": true
 }

@@ -11,7 +11,7 @@ Thirty ready-made WebGL shaders from the team behind the Paper design tool: mesh
 | **By** | Paper (Lost Coast Labs) |
 | **Demo** | [shaders.paper.design](https://shaders.paper.design) |
 | **Source** | [paper-design/shaders](https://github.com/paper-design/shaders) |
-| **Licence** | Apache-2.0 (keep notice) **from v0.0.77 only**; 0.0.47–0.0.76 were PolyForm Shield. The README says end products need "no visible attribution". Keep the LICENSE and NOTICE files with the code: npm keeps both inside `node_modules`, and if you copy or vendor shader code, copy both files too. Read on 2026-10-15 at v0.0.81 |
+| **Licence** | Apache-2.0 (keep notice) **from v0.0.77 only**; 0.0.47–0.0.76 were PolyForm Shield. The README says end products need "no visible attribution". Keep the LICENSE and NOTICE files with the code: npm keeps both inside `node_modules`, and if you copy or vendor shader code, copy both files too. Read on 2026-10-28 at v0.0.82 |
 | **Needs** | WebGL. React 18 or 19 for the components; the vanilla core (`@paper-design/shaders`) works without a framework |
 
 ## Install
@@ -94,7 +94,7 @@ Where the accent is the primary itself, or too close to tell apart (as in the wa
 
 ## Notes
 
-- **Licence history.** The licence changed at v0.0.77: 0.0.47–0.0.76 are PolyForm Shield (source-available, not open source). On 0.0.x versions a caret range like `^0.0.81` allows only that one version, so `npm install` without a range is also safe; what matters is never going below 0.0.77. `pa check --online` re-reads the licence on npm and GitHub.
+- **Licence history.** The licence changed at v0.0.77: 0.0.47–0.0.76 are PolyForm Shield (source-available, not open source). On 0.0.x versions a caret range like `^0.0.82` allows only that one version, so `npm install` without a range is also safe; what matters is never going below 0.0.77. `pa check --online` re-reads the licence on npm and GitHub.
 - **Attribution.** The upstream README says end products need "no visible attribution". The NOTICE file reads "Powered by Paper Shaders: https://shaders.paper.design"; it has to travel with the code, not appear on screen. The README asks anyone who redistributes the code inside another shader library, plugin or tool to keep LICENSE and NOTICE, and calls visible credit appreciated, not required.
 - **Paper texture** is subtle on a white brand: a white sheet with grey folds looks much like the stock one. It earns its keep on a coloured or dark page, or over a photo (`image`).
 - **Text on top.** These presets are backgrounds. Don't set text straight on a dithering or grain preset without a solid panel behind it, especially if your primary is pale against your background.

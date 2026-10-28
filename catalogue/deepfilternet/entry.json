@@ -1,0 +1,13 @@
+{
+  "name": "DeepFilterNet",
+  "tagline": "Takes background hiss, hum and room noise out of a voice recording on your own machine, leaving the voice natural: the clean-up step between a phone recording and a voiceover.",
+  "category": "Voice & audio",
+  "author": "Hendrik Schröter",
+  "url": "https://github.com/Rikorose/DeepFilterNet",
+  "licence": "MIT OR Apache-2.0",
+  "install": "Download the deep-filter binary for your platform from the GitHub releases (or pip install deepfilternet)",
+  "version": "0.5.6 (DeepFilterNet3)",
+  "verified": "2026-10-16",
+  "maps": [],
+  "kind": "tool"
+}

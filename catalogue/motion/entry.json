@@ -9,8 +9,8 @@
   "stack": ["React", "JavaScript"],
   "install": "npm install motion",
   "npm": "motion",
-  "version": "14.2.0",
-  "verified": "2026-10-15",
+  "version": "14.7.1",
+  "verified": "2026-10-28",
   "maps": [],
   "from_picks": true
 }

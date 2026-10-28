@@ -1,0 +1,13 @@
+{
+  "name": "FFmpeg",
+  "tagline": "The engine under nearly every video tool: encodes, cuts, crossfades, pans and zooms, mixes voice under music, burns in text and makes GIFs, all from one command line.",
+  "category": "Video & capture",
+  "author": "The FFmpeg developers",
+  "url": "https://ffmpeg.org",
+  "licence": "LGPL-2.1-or-later",
+  "install": "brew install ffmpeg (or a static build from ffmpeg.org/download.html)",
+  "version": "8.1.1",
+  "verified": "2026-10-16",
+  "maps": [],
+  "kind": "tool"
+}

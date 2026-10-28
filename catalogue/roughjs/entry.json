@@ -1,0 +1,18 @@
+{
+  "name": "Rough.js",
+  "tagline": "Draws lines, shapes and charts as if sketched by hand, with hatched, zigzag, cross-hatched or dotted fills, in SVG or on a canvas.",
+  "category": "Drawing & hand-drawn",
+  "author": "Preet Shihn",
+  "github": "rough-stuff/rough",
+  "demo": "https://roughjs.com",
+  "licence": "MIT",
+  "stack": [
+    "JavaScript"
+  ],
+  "install": "npm install roughjs",
+  "npm": "roughjs",
+  "version": "4.6.6",
+  "verified": "2026-10-16",
+  "maps": [],
+  "settled": "Finished, not abandoned: last push July 2024, but 15 million npm downloads a week (week to 26 Oct 2026), and Mermaid and Excalidraw both depend on it. Reviewed 2026-10-28."
+}

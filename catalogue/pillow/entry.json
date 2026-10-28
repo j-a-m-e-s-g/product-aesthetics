@@ -1,0 +1,13 @@
+{
+  "name": "Pillow",
+  "tagline": "Python's everyday image library: crop, resize, recolour, composite and set type on images in a few lines, for cards, thumbnails and every frame a script draws.",
+  "category": "Image processing",
+  "author": "Jeffrey A. Clark and contributors",
+  "url": "https://python-pillow.github.io",
+  "licence": "MIT-CMU",
+  "install": "pip install pillow",
+  "version": "12.3.0",
+  "verified": "2026-10-16",
+  "maps": [],
+  "kind": "tool"
+}

@@ -9,7 +9,7 @@ Every open-source icon set behind one naming scheme, `prefix:name`, so `lucide:h
 | **By** | Vjacheslav Trushkin (Iconify) · Anthony Fu (Icones) |
 | **Search** | [icones.js.org](https://icones.js.org) · [icon-sets.iconify.design](https://icon-sets.iconify.design) |
 | **Source** | [iconify/iconify › components/react](https://github.com/iconify/iconify/tree/main/components/react) · [antfu/icones](https://github.com/antfu/icones) |
-| **Licence** | The tools are MIT (keep notice): `@iconify/react`, `@iconify/utils`, `@iconify/tailwind4`, api.iconify.design and icones.js.org. Read on 2026-10-15 at `@iconify/react` v6.0.2. **The icons are not covered by that.** Each set has its own licence: 159 of the 227 visible sets need no credit (list below), the rest need credit or forbid commercial use |
+| **Licence** | The tools are MIT (keep notice): `@iconify/react`, `@iconify/utils`, `@iconify/tailwind4`, api.iconify.design and icones.js.org. Read on 2026-10-28 at `@iconify/react` v6.0.3. **The icons are not covered by that.** Each set has its own licence: 159 of the 227 visible sets need no credit (list below), the rest need credit or forbid commercial use |
 | **Needs** | React 16+ for `@iconify/react`; Vue, Svelte, plain CSS and a web component are also available |
 
 ## Install
