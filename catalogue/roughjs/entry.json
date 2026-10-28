@@ -1,14 +1,12 @@
 {
   "name": "Rough.js",
-  "tagline": "Draws lines, shapes and charts as if sketched by hand, with hatched, zigzag, cross-hatched or dotted fills, in SVG or on a canvas.",
-  "category": "Drawing & hand-drawn",
+  "tagline": "Makes shapes and charts look sketched by hand, with pencil-style shading. It gives the popular whiteboard app Excalidraw its look.",
+  "category": "Hand-drawn",
   "author": "Preet Shihn",
   "github": "rough-stuff/rough",
   "demo": "https://roughjs.com",
   "licence": "MIT",
-  "stack": [
-    "JavaScript"
-  ],
+  "stack": ["JavaScript"],
   "install": "npm install roughjs",
   "npm": "roughjs",
   "version": "4.6.6",

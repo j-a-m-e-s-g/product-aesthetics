@@ -1,7 +1,7 @@
 {
   "name": "Kokoro",
-  "tagline": "A small text-to-speech model that sounds human and runs on a laptop CPU, offline and free: 54 voices in nine languages, eight of them British English, with over 10 million downloads.",
-  "category": "Voice & audio",
+  "tagline": "Turns a script into a natural-sounding voiceover on your own laptop, offline and free: 54 voices in nine languages, eight of them British.",
+  "category": "Sound and voice",
   "author": "hexgrad",
   "github": "hexgrad/kokoro",
   "demo": "https://huggingface.co/hexgrad/Kokoro-82M",

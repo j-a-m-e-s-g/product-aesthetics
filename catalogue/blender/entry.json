@@ -1,7 +1,7 @@
 {
   "name": "Blender",
-  "tagline": "The complete free 3D studio: modelling, photoreal Cycles rendering, 2D Grease Pencil animation, compositing and video editing, scriptable in Python so renders can be made by code.",
-  "category": "3D & materials",
+  "tagline": "A complete free 3D studio: build objects and scenes, render them as realistic as a photo, animate them and edit the video.",
+  "category": "Backgrounds, textures and 3D",
   "author": "Blender Foundation and community",
   "url": "https://www.blender.org",
   "licence": "GPL-3.0-or-later",

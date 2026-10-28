@@ -1,7 +1,7 @@
 {
   "name": "D3",
-  "tagline": "The toolkit under most of the best data graphics on the web: scales, shapes, map projections, force layouts and transitions, for charts and maps no chart library would draw.",
-  "category": "Charts & data",
+  "tagline": "The toolkit behind many of the best data graphics in newspapers and journals, for charts and maps no ready-made tool would draw.",
+  "category": "Charts and maps",
   "author": "Mike Bostock and Observable",
   "github": "d3/d3",
   "demo": "https://observablehq.com/@d3/gallery",

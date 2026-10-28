@@ -1,7 +1,7 @@
 {
   "name": "cobe",
-  "tagline": "A 5 KB dotted WebGL globe that spins, with markers, arcs between cities and labels that ride on them.",
-  "category": "Maps & globes",
+  "tagline": "A dotted globe that spins, with markers on cities and arcs flying between them, small and fast enough for any web page.",
+  "category": "Charts and maps",
   "author": "Shu Ding",
   "github": "shuding/cobe",
   "demo": "https://cobe.vercel.app",

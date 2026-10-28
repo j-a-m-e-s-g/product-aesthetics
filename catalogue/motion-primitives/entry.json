@@ -1,7 +1,7 @@
 {
   "name": "Motion Primitives",
-  "tagline": "Restrained motion to copy into a Tailwind site: shimmering and blur-in text, scrambles, progressive blur, border trails, morphing dialogs.",
-  "category": "Motion & animation",
+  "tagline": "Quiet, polished movement for websites: shimmering text, soft blur-ins, glowing borders, and windows that open smoothly out of a button.",
+  "category": "Animation",
   "author": "Julien Thibeaut (ibelick)",
   "github": "ibelick/motion-primitives",
   "demo": "https://motion-primitives.com/docs",

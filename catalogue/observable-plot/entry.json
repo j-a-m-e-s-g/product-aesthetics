@@ -1,7 +1,7 @@
 {
   "name": "Observable Plot",
-  "tagline": "Charts in a few lines of JavaScript, with the restraint of a good newspaper graphic: quiet axes, direct labels, no chart junk.",
-  "category": "Charts & data",
+  "tagline": "Clean charts in the style of a good newspaper: quiet gridlines, labels right next to the lines, nothing extra.",
+  "category": "Charts and maps",
   "author": "Observable",
   "github": "observablehq/plot",
   "demo": "https://observablehq.com/plot/",

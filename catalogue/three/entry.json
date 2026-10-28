@@ -1,7 +1,7 @@
 {
   "name": "three.js",
-  "tagline": "The 3D engine of the web: real-time scenes with physically based materials, studio lighting from an HDRI, glTF models and post-processing, in any page or rendered out frame by frame for video.",
-  "category": "3D & materials",
+  "tagline": "Real 3D on a web page: objects with lifelike materials and lighting that visitors can turn around, or that can be filmed for a video.",
+  "category": "Backgrounds, textures and 3D",
   "author": "Ricardo Cabello (mrdoob) and contributors",
   "github": "mrdoob/three.js",
   "demo": "https://threejs.org/examples/",

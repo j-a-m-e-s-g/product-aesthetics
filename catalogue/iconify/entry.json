@@ -1,8 +1,8 @@
 {
   "name": "Iconify",
   "pick": "Iconify and Icones",
-  "tagline": "Every open-source icon set behind one name format: 227 sets, 159 of them need no credit, bundled at build time or fetched as SVG.",
-  "category": "Icons",
+  "tagline": "Over 200 icon sets in one place, from simple outlines to bold filled shapes. 159 of the sets need no credit, and its page lists which.",
+  "category": "Type and icons",
   "author": "Vjacheslav Trushkin",
   "github": "iconify/iconify",
   "path": "components/react",

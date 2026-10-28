@@ -1,7 +1,7 @@
 {
   "name": "NumberFlow",
-  "tagline": "Numbers that roll digit by digit to their new value, formatted by the browser's own Intl.",
-  "category": "Motion & animation",
+  "tagline": "Numbers that roll to their new value digit by digit, like a departures board, in any currency or format.",
+  "category": "Animation",
   "author": "Maxwell Barvian",
   "github": "barvian/number-flow",
   "demo": "https://number-flow.barvian.me",

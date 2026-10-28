@@ -1,7 +1,7 @@
 {
   "name": "FLUX.2 [klein] 4B",
-  "tagline": "A photoreal AI image model small enough to run on a laptop in about ten seconds, under a licence that allows commercial use with no credit: images from a prompt, or edits of a real photo.",
-  "category": "AI images",
+  "tagline": "Makes a realistic image from a written description, or edits a real photo, on your own laptop in about ten seconds. Free for commercial use, with no credit.",
+  "category": "Photos and pictures",
   "author": "Black Forest Labs",
   "url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B",
   "licence": "Apache-2.0",

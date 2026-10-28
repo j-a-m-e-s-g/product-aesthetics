@@ -1,7 +1,7 @@
 {
   "name": "Thinking Orbs",
-  "tagline": "Dotted orbs that animate what an AI agent is doing: nine states, plain 2D canvas, no WebGL.",
-  "category": "Loaders & indicators",
+  "tagline": "Small dotted spheres that show what an AI assistant is doing: nine moods, such as searching, listening and solving, each with its own movement.",
+  "category": "Animation",
   "author": "Jakub Antalik",
   "github": "Jakubantalik/Libraries.dev",
   "path": "packages/thinking-orbs",

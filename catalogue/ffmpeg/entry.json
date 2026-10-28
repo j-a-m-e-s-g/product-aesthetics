@@ -1,7 +1,7 @@
 {
   "name": "FFmpeg",
-  "tagline": "The engine under nearly every video tool: encodes, cuts, crossfades, pans and zooms, mixes voice under music, burns in text and makes GIFs, all from one command line.",
-  "category": "Video & capture",
+  "tagline": "The engine inside nearly every video tool: it cuts, joins, zooms, puts music under a voice, adds captions and makes GIFs.",
+  "category": "Video",
   "author": "The FFmpeg developers",
   "url": "https://ffmpeg.org",
   "licence": "LGPL-2.1-or-later",

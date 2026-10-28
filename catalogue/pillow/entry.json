@@ -1,7 +1,7 @@
 {
   "name": "Pillow",
-  "tagline": "Python's everyday image library: crop, resize, recolour, composite and set type on images in a few lines, for cards, thumbnails and every frame a script draws.",
-  "category": "Image processing",
+  "tagline": "Crops, resizes, recolours and adds text to images automatically, so a hundred social cards or thumbnails take the same effort as one.",
+  "category": "Photos and pictures",
   "author": "Jeffrey A. Clark and contributors",
   "url": "https://python-pillow.github.io",
   "licence": "MIT-CMU",

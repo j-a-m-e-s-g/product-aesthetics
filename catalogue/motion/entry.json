@@ -1,7 +1,7 @@
 {
   "name": "Motion",
-  "tagline": "Springs, gestures and layout morphs for React and plain JavaScript: change the layout and it animates between the two.",
-  "category": "Motion & animation",
+  "tagline": "Gives a website natural, springy movement: cards that grow into full pages, panels that glide in and out, buttons that respond to a tap.",
+  "category": "Animation",
   "author": "Matt Perry (Motion)",
   "github": "motiondivision/motion",
   "demo": "https://motion.dev",

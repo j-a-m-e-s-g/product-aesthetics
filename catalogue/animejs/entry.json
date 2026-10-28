@@ -1,8 +1,8 @@
 {
   "name": "anime.js",
   "pick": "anime.js (version 4)",
-  "tagline": "SVG line drawing, split-text reveals and timelines you can scrub to the millisecond, in one small engine.",
-  "category": "Motion & animation",
+  "tagline": "Lines that draw themselves, headlines that build letter by letter, and whole sequences timed to the millisecond.",
+  "category": "Animation",
   "author": "Julian Garnier",
   "github": "juliangarnier/anime",
   "demo": "https://animejs.com",

@@ -1,7 +1,7 @@
 {
   "name": "DeepFilterNet",
-  "tagline": "Takes background hiss, hum and room noise out of a voice recording on your own machine, leaving the voice natural: the clean-up step between a phone recording and a voiceover.",
-  "category": "Voice & audio",
+  "tagline": "Cleans up a voice recording: it takes out hiss, hum and room noise and leaves the voice sounding natural, so a phone recording can pass for a studio one.",
+  "category": "Sound and voice",
   "author": "Hendrik Schröter",
   "url": "https://github.com/Rikorose/DeepFilterNet",
   "licence": "MIT OR Apache-2.0",

@@ -1,7 +1,7 @@
 {
   "name": "GeoPandas",
-  "tagline": "Maps from real boundaries in a few lines of Python: read any map data, join numbers to places, reproject, and draw choropleths with matplotlib or export them for the web.",
-  "category": "Maps & globes",
+  "tagline": "Turns figures into maps drawn on real boundaries, such as countries, regions or local areas, shaded by the numbers.",
+  "category": "Charts and maps",
   "author": "GeoPandas developers",
   "github": "geopandas/geopandas",
   "licence": "BSD-3-Clause",

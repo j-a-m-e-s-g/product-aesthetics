@@ -1,7 +1,7 @@
 {
   "name": "faster-whisper",
-  "tagline": "OpenAI's Whisper speech recognition, four times faster on a CPU, with a timestamp for every word: the timing that puts captions and cuts exactly on the voice.",
-  "category": "Voice & audio",
+  "tagline": "Writes down every word in a recording with the exact moment it's said, which is what makes captions land right on the voice.",
+  "category": "Sound and voice",
   "author": "SYSTRAN",
   "github": "SYSTRAN/faster-whisper",
   "licence": "MIT",

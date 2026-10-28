@@ -1,7 +1,7 @@
 {
   "name": "OpenCV",
-  "tagline": "The standard computer-vision library: filters, edges, masks and transforms that turn a photo into a pencil drawing, cut out a subject or straighten a perspective.",
-  "category": "Image processing",
+  "tagline": "Clever photo effects done automatically: turn a photo into a pencil sketch, cut out the subject, or straighten a shot taken at an angle.",
+  "category": "Photos and pictures",
   "author": "OpenCV team",
   "github": "opencv/opencv",
   "licence": "Apache-2.0",

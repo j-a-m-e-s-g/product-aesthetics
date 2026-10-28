@@ -1,7 +1,7 @@
 {
   "name": "Paper Shaders",
-  "tagline": "Thirty ready-made WebGL backgrounds and photo effects: mesh gradients, grain, dithering, halftone, paper. One component each, no GLSL.",
-  "category": "Shaders & backgrounds",
+  "tagline": "Thirty ready-made moving backgrounds and photo effects: soft colour washes, film grain, retro dot patterns and paper textures.",
+  "category": "Backgrounds, textures and 3D",
   "author": "Paper (Lost Coast Labs)",
   "github": "paper-design/shaders",
   "demo": "https://shaders.paper.design",

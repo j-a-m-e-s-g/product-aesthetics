@@ -1,78 +1,223 @@
-# product-aesthetics
+<h1 align="center">Product Aesthetics</h1>
 
-**Beautiful open-source UI you can ship in your own product, with nobody's name on screen.**
+<p align="center"><b>A hand-picked collection of beautiful, free design tools.</b><br>
+Fonts, icons, photos, sound, voices, video, animation, charts, maps and 3D,<br>
+free to use in anything you make, with no credit to anyone.</p>
 
-Every library here has three things checked: it looks exceptional, it's free and open source under a licence that needs no visible credit, and it's still maintained. Each one has its own folder with install steps, and one command puts it into your colours and fonts.
+<p align="center"><img src="assets/cover.png" width="100%" alt="A collage of ten things from the collection: an AI-made photo of a vase in afternoon sun, a dotted globe with flight paths, moving colour backgrounds, a headline circled in red pen, a big rolling number, shiny 3D spheres, a sheet of typefaces, a hand-sketched bar chart, stone and wood textures, and Hokusai's Great Wave set as a poster"></p>
 
-<img src="catalogue/thinking-orbs/sheet.gif" width="880" alt="Thinking Orbs as they ship, then mapped onto two example brands, on light and dark pages">
+<p align="center">
+<a href="#what-this-is">What this is</a> ·
+<a href="#how-to-use-it">How to use it</a> ·
+<a href="#the-catalogue">The catalogue</a> ·
+<a href="#is-it-really-free">Is it really free?</a> ·
+<a href="#for-developers">For developers</a>
+</p>
 
-<sub>Thinking Orbs as they ship (top row), then mapped onto two example brands by <code>pa add thinking-orbs --brand …</code>.</sub>
+## What this is
 
-## Catalogue
+Making something look good usually means hours on stock sites, free trials and "free for personal use only" small print. This collection does that digging for you. It's a shelf of the best free design tools and materials around, and every one was checked by hand.
+
+Everything here passed three tests:
+
+- **It looks exceptional.** It's good enough to make a designer stop scrolling. Merely decent doesn't get in.
+- **It's free, with no credit.** You can use it for work and for things you sell, and you never have to put anyone's name on what you make.
+- **It's looked after.** Someone still maintains it, or it's finished and millions of people rely on it.
+
+Each one has its own page with a picture of it working, what it's good for and how to get it.
+
+## How to use it
+
+**1. Browse.** Scroll down to [the catalogue](#the-catalogue). Every picture shows the real thing working, not a mock-up.
+
+**2. Open its page.** Click a picture. The page says what it's for and gives the full steps to get it.
+
+**3. Get it.** The label under each one tells you what that involves:
+
+| Label | What it is | How you get it |
+|---|---|---|
+| **Download and use** | Fonts, photos, sound effects and textures | Follow the link on its page and download what you need. There's no sign-up and no fee. |
+| **Runs on your computer** | Free software, from a 3D studio to a voiceover maker | Most are set up by typing a few commands. The easy way is to ask Claude to do it for you. |
+| **For websites and apps** | Building blocks that websites are made from | Ask whoever builds your website, or Claude, to add it. |
+
+Some also say **Matches your brand**. Those can redraw themselves in your own colours and fonts ([see how](#make-it-match-your-brand)).
+
+### Or just ask Claude
+
+You don't need to know how any of this works. If you use Claude (for example Claude Code on your computer), paste in the link to this page, then say what you're making. For example:
+
+```text
+Add the spinning globe from this collection to our website, in our brand colours.
+```
+
+```text
+Set up Kokoro from this collection, then read my script aloud in a British voice.
+```
+
+```text
+Find me free sound effects for a page turn and a whoosh in this collection.
+```
+
+Claude reads the same pages you do and follows the steps on them.
+
+## The catalogue
 
 <!-- catalogue:start (pa check --fix writes this) -->
 
+31 picks in 8 sections. Click any picture to open its page.
+
+**Jump to:** [Type and icons](#type-and-icons) · [Photos and pictures](#photos-and-pictures) · [Hand-drawn](#hand-drawn) · [Charts and maps](#charts-and-maps) · [Backgrounds, textures and 3D](#backgrounds-textures-and-3d) · [Animation](#animation) · [Video](#video) · [Sound and voice](#sound-and-voice)
+
+### Type and icons
+
+The letters and symbols everything else is built from.
+
 <table>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/ambientcg"><img src="catalogue/ambientcg/preview.png" width="100%" alt="ambientCG"></a><br><sub>3D & MATERIALS</sub><br><b><a href="catalogue/ambientcg">ambientCG</a></b><br>2,900 public-domain PBR materials and HDRIs, from brick, slate and concrete to marble and paper grain, fetched by API with no key.<br><sub>Blender · CC0-1.0 (no strings) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/blender"><img src="catalogue/blender/preview.png" width="100%" alt="Blender"></a><br><sub>3D & MATERIALS</sub><br><b><a href="catalogue/blender">Blender</a></b><br>The complete free 3D studio: modelling, photoreal Cycles rendering, 2D Grease Pencil animation, compositing and video editing, scriptable in Python so renders can be made by code.<br><sub>App · GPL-3.0-or-later (app; what you make is yours) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/poly-haven"><img src="catalogue/poly-haven/preview.png" width="100%" alt="Poly Haven"></a><br><sub>3D & MATERIALS</sub><br><b><a href="catalogue/poly-haven">Poly Haven</a></b><br>About 2,400 public-domain HDRIs, textures and 3D models, photographed and scanned by its own team, with 124 million downloads between them: the lighting and surfaces that make a 3D render look real.<br><sub>Blender, three.js · CC0-1.0 (no strings) · no brand mapping</sub></td>
+<td width="50%" valign="top"><a href="catalogue/open-fonts"><img src="catalogue/open-fonts/preview.png" width="100%" alt="Open fonts kit preview"></a><br><b><a href="catalogue/open-fonts">Open fonts kit</a></b><br>Nineteen of the best free typefaces, hand-picked: clean ones for everyday text, bold and narrow ones for headlines, elegant serifs, steady ones for numbers and tables, and one that looks handwritten.<br><sub>DOWNLOAD AND USE</sub></td>
+<td width="50%" valign="top"><a href="catalogue/iconify"><img src="catalogue/iconify/preview.gif" width="100%" alt="Iconify preview"></a><br><b><a href="catalogue/iconify">Iconify</a></b><br>Over 200 icon sets in one place, from simple outlines to bold filled shapes. 159 of the sets need no credit, and its page lists which.<br><sub>FOR WEBSITES AND APPS</sub></td>
+</tr>
+</table>
+
+### Photos and pictures
+
+Real art and photography, AI images, and tools that edit pictures in bulk.
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/public-domain-images"><img src="catalogue/public-domain-images/preview.png" width="100%" alt="Public-domain image archives preview"></a><br><b><a href="catalogue/public-domain-images">Public-domain image archives</a></b><br>Hundreds of thousands of famous paintings, prints and NASA space photos, free to use with no credit: real art and real photography instead of stock images.<br><sub>DOWNLOAD AND USE</sub></td>
+<td width="50%" valign="top"><a href="catalogue/flux-klein"><img src="catalogue/flux-klein/preview.png" width="100%" alt="FLUX.2 [klein] 4B preview"></a><br><b><a href="catalogue/flux-klein">FLUX.2 [klein] 4B</a></b><br>Makes a realistic image from a written description, or edits a real photo, on your own laptop in about ten seconds. Free for commercial use, with no credit.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/three"><img src="catalogue/three/preview.png" width="100%" alt="three.js"></a><br><sub>3D & MATERIALS</sub><br><b><a href="catalogue/three">three.js</a></b><br>The 3D engine of the web: real-time scenes with physically based materials, studio lighting from an HDRI, glTF models and post-processing, in any page or rendered out frame by frame for video.<br><sub>JavaScript, React · MIT (keep notice) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/flux-klein"><img src="catalogue/flux-klein/preview.png" width="100%" alt="FLUX.2 [klein] 4B"></a><br><sub>AI IMAGES</sub><br><b><a href="catalogue/flux-klein">FLUX.2 [klein] 4B</a></b><br>A photoreal AI image model small enough to run on a laptop in about ten seconds, under a licence that allows commercial use with no credit: images from a prompt, or edits of a real photo.<br><sub>App · Apache-2.0 (app; what you make is yours) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/d3"><img src="catalogue/d3/preview.gif" width="100%" alt="D3"></a><br><sub>CHARTS & DATA</sub><br><b><a href="catalogue/d3">D3</a></b><br>The toolkit under most of the best data graphics on the web: scales, shapes, map projections, force layouts and transitions, for charts and maps no chart library would draw.<br><sub>JavaScript · ISC (keep notice) · no brand mapping</sub></td>
+<td width="50%" valign="top"><a href="catalogue/opencv"><img src="catalogue/opencv/preview.png" width="100%" alt="OpenCV preview"></a><br><b><a href="catalogue/opencv">OpenCV</a></b><br>Clever photo effects done automatically: turn a photo into a pencil sketch, cut out the subject, or straighten a shot taken at an angle.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
+<td width="50%" valign="top"><a href="catalogue/pillow"><img src="catalogue/pillow/preview.png" width="100%" alt="Pillow preview"></a><br><b><a href="catalogue/pillow">Pillow</a></b><br>Crops, resizes, recolours and adds text to images automatically, so a hundred social cards or thumbnails take the same effort as one.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
+</tr>
+</table>
+
+### Hand-drawn
+
+A human touch: shapes that look sketched and strokes that look inked.
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/perfect-freehand"><img src="catalogue/perfect-freehand/preview.gif" width="100%" alt="perfect-freehand preview"></a><br><b><a href="catalogue/perfect-freehand">perfect-freehand</a></b><br>Ink strokes that taper and thicken like a real pen, for circling, underlining and scribbling on top of a design.<br><sub>FOR WEBSITES AND APPS</sub></td>
+<td width="50%" valign="top"><a href="catalogue/roughjs"><img src="catalogue/roughjs/preview.png" width="100%" alt="Rough.js preview"></a><br><b><a href="catalogue/roughjs">Rough.js</a></b><br>Makes shapes and charts look sketched by hand, with pencil-style shading. It gives the popular whiteboard app Excalidraw its look.<br><sub>FOR WEBSITES AND APPS</sub></td>
+</tr>
+</table>
+
+### Charts and maps
+
+For making numbers and places easy to see at a glance.
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/datatype"><img src="catalogue/datatype/preview.gif" width="100%" alt="Datatype preview"></a><br><b><a href="catalogue/datatype">Datatype</a></b><br>A font that draws tiny charts inside a sentence: type numbers in a short code and a trend line, bar chart or pie appears among the words.<br><sub>DOWNLOAD AND USE</sub></td>
+<td width="50%" valign="top"><a href="catalogue/geopandas"><img src="catalogue/geopandas/preview.png" width="100%" alt="GeoPandas preview"></a><br><b><a href="catalogue/geopandas">GeoPandas</a></b><br>Turns figures into maps drawn on real boundaries, such as countries, regions or local areas, shaded by the numbers.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/datatype"><img src="catalogue/datatype/preview.gif" width="100%" alt="Datatype"></a><br><sub>CHARTS & DATA</sub><br><b><a href="catalogue/datatype">Datatype</a></b><br>A font that draws charts: type {l:20,45,60,95} and a sparkline appears in the line of text, with bars and pies too, so a number and its trend sit in one sentence.<br><sub>CSS · OFL-1.1 (keep notice) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/observable-plot"><img src="catalogue/observable-plot/preview.png" width="100%" alt="Observable Plot"></a><br><sub>CHARTS & DATA</sub><br><b><a href="catalogue/observable-plot">Observable Plot</a></b><br>Charts in a few lines of JavaScript, with the restraint of a good newspaper graphic: quiet axes, direct labels, no chart junk.<br><sub>JavaScript · ISC (keep notice) · maps colours, fonts</sub></td>
-<td width="33%" valign="top"><a href="catalogue/vizzu"><img src="catalogue/vizzu/preview.gif" width="100%" alt="Vizzu"></a><br><sub>CHARTS & DATA</sub><br><b><a href="catalogue/vizzu">Vizzu</a></b><br>Charts that morph into each other: bars regroup, bend into a pie, then pour into stacked areas, so a viewer can follow the data from one view to the next.<br><sub>JavaScript · Apache-2.0 (keep notice) · maps colours, fonts</sub></td>
+<td width="50%" valign="top"><a href="catalogue/cobe"><img src="catalogue/cobe/preview.png" width="100%" alt="cobe preview"></a><br><b><a href="catalogue/cobe">cobe</a></b><br>A dotted globe that spins, with markers on cities and arcs flying between them, small and fast enough for any web page.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
+<td width="50%" valign="top"><a href="catalogue/d3"><img src="catalogue/d3/preview.gif" width="100%" alt="D3 preview"></a><br><b><a href="catalogue/d3">D3</a></b><br>The toolkit behind many of the best data graphics in newspapers and journals, for charts and maps no ready-made tool would draw.<br><sub>FOR WEBSITES AND APPS</sub></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/perfect-freehand"><img src="catalogue/perfect-freehand/preview.gif" width="100%" alt="perfect-freehand"></a><br><sub>DRAWING & HAND-DRAWN</sub><br><b><a href="catalogue/perfect-freehand">perfect-freehand</a></b><br>Pressure-sensitive ink strokes from mouse, pen or touch points: tapering, thinning and smoothing that feel like a real pen.<br><sub>JavaScript · MIT (keep notice) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/roughjs"><img src="catalogue/roughjs/preview.png" width="100%" alt="Rough.js"></a><br><sub>DRAWING & HAND-DRAWN</sub><br><b><a href="catalogue/roughjs">Rough.js</a></b><br>Draws lines, shapes and charts as if sketched by hand, with hatched, zigzag, cross-hatched or dotted fills, in SVG or on a canvas.<br><sub>JavaScript · MIT (keep notice) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/iconify"><img src="catalogue/iconify/preview.gif" width="100%" alt="Iconify"></a><br><sub>ICONS</sub><br><b><a href="catalogue/iconify">Iconify</a></b><br>Every open-source icon set behind one name format: 227 sets, 159 of them need no credit, bundled at build time or fetched as SVG.<br><sub>React, Vue, Svelte, JavaScript, CSS · MIT (keep notice) · no brand mapping</sub></td>
+<td width="50%" valign="top"><a href="catalogue/observable-plot"><img src="catalogue/observable-plot/preview.png" width="100%" alt="Observable Plot preview"></a><br><b><a href="catalogue/observable-plot">Observable Plot</a></b><br>Clean charts in the style of a good newspaper: quiet gridlines, labels right next to the lines, nothing extra.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
+<td width="50%" valign="top"><a href="catalogue/vizzu"><img src="catalogue/vizzu/preview.gif" width="100%" alt="Vizzu preview"></a><br><b><a href="catalogue/vizzu">Vizzu</a></b><br>Charts that change shape in front of the viewer: bars regroup, curl into a pie, then pour into layers, so people can follow the story.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
+</tr>
+</table>
+
+### Backgrounds, textures and 3D
+
+Surfaces, light and depth, from a slow-moving colour wash to a 3D scene that looks like a photo.
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/ambientcg"><img src="catalogue/ambientcg/preview.png" width="100%" alt="ambientCG preview"></a><br><b><a href="catalogue/ambientcg">ambientCG</a></b><br>2,900 free surface textures, from brick, slate and concrete to marble, wood and paper, for 3D scenes or as backgrounds.<br><sub>DOWNLOAD AND USE</sub></td>
+<td width="50%" valign="top"><a href="catalogue/poly-haven"><img src="catalogue/poly-haven/preview.png" width="100%" alt="Poly Haven preview"></a><br><b><a href="catalogue/poly-haven">Poly Haven</a></b><br>About 2,400 free skies, surfaces and 3D objects, photographed and scanned from the real thing, which make a 3D scene look like a photo.<br><sub>DOWNLOAD AND USE</sub></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/opencv"><img src="catalogue/opencv/preview.png" width="100%" alt="OpenCV"></a><br><sub>IMAGE PROCESSING</sub><br><b><a href="catalogue/opencv">OpenCV</a></b><br>The standard computer-vision library: filters, edges, masks and transforms that turn a photo into a pencil drawing, cut out a subject or straighten a perspective.<br><sub>App · Apache-2.0 (app; what you make is yours) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/pillow"><img src="catalogue/pillow/preview.png" width="100%" alt="Pillow"></a><br><sub>IMAGE PROCESSING</sub><br><b><a href="catalogue/pillow">Pillow</a></b><br>Python's everyday image library: crop, resize, recolour, composite and set type on images in a few lines, for cards, thumbnails and every frame a script draws.<br><sub>App · MIT-CMU (app; what you make is yours) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/thinking-orbs"><img src="catalogue/thinking-orbs/preview.gif" width="100%" alt="Thinking Orbs"></a><br><sub>LOADERS & INDICATORS</sub><br><b><a href="catalogue/thinking-orbs">Thinking Orbs</a></b><br>Dotted orbs that animate what an AI agent is doing: nine states, plain 2D canvas, no WebGL.<br><sub>React · MIT (keep notice) · maps colours</sub></td>
+<td width="50%" valign="top"><a href="catalogue/blender"><img src="catalogue/blender/preview.png" width="100%" alt="Blender preview"></a><br><b><a href="catalogue/blender">Blender</a></b><br>A complete free 3D studio: build objects and scenes, render them as realistic as a photo, animate them and edit the video.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
+<td width="50%" valign="top"><a href="catalogue/paper-shaders"><img src="catalogue/paper-shaders/preview.gif" width="100%" alt="Paper Shaders preview"></a><br><b><a href="catalogue/paper-shaders">Paper Shaders</a></b><br>Thirty ready-made moving backgrounds and photo effects: soft colour washes, film grain, retro dot patterns and paper textures.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/cobe"><img src="catalogue/cobe/preview.png" width="100%" alt="cobe"></a><br><sub>MAPS & GLOBES</sub><br><b><a href="catalogue/cobe">cobe</a></b><br>A 5 KB dotted WebGL globe that spins, with markers, arcs between cities and labels that ride on them.<br><sub>JavaScript, React · MIT (keep notice) · maps colours, fonts, radius</sub></td>
-<td width="33%" valign="top"><a href="catalogue/geopandas"><img src="catalogue/geopandas/preview.png" width="100%" alt="GeoPandas"></a><br><sub>MAPS & GLOBES</sub><br><b><a href="catalogue/geopandas">GeoPandas</a></b><br>Maps from real boundaries in a few lines of Python: read any map data, join numbers to places, reproject, and draw choropleths with matplotlib or export them for the web.<br><sub>App · BSD-3-Clause (app; what you make is yours) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/animejs"><img src="catalogue/animejs/preview.gif" width="100%" alt="anime.js"></a><br><sub>MOTION & ANIMATION</sub><br><b><a href="catalogue/animejs">anime.js</a></b><br>SVG line drawing, split-text reveals and timelines you can scrub to the millisecond, in one small engine.<br><sub>JavaScript · MIT (keep notice) · no brand mapping</sub></td>
+<td width="50%" valign="top"><a href="catalogue/three"><img src="catalogue/three/preview.png" width="100%" alt="three.js preview"></a><br><b><a href="catalogue/three">three.js</a></b><br>Real 3D on a web page: objects with lifelike materials and lighting that visitors can turn around, or that can be filmed for a video.<br><sub>FOR WEBSITES AND APPS</sub></td>
+<td width="50%"></td>
+</tr>
+</table>
+
+### Animation
+
+Movement for websites and apps, from quiet polish to headlines that grab attention.
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/animejs"><img src="catalogue/animejs/preview.gif" width="100%" alt="anime.js preview"></a><br><b><a href="catalogue/animejs">anime.js</a></b><br>Lines that draw themselves, headlines that build letter by letter, and whole sequences timed to the millisecond.<br><sub>FOR WEBSITES AND APPS</sub></td>
+<td width="50%" valign="top"><a href="catalogue/fancy-components"><img src="catalogue/fancy-components/preview.gif" width="100%" alt="Fancy Components preview"></a><br><b><a href="catalogue/fancy-components">Fancy Components</a></b><br>Headline type that moves: letters slice into place, words swap inside a highlighted pill, and headlines tumble and pile up as if under gravity.<br><sub>FOR WEBSITES AND APPS</sub></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/fancy-components"><img src="catalogue/fancy-components/preview.gif" width="100%" alt="Fancy Components"></a><br><sub>MOTION & ANIMATION</sub><br><b><a href="catalogue/fancy-components">Fancy Components</a></b><br>Editorial type in motion for React: letters cut up into place, words rotate in a pill, highlighters sweep, text runs along a path, and headlines fall and pile up under real physics.<br><sub>React, Tailwind · MIT (keep notice) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/motion"><img src="catalogue/motion/preview.gif" width="100%" alt="Motion"></a><br><sub>MOTION & ANIMATION</sub><br><b><a href="catalogue/motion">Motion</a></b><br>Springs, gestures and layout morphs for React and plain JavaScript: change the layout and it animates between the two.<br><sub>React, JavaScript · MIT (keep notice) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/motion-primitives"><img src="catalogue/motion-primitives/preview.gif" width="100%" alt="Motion Primitives"></a><br><sub>MOTION & ANIMATION</sub><br><b><a href="catalogue/motion-primitives">Motion Primitives</a></b><br>Restrained motion to copy into a Tailwind site: shimmering and blur-in text, scrambles, progressive blur, border trails, morphing dialogs.<br><sub>React, Tailwind · MIT (keep notice) · no brand mapping</sub></td>
+<td width="50%" valign="top"><a href="catalogue/motion"><img src="catalogue/motion/preview.gif" width="100%" alt="Motion preview"></a><br><b><a href="catalogue/motion">Motion</a></b><br>Gives a website natural, springy movement: cards that grow into full pages, panels that glide in and out, buttons that respond to a tap.<br><sub>FOR WEBSITES AND APPS</sub></td>
+<td width="50%" valign="top"><a href="catalogue/motion-primitives"><img src="catalogue/motion-primitives/preview.gif" width="100%" alt="Motion Primitives preview"></a><br><b><a href="catalogue/motion-primitives">Motion Primitives</a></b><br>Quiet, polished movement for websites: shimmering text, soft blur-ins, glowing borders, and windows that open smoothly out of a button.<br><sub>FOR WEBSITES AND APPS</sub></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/number-flow"><img src="catalogue/number-flow/preview.gif" width="100%" alt="NumberFlow"></a><br><sub>MOTION & ANIMATION</sub><br><b><a href="catalogue/number-flow">NumberFlow</a></b><br>Numbers that roll digit by digit to their new value, formatted by the browser's own Intl.<br><sub>React, Vue, Svelte, JavaScript · MIT (keep notice) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/public-domain-images"><img src="catalogue/public-domain-images/preview.png" width="100%" alt="Public-domain image archives"></a><br><sub>PHOTOS & IMAGERY</sub><br><b><a href="catalogue/public-domain-images">Public-domain image archives</a></b><br>Hundreds of thousands of museum masterpieces and NASA photographs, free to use with no credit, each searchable through a free API with no key: real imagery instead of stock or clip-art.<br><sub>Asset library · CC0-1.0 (no strings) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/paper-shaders"><img src="catalogue/paper-shaders/preview.gif" width="100%" alt="Paper Shaders"></a><br><sub>SHADERS & BACKGROUNDS</sub><br><b><a href="catalogue/paper-shaders">Paper Shaders</a></b><br>Thirty ready-made WebGL backgrounds and photo effects: mesh gradients, grain, dithering, halftone, paper. One component each, no GLSL.<br><sub>React, JavaScript · Apache-2.0 (keep notice) · maps colours</sub></td>
+<td width="50%" valign="top"><a href="catalogue/number-flow"><img src="catalogue/number-flow/preview.gif" width="100%" alt="NumberFlow preview"></a><br><b><a href="catalogue/number-flow">NumberFlow</a></b><br>Numbers that roll to their new value digit by digit, like a departures board, in any currency or format.<br><sub>FOR WEBSITES AND APPS</sub></td>
+<td width="50%" valign="top"><a href="catalogue/thinking-orbs"><img src="catalogue/thinking-orbs/preview.gif" width="100%" alt="Thinking Orbs preview"></a><br><b><a href="catalogue/thinking-orbs">Thinking Orbs</a></b><br>Small dotted spheres that show what an AI assistant is doing: nine moods, such as searching, listening and solving, each with its own movement.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
+</tr>
+</table>
+
+### Video
+
+The machinery that turns a design into a finished video.
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/ffmpeg"><img src="catalogue/ffmpeg/preview.png" width="100%" alt="FFmpeg preview"></a><br><b><a href="catalogue/ffmpeg">FFmpeg</a></b><br>The engine inside nearly every video tool: it cuts, joins, zooms, puts music under a voice, adds captions and makes GIFs.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
+<td width="50%" valign="top"><a href="catalogue/playwright"><img src="catalogue/playwright/preview.gif" width="100%" alt="Playwright preview"></a><br><b><a href="catalogue/playwright">Playwright</a></b><br>Films a web page: anything designed for a browser can be recorded frame by frame as video, or saved as an image or PDF.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
+</tr>
+</table>
+
+### Sound and voice
+
+Everything a video needs to sound professional: sound effects, a voiceover, a clean recording and captions in time.
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/freesound-cc0"><img src="catalogue/freesound-cc0/preview.png" width="100%" alt="Freesound CC0 sound kit preview"></a><br><b><a href="catalogue/freesound-cc0">Freesound CC0 sound kit</a></b><br>The sound effects videos use most: whooshes, pops, clicks, typing, page turns, a ticking clock and more. Twenty-one of the most-downloaded free sounds, one for each job.<br><sub>DOWNLOAD AND USE</sub></td>
+<td width="50%" valign="top"><a href="catalogue/deepfilternet"><img src="catalogue/deepfilternet/preview.png" width="100%" alt="DeepFilterNet preview"></a><br><b><a href="catalogue/deepfilternet">DeepFilterNet</a></b><br>Cleans up a voice recording: it takes out hiss, hum and room noise and leaves the voice sounding natural, so a phone recording can pass for a studio one.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="catalogue/freesound-cc0"><img src="catalogue/freesound-cc0/preview.png" width="100%" alt="Freesound CC0 sound kit"></a><br><sub>SOUND EFFECTS</sub><br><b><a href="catalogue/freesound-cc0">Freesound CC0 sound kit</a></b><br>The most-downloaded public-domain sound for each job in a video: whoosh, pop, click, typing, impact, riser, page turn, stamp, clock tick and more, 21 picks with 820,000 downloads between them.<br><sub>Asset library · CC0-1.0 (no strings) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/open-fonts"><img src="catalogue/open-fonts/preview.png" width="100%" alt="Open fonts kit"></a><br><sub>TYPE</sub><br><b><a href="catalogue/open-fonts">Open fonts kit</a></b><br>Nineteen free typefaces picked from the most-used families on Google Fonts, ten core faces and nine more: UI sans, condensed and heavy headlines, editorial serifs, a superfamily, monos and a handwriting face, self-hosted through Fontsource.<br><sub>CSS · OFL-1.1 (keep notice) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/ffmpeg"><img src="catalogue/ffmpeg/preview.png" width="100%" alt="FFmpeg"></a><br><sub>VIDEO & CAPTURE</sub><br><b><a href="catalogue/ffmpeg">FFmpeg</a></b><br>The engine under nearly every video tool: encodes, cuts, crossfades, pans and zooms, mixes voice under music, burns in text and makes GIFs, all from one command line.<br><sub>App · LGPL-2.1-or-later (app; what you make is yours) · no brand mapping</sub></td>
-</tr>
-<tr>
-<td width="33%" valign="top"><a href="catalogue/playwright"><img src="catalogue/playwright/preview.gif" width="100%" alt="Playwright"></a><br><sub>VIDEO & CAPTURE</sub><br><b><a href="catalogue/playwright">Playwright</a></b><br>Drives a real browser from code, which turns any web page into frames for video, stills and PDFs: draw a scene in HTML, seek to each moment, screenshot it.<br><sub>App · Apache-2.0 (app; what you make is yours) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/deepfilternet"><img src="catalogue/deepfilternet/preview.png" width="100%" alt="DeepFilterNet"></a><br><sub>VOICE & AUDIO</sub><br><b><a href="catalogue/deepfilternet">DeepFilterNet</a></b><br>Takes background hiss, hum and room noise out of a voice recording on your own machine, leaving the voice natural: the clean-up step between a phone recording and a voiceover.<br><sub>App · MIT OR Apache-2.0 (app; what you make is yours) · no brand mapping</sub></td>
-<td width="33%" valign="top"><a href="catalogue/faster-whisper"><img src="catalogue/faster-whisper/preview.png" width="100%" alt="faster-whisper"></a><br><sub>VOICE & AUDIO</sub><br><b><a href="catalogue/faster-whisper">faster-whisper</a></b><br>OpenAI's Whisper speech recognition, four times faster on a CPU, with a timestamp for every word: the timing that puts captions and cuts exactly on the voice.<br><sub>App · MIT (app; what you make is yours) · no brand mapping</sub></td>
-</tr>
-<tr>
-<td width="33%" valign="top"><a href="catalogue/kokoro"><img src="catalogue/kokoro/preview.png" width="100%" alt="Kokoro"></a><br><sub>VOICE & AUDIO</sub><br><b><a href="catalogue/kokoro">Kokoro</a></b><br>A small text-to-speech model that sounds human and runs on a laptop CPU, offline and free: 54 voices in nine languages, eight of them British English, with over 10 million downloads.<br><sub>App · Apache-2.0 (app; what you make is yours) · no brand mapping</sub></td>
-<td width="33%"></td>
-<td width="33%"></td>
+<td width="50%" valign="top"><a href="catalogue/faster-whisper"><img src="catalogue/faster-whisper/preview.png" width="100%" alt="faster-whisper preview"></a><br><b><a href="catalogue/faster-whisper">faster-whisper</a></b><br>Writes down every word in a recording with the exact moment it's said, which is what makes captions land right on the voice.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
+<td width="50%" valign="top"><a href="catalogue/kokoro"><img src="catalogue/kokoro/preview.png" width="100%" alt="Kokoro preview"></a><br><b><a href="catalogue/kokoro">Kokoro</a></b><br>Turns a script into a natural-sounding voiceover on your own laptop, offline and free: 54 voices in nine languages, eight of them British.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
 </tr>
 </table>
 
 <!-- catalogue:end -->
 
-## Use one
+## Make it match your brand
+
+Entries labelled **Matches your brand** can redraw themselves in your organisation's colours and fonts. Give Claude your style guide, whether that's a PDF, a link to your website or the colour list your designer uses, and ask for the entry in your brand. Your colours are used exactly as you give them; nothing gets "improved".
+
+<img src="catalogue/thinking-orbs/sheet.gif" width="100%" alt="Thinking Orbs as they come, then the same animations in two example brands, on light and dark pages">
+
+<sub>Thinking Orbs as they come (top row), then the same animations matched to two example brands, on light and dark pages.</sub>
+
+## Is it really free?
+
+Yes. Everything here is free to use in personal projects, at work and in things you sell. You never have to write "photo by", "made with" or anyone's name on what you make.
+
+There are three pieces of small print, and none of them puts anything on screen:
+
+- **Building blocks for websites** come with a short licence file tucked inside the code. Visitors never see it. It's added automatically when your developer or Claude installs the block; just don't delete it.
+- **Software you run**, such as Blender, has a licence that covers the software itself. Whatever you make with it is entirely yours.
+- **A few pages carry a specific note.** For example, Iconify holds over 200 icon sets, but only 159 of them are credit-free, and its page lists which. Read the Notes at the bottom of a page before you publish.
+
+Some things are left out on purpose: anything that asks for a visible credit, bans commercial use, needs a paid account, or is a free taster for a paid product.
+
+**Checked, not assumed.** Every licence here was read in full, not taken from a badge, and each page records which version was checked and when. Projects sometimes change their terms, so a built-in check re-reads every licence and flags any change.
+
+## For developers
+
+Everything above is for people who make things. This part is for people who write code. It covers the `pa` command-line tool, brand files and how to add a library.
+
+<details>
+<summary><b>Install and use <code>pa</code></b></summary>
 
 You need Node 22 or later.
 
@@ -90,7 +235,10 @@ Without `npm link`, run `node <path to>/product-aesthetics/bin/pa.mjs` in place 
 
 `pa add` installs with your project's package manager (pnpm, bun, yarn or npm, picked from the lockfile). With `--brand` it also writes a ready-made component into `src/components/` (or `--out <dir>`), and prints how to use it. It won't overwrite a file unless you add `--force`. Every library's own folder has the full install and usage steps if you'd rather do it by hand.
 
-## Map it onto your style guide
+</details>
+
+<details>
+<summary><b>Brand files: how <code>--brand</code> reads your style guide</b></summary>
 
 Nothing in this repo belongs to any one brand. Your style guide stays in your own project, and `--brand` reads it from there. The adapters work from eight colour roles, three font stacks and a radius. Point `--brand` at either of these:
 
@@ -133,24 +281,28 @@ Example (cool slate) from brands/example-cool.json
   …
 ```
 
-## What gets in
+</details>
 
-1. **It looks exceptional.** It should feel crafted on sight, not just competent.
-2. **The licence needs no visible credit.** `pa check` enforces this:
+<details>
+<summary><b>The licence rules <code>pa check</code> enforces</b></summary>
 
-   | Terms | Licences | What you owe |
-   |---|---|---|
-   | **no strings** | CC0-1.0, Unlicense, MIT-0, 0BSD, public domain mark | nothing |
-   | **keep notice** | MIT, ISC, BSD-2/3-Clause, Apache-2.0, OFL-1.1 | nothing on screen; the licence text stays with the code. npm keeps it in `node_modules` for you, and copy-pasted files keep their header comment |
+| Terms | Licences | What you owe |
+|---|---|---|
+| **no strings** | CC0-1.0, Unlicense, MIT-0, 0BSD, public domain mark | nothing |
+| **keep notice** | MIT, ISC, BSD-2/3-Clause, Apache-2.0, OFL-1.1 | nothing on screen; the licence text stays with the code. npm keeps it in `node_modules` for you, and copy-pasted files keep their header comment |
 
-   Apps we run rather than ship (`"kind": "tool"`) are the exception: any open-source licence is fine, because it covers the app, not what we make with it.
+Apps we run rather than ship (`"kind": "tool"`) are the exception: any open-source licence is fine, because it covers the app, not what we make with it.
 
-   **Kept out of anything we ship:** GPL, LGPL and AGPL (copyleft); any CC-BY (visible credit) or non-commercial licence; MIT plus Commons Clause; BSL, PolyForm and other source-available licences; "free with attribution"; and anything that's free only as a teaser for a paid tier.
-3. **It's alive.** Archived repos are rejected. A repo with no push for 18 months gets flagged.
+**Kept out of anything we ship:** GPL, LGPL and AGPL (copyleft); any CC-BY (visible credit) or non-commercial licence; MIT plus Commons Clause; BSL, PolyForm and other source-available licences; "free with attribution"; and anything that's free only as a teaser for a paid tier.
+
+**Alive:** archived repos are rejected, and a repo with no push for 18 months gets flagged unless its entry says why it's finished rather than abandoned (`settled`).
 
 A project can change its licence for future versions, but the version you installed keeps the licence it shipped under. That's why each entry records the version and the date its licence was read. `pa check --online` re-reads every licence on GitHub and npm and fails if one has changed.
 
-## Add a library
+</details>
+
+<details>
+<summary><b>Add a library</b></summary>
 
 The quickest way is to ask Claude: *"add `<repo url>` to product-aesthetics"*. [`CLAUDE.md`](CLAUDE.md) holds the checklist it follows.
 
@@ -164,13 +316,13 @@ To do it by hand:
    - `README.md`: install, usage and how it takes your brand ([thinking-orbs](catalogue/thinking-orbs/README.md) is the model)
    - `preview.gif`: a 600 × 300 tile rendered from the real library, under 500 KB
    - `adapter.mjs`, if it takes colours, fonts or radius
-3. Run `node bin/pa.mjs check --online --fix`. This validates the entry, runs its adapter against a sample brand, re-reads the licence upstream and rewrites the gallery above.
+3. Run `node bin/pa.mjs check --online --fix`. This validates the entry, runs its adapter against a sample brand, re-reads the licence upstream and rewrites the catalogue above.
 
 ```jsonc
 {
   "name": "Thinking Orbs",
-  "tagline": "One line about what it looks like.",
-  "category": "Loaders & indicators",
+  "tagline": "One plain sentence a non-coder understands: what it does for them.",
+  "category": "Animation",                  // one of the sections in lib/catalogue.mjs (CATEGORIES)
   "author": "Jakub Antalik",
   "github": "Jakubantalik/Libraries.dev",   // owner/repo
   "path": "packages/thinking-orbs",         // optional: a monorepo package
@@ -203,14 +355,20 @@ export default async function adapt(brand, { ts, colour }) {
 }
 ```
 
-## Layout
+</details>
+
+<details>
+<summary><b>How the repo is laid out</b></summary>
 
 ```text
 bin/pa.mjs            the CLI (no dependencies)
-lib/picks.mjs         reads the ticks from the Google Doc's Markdown export
+lib/catalogue.mjs     loads and validates entries; its sections and the catalogue above
 lib/brand.mjs         reads brand files and CSS, derives the missing roles
 lib/colour.mjs        colour parsing, OKLab mixing, WCAG contrast
-lib/catalogue.mjs     loads and validates entries; writes the gallery above
+lib/picks.mjs         reads the ticks from the Google Doc's Markdown export
 brands/               two neutral example brands: example.json (warm paper), example-cool.json (cool slate, with a dark scheme)
-catalogue/<id>/       one folder per library: entry.json, README.md, preview, adapter
+catalogue/<id>/       one folder per entry: entry.json, README.md, preview, adapter
+assets/cover.png      the collage at the top of this page
 ```
+
+</details>

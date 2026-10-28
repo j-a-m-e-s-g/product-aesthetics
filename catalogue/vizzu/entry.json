@@ -1,7 +1,7 @@
 {
   "name": "Vizzu",
-  "tagline": "Charts that morph into each other: bars regroup, bend into a pie, then pour into stacked areas, so a viewer can follow the data from one view to the next.",
-  "category": "Charts & data",
+  "tagline": "Charts that change shape in front of the viewer: bars regroup, curl into a pie, then pour into layers, so people can follow the story.",
+  "category": "Charts and maps",
   "author": "Vizzu",
   "github": "vizzuhq/vizzu-lib",
   "demo": "https://lib.vizzuhq.com",

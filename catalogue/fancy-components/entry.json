@@ -1,7 +1,7 @@
 {
   "name": "Fancy Components",
-  "tagline": "Editorial type in motion for React: letters cut up into place, words rotate in a pill, highlighters sweep, text runs along a path, and headlines fall and pile up under real physics.",
-  "category": "Motion & animation",
+  "tagline": "Headline type that moves: letters slice into place, words swap inside a highlighted pill, and headlines tumble and pile up as if under gravity.",
+  "category": "Animation",
   "author": "Daniel Petho",
   "github": "danielpetho/fancy",
   "demo": "https://www.fancycomponents.dev",

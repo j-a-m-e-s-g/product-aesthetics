@@ -17,11 +17,17 @@ A catalogue of beautiful open-source UI that anyone can ship in a product with n
    - If any of these fail, don't add it. Tell the user the exact clause that rules it out.
 2. **Create `catalogue/<id>/`.** The id is the npm name or a short kebab-case name. Copy the shape of `catalogue/thinking-orbs/`:
    - `entry.json`: every field in the README's example. `version` and `verified` record what you read and when.
+     - `tagline` is written for someone who has never coded: one or two plain sentences on what it does for them. No jargon (WebGL, SVG, API, CPU, React, HDRI, choropleth); the entry README holds the technical detail. It's the description on the README card.
+     - `category` is one of the sections in `CATEGORIES` in `lib/catalogue.mjs`. Add a section there only when nothing fits, with a plain one-line intro.
    - `README.md`: same sections as thinking-orbs: a one-paragraph pitch, the visual, the facts table, Install, Use it as it comes, Use it in your brand, Notes. Write the real install command for each package manager that differs.
    - `preview.gif`: a 600 × 300 px tile (300 × 150 CSS px at 2x) under 500 KB, showing the library as it ships. Render it from the real package; never draw an imitation. An optional `sheet.gif` (≤ 1.5 MB) can show more inside the entry's README.
    - `adapter.mjs`: only if the library takes colours, fonts or radius. Set `maps` to match.
 3. **Prove it in a scratch project** (never in this repo). Run `npm init -y`, then `pa add <id> --brand <repo>/brands/example-cool.json` (and `example.json`), then bundle a test page with esbuild, render it in headless Chrome (install `puppeteer` in the scratch project, or point `puppeteer-core` at an installed Chrome) and **look at the screenshot**. For animated previews, stub `performance.now` and `requestAnimationFrame` with a frame-stepped clock so every frame is exact, then encode with ffmpeg (`palettegen` + `paletteuse`, `diff_mode=rectangle`). If the generated code ships types, type-check them with `tsc --strict`.
 4. **Finish with `node bin/pa.mjs check --online --fix`.** It must exit 0. It rewrites the README gallery; never edit the gallery by hand.
+
+## The README
+
+It's written for a non-technical reader first: what this is, how to use it, the catalogue, whether it's really free. Everything for coders sits under "For developers" in collapsed sections. Keep it that way. `assets/cover.png` is a collage of ten previews (frame 0 of each, except perfect-freehand's finished circle) laid out in a grid and rendered in Chrome at 2x on a transparent background, so it works in light and dark mode. Remake it when the line-up changes a lot.
 
 ## Picks: when the user says "update the gh"
 
