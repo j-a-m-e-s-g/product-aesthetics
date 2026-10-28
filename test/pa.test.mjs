@@ -189,3 +189,15 @@ test('validation: malformed fields are reported, not thrown', () => {
   assert.ok(msgs.includes('missing "tagline"'), msgs.join('; '));
   assert.doesNotThrow(() => catalogueMarkdown([e]));
 });
+
+test('cli: list --json gives every entry, with no absolute paths', async () => {
+  const r = spawnSync(process.execPath, [path.join(ROOT, 'bin/pa.mjs'), 'list', '--json'], { encoding: 'utf8' });
+  assert.equal(r.status, 0, r.stderr);
+  const entries = JSON.parse(r.stdout);
+  assert.equal(entries.length, (await loadCatalogue()).length);
+  for (const e of entries) {
+    assert.ok(e.id && e.licence && e.kind, JSON.stringify(e).slice(0, 80));
+    assert.ok(!('dir' in e), e.id);
+    assert.doesNotMatch(JSON.stringify(e), new RegExp(ROOT.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), e.id);
+  }
+});

@@ -227,6 +227,7 @@ cd product-aesthetics && npm link                  # optional: puts `pa` on your
 
 cd ~/your-app
 pa list                                            # what's in the catalogue
+pa list --json                                     # the same, as JSON, for other tools to read
 pa add thinking-orbs                               # install it as it comes
 pa add thinking-orbs --brand src/app/globals.css   # …or generated in your brand
 ```

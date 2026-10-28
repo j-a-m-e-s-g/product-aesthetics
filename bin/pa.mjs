@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // pa: the product-aesthetics CLI. No dependencies; Node 22+.
 //
-//   pa list                                 what's in the catalogue
+//   pa list [--json]                        what's in the catalogue (--json: every entry, for other tools)
 //   pa add <id> [--brand <file>] [--out <dir>] [--no-install] [--force]
 //                                           install a library into this project,
 //                                           and with --brand, generate it in your brand
@@ -79,6 +79,12 @@ try {
 
 async function list() {
   const entries = await loadCatalogue();
+  if (flags.json) {
+    // Machine-readable, and the same on every machine: no absolute paths.
+    const rel = (p) => (p ? path.relative(ROOT, p) : null);
+    console.log(JSON.stringify(entries.map(({ dir, adapter, preview, ...e }) => ({ ...e, adapter: Boolean(adapter), preview: rel(preview) })), null, 1));
+    return;
+  }
   let category;
   for (const e of entries) {
     if (e.category !== category) console.log(`\n${bold((category = e.category))}`);
