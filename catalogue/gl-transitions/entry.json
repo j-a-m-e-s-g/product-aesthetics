@@ -1,0 +1,16 @@
+{
+  "name": "GL Transitions",
+  "tagline": "Over 180 ready-made ways to move from one picture or video shot to the next: torn paper, ink bleeding through, page curls, whip pans, glitches and spinning cubes.",
+  "category": "Video",
+  "author": "Gaëtan Renaudeau (gre) and contributors",
+  "github": "gl-transitions/gl-transitions",
+  "path": "packages/gl-transitions",
+  "demo": "https://gl-transitions.com",
+  "licence": "MIT",
+  "stack": ["JavaScript"],
+  "install": "npm install gl-transitions",
+  "npm": "gl-transitions",
+  "version": "3.0.0",
+  "verified": "2026-11-06",
+  "maps": []
+}

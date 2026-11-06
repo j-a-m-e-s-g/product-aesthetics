@@ -64,7 +64,7 @@ Claude reads the same pages you do and follows the steps on them.
 
 <!-- catalogue:start (pa check --fix writes this) -->
 
-31 picks in 8 sections. Click any picture to open its page.
+35 picks in 8 sections. Click any picture to open its page.
 
 **Jump to:** [Type and icons](#type-and-icons) · [Photos and pictures](#photos-and-pictures) · [Hand-drawn](#hand-drawn) · [Charts and maps](#charts-and-maps) · [Backgrounds, textures and 3D](#backgrounds-textures-and-3d) · [Animation](#animation) · [Video](#video) · [Sound and voice](#sound-and-voice)
 
@@ -138,8 +138,8 @@ Surfaces, light and depth, from a slow-moving colour wash to a 3D scene that loo
 <td width="50%" valign="top"><a href="catalogue/paper-shaders"><img src="catalogue/paper-shaders/preview.gif" width="100%" alt="Paper Shaders preview"></a><br><b><a href="catalogue/paper-shaders">Paper Shaders</a></b><br>Thirty ready-made moving backgrounds and photo effects: soft colour washes, film grain, retro dot patterns and paper textures.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
 </tr>
 <tr>
+<td width="50%" valign="top"><a href="catalogue/pixi-filters"><img src="catalogue/pixi-filters/preview.gif" width="100%" alt="PixiJS Filters preview"></a><br><b><a href="catalogue/pixi-filters">PixiJS Filters</a></b><br>More than 35 effects for any picture or moving scene: old film, glitches, TV scanlines, ripples, zoom and motion blur, glow, light rays and halftone dots.<br><sub>FOR WEBSITES AND APPS</sub></td>
 <td width="50%" valign="top"><a href="catalogue/three"><img src="catalogue/three/preview.png" width="100%" alt="three.js preview"></a><br><b><a href="catalogue/three">three.js</a></b><br>Real 3D on a web page: objects with lifelike materials and lighting that visitors can turn around, or that can be filmed for a video.<br><sub>FOR WEBSITES AND APPS</sub></td>
-<td width="50%"></td>
 </tr>
 </table>
 
@@ -151,6 +151,10 @@ Movement for websites and apps, from quiet polish to headlines that grab attenti
 <tr>
 <td width="50%" valign="top"><a href="catalogue/animejs"><img src="catalogue/animejs/preview.gif" width="100%" alt="anime.js preview"></a><br><b><a href="catalogue/animejs">anime.js</a></b><br>Lines that draw themselves, headlines that build letter by letter, and whole sequences timed to the millisecond.<br><sub>FOR WEBSITES AND APPS</sub></td>
 <td width="50%" valign="top"><a href="catalogue/fancy-components"><img src="catalogue/fancy-components/preview.gif" width="100%" alt="Fancy Components preview"></a><br><b><a href="catalogue/fancy-components">Fancy Components</a></b><br>Headline type that moves: letters slice into place, words swap inside a highlighted pill, and headlines tumble and pile up as if under gravity.<br><sub>FOR WEBSITES AND APPS</sub></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/flubber"><img src="catalogue/flubber/preview.gif" width="100%" alt="flubber preview"></a><br><b><a href="catalogue/flubber">flubber</a></b><br>Smoothly turns one shape into another, such as a star into a circle, and splits one shape into several or joins several back into one.<br><sub>FOR WEBSITES AND APPS</sub></td>
+<td width="50%" valign="top"><a href="catalogue/lottie-web"><img src="catalogue/lottie-web/preview.gif" width="100%" alt="Lottie preview"></a><br><b><a href="catalogue/lottie-web">Lottie</a></b><br>Plays animations that motion designers make in After Effects, such as animated icons, illustrations and loading screens, sharp at any size and far lighter than a video file.<br><sub>FOR WEBSITES AND APPS</sub></td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="catalogue/motion"><img src="catalogue/motion/preview.gif" width="100%" alt="Motion preview"></a><br><b><a href="catalogue/motion">Motion</a></b><br>Gives a website natural, springy movement: cards that grow into full pages, panels that glide in and out, buttons that respond to a tap.<br><sub>FOR WEBSITES AND APPS</sub></td>
@@ -170,6 +174,10 @@ The machinery that turns a design into a finished video.
 <tr>
 <td width="50%" valign="top"><a href="catalogue/ffmpeg"><img src="catalogue/ffmpeg/preview.png" width="100%" alt="FFmpeg preview"></a><br><b><a href="catalogue/ffmpeg">FFmpeg</a></b><br>The engine inside nearly every video tool: it cuts, joins, zooms, puts music under a voice, adds captions and makes GIFs.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
 <td width="50%" valign="top"><a href="catalogue/playwright"><img src="catalogue/playwright/preview.gif" width="100%" alt="Playwright preview"></a><br><b><a href="catalogue/playwright">Playwright</a></b><br>Films a web page: anything designed for a browser can be recorded frame by frame as video, or saved as an image or PDF.<br><sub>RUNS ON YOUR COMPUTER</sub></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/gl-transitions"><img src="catalogue/gl-transitions/preview.gif" width="100%" alt="GL Transitions preview"></a><br><b><a href="catalogue/gl-transitions">GL Transitions</a></b><br>Over 180 ready-made ways to move from one picture or video shot to the next: torn paper, ink bleeding through, page curls, whip pans, glitches and spinning cubes.<br><sub>FOR WEBSITES AND APPS</sub></td>
+<td width="50%"></td>
 </tr>
 </table>
 

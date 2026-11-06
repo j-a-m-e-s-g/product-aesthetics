@@ -1,0 +1,15 @@
+{
+  "name": "PixiJS Filters",
+  "tagline": "More than 35 effects for any picture or moving scene: old film, glitches, TV scanlines, ripples, zoom and motion blur, glow, light rays and halftone dots.",
+  "category": "Backgrounds, textures and 3D",
+  "author": "The PixiJS team (Mat Groves, Chad Engler and contributors)",
+  "github": "pixijs/filters",
+  "demo": "https://pixijs.io/filters/examples/",
+  "licence": "MIT",
+  "stack": ["JavaScript"],
+  "install": "npm install pixi.js pixi-filters",
+  "npm": "pixi-filters",
+  "version": "6.1.5",
+  "verified": "2026-11-06",
+  "maps": []
+}

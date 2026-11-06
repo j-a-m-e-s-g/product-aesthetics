@@ -1,0 +1,15 @@
+{
+  "name": "Lottie",
+  "tagline": "Plays animations that motion designers make in After Effects, such as animated icons, illustrations and loading screens, sharp at any size and far lighter than a video file.",
+  "category": "Animation",
+  "author": "Hernan Torrisi, with Airbnb",
+  "github": "airbnb/lottie-web",
+  "demo": "https://airbnb.io/lottie/",
+  "licence": "MIT",
+  "stack": ["JavaScript"],
+  "install": "npm install lottie-web",
+  "npm": "lottie-web",
+  "version": "5.13.0",
+  "verified": "2026-11-06",
+  "maps": []
+}

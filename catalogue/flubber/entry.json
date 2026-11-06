@@ -1,0 +1,16 @@
+{
+  "name": "flubber",
+  "tagline": "Smoothly turns one shape into another, such as a star into a circle, and splits one shape into several or joins several back into one.",
+  "category": "Animation",
+  "author": "Noah Veltman",
+  "github": "veltman/flubber",
+  "demo": "https://veltman.github.io/flubber/demos/medley.html",
+  "licence": "MIT",
+  "stack": ["JavaScript"],
+  "install": "npm install flubber",
+  "npm": "flubber",
+  "version": "0.4.2",
+  "verified": "2026-11-06",
+  "maps": [],
+  "settled": "Finished, not abandoned: last push November 2022, but 162,000 npm downloads a week (week to 5 Nov 2026), 113 packages depend on it directly (deps.dev), and it is a small shape-maths library with nothing that goes out of date. Reviewed 2026-11-06."
+}
