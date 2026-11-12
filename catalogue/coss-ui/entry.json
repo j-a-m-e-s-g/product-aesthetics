@@ -1,0 +1,14 @@
+{
+  "name": "coss ui",
+  "tagline": "Finely detailed buttons, forms, calendars and menus with crisp edges, soft shadows and careful spacing, plus hundreds of ready-made examples to start from.",
+  "category": "Interface",
+  "author": "coss.com (formerly Origin UI)",
+  "github": "cosscom/ui",
+  "demo": "https://coss.com/ui",
+  "licence": "MIT",
+  "stack": ["React", "Tailwind"],
+  "install": "npx shadcn@latest add @coss/style",
+  "version": "main@fe6ffa8",
+  "verified": "2026-11-12",
+  "maps": ["colours", "fonts", "radius"]
+}

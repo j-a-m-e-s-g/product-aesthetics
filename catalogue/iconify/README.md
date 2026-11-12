@@ -69,7 +69,8 @@ curl -s "https://api.iconify.design/lucide/train-front.svg?color=%23e4572e&heigh
 | Tabler | `tabler` | 6,200 strokes on a 24 px grid; strong on buildings, transport and maps |
 | Material Symbols | `material-symbols` | Google's 15,700, in outline, rounded and sharp; the `material-symbols-light` set is a lighter weight |
 | Material Design Icons | `mdi` | 7,400 community icons; covers odd things nobody else has |
-| Remix, Carbon, MingCute, Iconoir, Huge Icons | `ri` `carbon` `mingcute` `iconoir` `hugeicons` | other clean UI families; pick one and stay with it |
+| Carbon, MingCute, Iconoir, Huge Icons | `carbon` `mingcute` `iconoir` `hugeicons` | other clean UI families; pick one and stay with it |
+| Remix | `ri` | clean UI family, but only while Iconify serves version 4.8.0 or earlier (Apache-2.0). From 4.9 (January 2026) Remix Icon has its own licence, which bans using its icons in logos or in another icon library. If Iconify moves `ri` past 4.8, stop using it |
 | Maki, Temaki, Osmic, Map Icons | `maki` `temaki` `osmic` `map` | map-legend symbols (Maki is Mapbox's own); CC0 or OFL |
 | Health Icons, Meteocons | `healthicons` `meteocons` | public services, and weather for charts |
 | Material Line Icons, SVG Spinners | `line-md` `svg-spinners` | animated: icons that draw themselves in, and loaders |

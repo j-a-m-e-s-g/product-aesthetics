@@ -1,0 +1,14 @@
+{
+  "name": "Kokonut UI",
+  "tagline": "Over a hundred lively buttons, cards and inputs with polished movement: a departure-board headline, slide-to-confirm buttons, boarding passes, receipts and helpers for AI chat screens.",
+  "category": "Interface",
+  "author": "Dorian Baffier (Kokonut Labs)",
+  "github": "kokonut-labs/kokonutui",
+  "demo": "https://kokonutui.com",
+  "licence": "MIT",
+  "stack": ["React", "Tailwind"],
+  "install": "npx shadcn@latest add @kokonutui/<component>",
+  "version": "main@8af6e27",
+  "verified": "2026-11-12",
+  "maps": []
+}

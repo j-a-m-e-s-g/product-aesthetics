@@ -1,0 +1,14 @@
+{
+  "name": "HyperUI",
+  "tagline": "Hundreds of ready-made pieces of web page, from pricing tables, sign-up forms and page footers to whole dashboards, that you copy and paste into your site.",
+  "category": "Interface",
+  "author": "Mark Mead",
+  "github": "markmead/hyperui",
+  "demo": "https://www.hyperui.dev",
+  "licence": "MIT",
+  "stack": ["HTML", "Tailwind"],
+  "install": "Copy a component's HTML from hyperui.dev",
+  "version": "main@b3941ba",
+  "verified": "2026-11-12",
+  "maps": []
+}

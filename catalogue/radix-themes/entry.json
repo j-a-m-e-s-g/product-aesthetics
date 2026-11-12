@@ -1,0 +1,15 @@
+{
+  "name": "Radix Themes",
+  "tagline": "A complete set of ready-styled buttons, menus, forms, cards, tables and pop-ups with a quiet, consistent look, matching light and dark modes, and 26 tuned colours to pick your accent from.",
+  "category": "Interface",
+  "author": "WorkOS",
+  "github": "radix-ui/themes",
+  "demo": "https://www.radix-ui.com/themes/playground",
+  "licence": "MIT",
+  "stack": ["React"],
+  "install": "npm install @radix-ui/themes",
+  "npm": "@radix-ui/themes",
+  "version": "3.3.0",
+  "verified": "2026-11-12",
+  "maps": []
+}

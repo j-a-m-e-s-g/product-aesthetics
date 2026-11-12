@@ -1,0 +1,14 @@
+{
+  "name": "Tailark",
+  "tagline": "Ready-made sections for a product's website, such as pricing, feature grids, sign-up forms, testimonials and FAQs, in three calm, carefully spaced styles that pick up your colours and fonts.",
+  "category": "Interface",
+  "author": "Méschac Irung",
+  "github": "tailark/blocks",
+  "demo": "https://tailark.com",
+  "licence": "MIT",
+  "stack": ["React", "Tailwind", "shadcn/ui"],
+  "install": "npx shadcn@latest add @tailark-oss/<kit>-<block>",
+  "version": "main@8139698",
+  "verified": "2026-11-12",
+  "maps": ["colours", "fonts", "radius"]
+}

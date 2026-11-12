@@ -1,0 +1,15 @@
+{
+  "name": "Sonner",
+  "tagline": "Little pop-up messages, like \"Saved\" or \"Link copied\", that slide in, stack neatly and spread out when you point at them.",
+  "category": "Interface",
+  "author": "Emil Kowalski",
+  "github": "emilkowalski/sonner",
+  "demo": "https://sonner.emilkowal.ski",
+  "licence": "MIT",
+  "stack": ["React"],
+  "install": "npm install sonner",
+  "npm": "sonner",
+  "version": "2.0.8",
+  "verified": "2026-11-12",
+  "maps": ["colours", "fonts", "radius"]
+}

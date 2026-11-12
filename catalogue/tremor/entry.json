@@ -1,0 +1,14 @@
+{
+  "name": "Tremor",
+  "tagline": "The pieces of a good-looking dashboard: line, bar and doughnut charts, big-number cards, progress rings, status strips and ranked lists, plus the buttons, tabs and date pickers around them.",
+  "category": "Interface",
+  "author": "Tremor Labs (Severin Landolt, Christopher Kindl)",
+  "github": "tremorlabs/tremor",
+  "demo": "https://tremor.so/docs",
+  "licence": "Apache-2.0",
+  "stack": ["React", "Tailwind", "Recharts"],
+  "install": "Copy each component from tremor.so/docs; npm install tailwind-variants clsx tailwind-merge @remixicon/react@4.8.0 recharts@2",
+  "version": "main@ca4d588",
+  "verified": "2026-11-12",
+  "maps": []
+}

@@ -64,9 +64,9 @@ Claude reads the same pages you do and follows the steps on them.
 
 <!-- catalogue:start (pa check --fix writes this) -->
 
-35 picks in 8 sections. Click any picture to open its page.
+45 picks in 9 sections. Click any picture to open its page.
 
-**Jump to:** [Type and icons](#type-and-icons) · [Photos and pictures](#photos-and-pictures) · [Hand-drawn](#hand-drawn) · [Charts and maps](#charts-and-maps) · [Backgrounds, textures and 3D](#backgrounds-textures-and-3d) · [Animation](#animation) · [Video](#video) · [Sound and voice](#sound-and-voice)
+**Jump to:** [Type and icons](#type-and-icons) · [Photos and pictures](#photos-and-pictures) · [Hand-drawn](#hand-drawn) · [Charts and maps](#charts-and-maps) · [Backgrounds, textures and 3D](#backgrounds-textures-and-3d) · [Interface](#interface) · [Animation](#animation) · [Video](#video) · [Sound and voice](#sound-and-voice)
 
 ### Type and icons
 
@@ -140,6 +140,33 @@ Surfaces, light and depth, from a slow-moving colour wash to a 3D scene that loo
 <tr>
 <td width="50%" valign="top"><a href="catalogue/pixi-filters"><img src="catalogue/pixi-filters/preview.gif" width="100%" alt="PixiJS Filters preview"></a><br><b><a href="catalogue/pixi-filters">PixiJS Filters</a></b><br>More than 35 effects for any picture or moving scene: old film, glitches, TV scanlines, ripples, zoom and motion blur, glow, light rays and halftone dots.<br><sub>FOR WEBSITES AND APPS</sub></td>
 <td width="50%" valign="top"><a href="catalogue/three"><img src="catalogue/three/preview.png" width="100%" alt="three.js preview"></a><br><b><a href="catalogue/three">three.js</a></b><br>Real 3D on a web page: objects with lifelike materials and lighting that visitors can turn around, or that can be filmed for a video.<br><sub>FOR WEBSITES AND APPS</sub></td>
+</tr>
+</table>
+
+### Interface
+
+Buttons, menus, forms and whole page sections that look designed, not default.
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/basecoat"><img src="catalogue/basecoat/preview.gif" width="100%" alt="Basecoat preview"></a><br><b><a href="catalogue/basecoat">Basecoat</a></b><br>The calm, crisp look of today's best-designed apps (buttons, forms, switches, tabs and cards) for any kind of website, in eight ready-made styles.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
+<td width="50%" valign="top"><a href="catalogue/coss-ui"><img src="catalogue/coss-ui/preview.png" width="100%" alt="coss ui preview"></a><br><b><a href="catalogue/coss-ui">coss ui</a></b><br>Finely detailed buttons, forms, calendars and menus with crisp edges, soft shadows and careful spacing, plus hundreds of ready-made examples to start from.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/hyperui"><img src="catalogue/hyperui/preview.png" width="100%" alt="HyperUI preview"></a><br><b><a href="catalogue/hyperui">HyperUI</a></b><br>Hundreds of ready-made pieces of web page, from pricing tables, sign-up forms and page footers to whole dashboards, that you copy and paste into your site.<br><sub>FOR WEBSITES AND APPS</sub></td>
+<td width="50%" valign="top"><a href="catalogue/kokonut-ui"><img src="catalogue/kokonut-ui/preview.gif" width="100%" alt="Kokonut UI preview"></a><br><b><a href="catalogue/kokonut-ui">Kokonut UI</a></b><br>Over a hundred lively buttons, cards and inputs with polished movement: a departure-board headline, slide-to-confirm buttons, boarding passes, receipts and helpers for AI chat screens.<br><sub>FOR WEBSITES AND APPS</sub></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/launch-ui"><img src="catalogue/launch-ui/preview.png" width="100%" alt="Launch UI preview"></a><br><b><a href="catalogue/launch-ui">Launch UI</a></b><br>Ready-made sections for a product's home page, from the big opening headline to pricing, questions and the footer, with a soft glow behind them and dark mode included.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
+<td width="50%" valign="top"><a href="catalogue/radix-themes"><img src="catalogue/radix-themes/preview.png" width="100%" alt="Radix Themes preview"></a><br><b><a href="catalogue/radix-themes">Radix Themes</a></b><br>A complete set of ready-styled buttons, menus, forms, cards, tables and pop-ups with a quiet, consistent look, matching light and dark modes, and 26 tuned colours to pick your accent from.<br><sub>FOR WEBSITES AND APPS</sub></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/shadcn-ui"><img src="catalogue/shadcn-ui/preview.png" width="100%" alt="shadcn/ui preview"></a><br><b><a href="catalogue/shadcn-ui">shadcn/ui</a></b><br>The building blocks of a modern app or website: buttons, forms, menus, pop-up windows and charts that look calm and considered, and become your own to restyle.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
+<td width="50%" valign="top"><a href="catalogue/sonner"><img src="catalogue/sonner/preview.gif" width="100%" alt="Sonner preview"></a><br><b><a href="catalogue/sonner">Sonner</a></b><br>Little pop-up messages, like &quot;Saved&quot; or &quot;Link copied&quot;, that slide in, stack neatly and spread out when you point at them.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
+</tr>
+<tr>
+<td width="50%" valign="top"><a href="catalogue/tailark"><img src="catalogue/tailark/preview.png" width="100%" alt="Tailark preview"></a><br><b><a href="catalogue/tailark">Tailark</a></b><br>Ready-made sections for a product's website, such as pricing, feature grids, sign-up forms, testimonials and FAQs, in three calm, carefully spaced styles that pick up your colours and fonts.<br><sub>FOR WEBSITES AND APPS · MATCHES YOUR BRAND</sub></td>
+<td width="50%" valign="top"><a href="catalogue/tremor"><img src="catalogue/tremor/preview.png" width="100%" alt="Tremor preview"></a><br><b><a href="catalogue/tremor">Tremor</a></b><br>The pieces of a good-looking dashboard: line, bar and doughnut charts, big-number cards, progress rings, status strips and ranked lists, plus the buttons, tabs and date pickers around them.<br><sub>FOR WEBSITES AND APPS</sub></td>
 </tr>
 </table>
 

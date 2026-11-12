@@ -1,0 +1,15 @@
+{
+  "name": "shadcn/ui",
+  "tagline": "The building blocks of a modern app or website: buttons, forms, menus, pop-up windows and charts that look calm and considered, and become your own to restyle.",
+  "category": "Interface",
+  "author": "shadcn",
+  "github": "shadcn-ui/ui",
+  "demo": "https://ui.shadcn.com",
+  "licence": "MIT",
+  "stack": ["React", "Tailwind"],
+  "install": "npx shadcn@latest init",
+  "npm": "shadcn",
+  "version": "4.23.0",
+  "verified": "2026-11-12",
+  "maps": ["colours", "fonts", "radius"]
+}

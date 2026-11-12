@@ -1,0 +1,14 @@
+{
+  "name": "Launch UI",
+  "tagline": "Ready-made sections for a product's home page, from the big opening headline to pricing, questions and the footer, with a soft glow behind them and dark mode included.",
+  "category": "Interface",
+  "author": "Mikołaj Dobrucki",
+  "github": "launch-ui/launch-ui",
+  "demo": "https://www.launchuicomponents.com",
+  "licence": "MIT",
+  "stack": ["React", "Next.js", "Tailwind"],
+  "install": "npx shadcn@latest add @launchui/launchui @launchui/hero",
+  "version": "main@9387bec",
+  "verified": "2026-11-12",
+  "maps": ["colours", "fonts", "radius"]
+}

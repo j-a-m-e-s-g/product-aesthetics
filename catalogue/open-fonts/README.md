@@ -41,7 +41,9 @@ Type does more for a design than anything else on the page, and the best free fa
 | **DM Serif Display** | Confident editorial headlines | Colophon Foundry | #73 | `@fontsource/dm-serif-display` |
 | **Hanken Grotesk** | Neat grotesk for text and UI | Hanken Design Co. | #105 | `@fontsource-variable/hanken-grotesk` |
 
-Two pairings that work straight away: **Instrument Serif headlines over Inter text** (editorial, calm) and **Bebas Neue titles over Space Grotesk** (loud, social). IBM Plex alone covers a whole report.
+Pairings that work straight away: **Newsreader for reading with Work Sans for the interface** (calm, editorial), **Archivo's narrow widths for headlines over Figtree text** (compact, confident) and **Bebas Neue titles over Work Sans** (loud, social). IBM Plex alone covers a whole report.
+
+The faces that tools and AI page-builders reach for by default now read as a default look, according to 2026 design guidance written to stop generic AI-made pages (Anthropic's frontend-design skill; impeccable): Inter, Geist, Space Grotesk and Fraunces, and a serif italic as the big headline (Instrument Serif's usual job). They're still excellent faces. Choose them on purpose, not because nothing else was decided.
 
 ## Install
 
@@ -88,6 +90,8 @@ There's no adapter: a font becomes part of your brand when your style guide name
 ## Notes
 
 - Use the name the package registers. `'Inter'` won't match `@fontsource-variable/inter`; it has to be `'Inter Variable'`.
-- Popularity has a cost: Inter and Bebas Neue are everywhere, so on their own they read as default. They're at their best paired with something with more character (Instrument Serif, Fraunces, Bricolage Grotesque).
+- Popularity has a cost: Inter and Bebas Neue are everywhere, so on their own they read as default. They're at their best paired with something with more character, such as Bricolage Grotesque or Archivo's width axis.
+- For tables and figures that line up, use a face with tabular figures (`font-variant-numeric: tabular-nums`). Fraunces, Instrument Serif and Hanken Grotesk have none; IBM Plex Sans's figures can't be switched between tabular and proportional. Inter, JetBrains Mono, Roboto Mono and Newsreader do line up.
+- IBM Plex carries a Reserved Font Name ("Plex"). If you make your own cut-down copy of the font files (only the letters a page uses), the OFL says it must be renamed. Serving the packages as Fontsource ships them doesn't raise this.
 - Bebas Neue has capitals only: lower-case letters come out as the same full-size capitals.
 - [Datatype](../datatype) in this catalogue is a font too: it draws inline charts.
